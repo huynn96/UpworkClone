@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<!-- saved from url=(0107)https://app.trustev.com/api/v2.0/Iframe?evercookie=e5591f10-8cd1-4646-9fa6-6ed39866f60c&source=localstorage -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head>
+<body>
+<script>
+    var TrustevV2 = TrustevV2 || (function() {
+        var _publicKey = '';
+        var _sessionId = 'NotSet';
+        var _data = {};
+        var _baseUrl = 'https://app.trustev.com/api/v2.0';
+        var _baseHost = 'app.trustev.com';
+
+        return {
+            Init: function() {
+
+                _sessionId = 'e5591f10-8cd1-4646-9fa6-6ed39866f60c';
+
+                this.AsyncGatherInformation();
+            },
+            CallAPI: function(method, url, json, callback) {
+                try {
+                    var xhr = null;
+
+                    if (window.XMLHttpRequest) {
+                        xhr = new XMLHttpRequest();
+                    } else if (window.ActiveXObject) {
+                        xhr = new ActiveXObject("Microsoft.XMLHTTP");
+                    }
+
+                    if (xhr) {
+                        xhr.onreadystatechange = function() {
+                            if (xhr.readyState == XMLHttpRequest.DONE) {
+                                if (xhr.status == '200') {
+                                    callback.apply(xhr);
+                                }
+                            }
+                        }
+
+                        xhr.open(method, url, true);
+                        xhr.setRequestHeader("X-RequestedBy", "iframe-trustevjs");
+                        xhr.send(json);
+                    }
+                } catch (e) {
+                }
+            },
+            AsyncGatherInformation: function() {
+                if (_sessionId != "NotSet" && _sessionId != "") {
+                    TrustevV2.GatherInformation();
+                }
+                return;
+            },
+            ExecuteDeviceTag: function() {
+                // Run device tag / evercookie code
+                var Evercookie = Evercookie || (function() {
+                    var document = window.document;
+                    var Image = window.Image;
+                    var globalStorage = window.globalStorage;
+                    var localStore = window.localStorage;
+                    var sessionStorage = window.sessionStorage;
+
+                    _ec_replace = function(str, key, value) {
+                        if (str.indexOf("&" + key + "=") > -1 || str.indexOf(key + "=") === 0) {
+                            // find start
+                            var idx = str.indexOf("&" + key + "="),
+                                end,
+                                newstr;
+                            if (idx === -1) {
+                                idx = str.indexOf(key + "=");
+                            }
+                            // find end
+                            end = str.indexOf("&", idx + 1);
+                            if (end !== -1) {
+                                newstr = str.substr(0, idx) + str.substr(end + (idx ? 0 : 1)) + "&" + key + "=" + value;
+                            } else {
+                                newstr = str.substr(0, idx) + "&" + key + "=" + value;
+                            }
+                            return newstr;
+                        } else {
+                            return str + "&" + key + "=" + value;
+                        }
+                    }
+                    evercookie_indexdb_storage = function(name) {
+                        try {
+                            if (!('indexedDB' in window)) {
+
+                                indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+                                IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction;
+                                IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
+                            }
+
+                            if (indexedDB) {
+                                var ver = 1;
+                                //FF incognito mode restricts indexedb access
+                                var request = indexedDB.open("idb_evercookie", ver);
+
+                                request.onerror = function(e) {
+                                    //console.log("evercookie_indexdb_storage.request.onerror - error: " + e.message);
+                                }
+
+                                request.onupgradeneeded = function(event) {
+                                    var db = event.target.result;
+
+                                    var store = db.createObjectStore("evercookie", {
+                                        keyPath: "name",
+                                        unique: false
+                                    })
+                                }
+
+                                if (_data['EvercookieRegenerated'] === "true") {
+                                    //console.log("evercookie_indexdb_storage - overwritting value: " + value);
+                                    request.onsuccess = function(event) {
+                                        var idb = event.target.result;
+                                        if (idb.objectStoreNames.contains("evercookie")) {
+                                            var tx = idb.transaction(["evercookie"], "readwrite");
+                                            var objst = tx.objectStore("evercookie");
+                                            var qr = objst.put({
+                                                "name": name,
+                                                "value": _data['EvercookieId']
+                                            })
+                                        }
+                                        idb.close();
+                                    }
+                                } else {
+                                    request.onsuccess = function(event) {
+                                        var idb = event.target.result;
+                                        if (idb.objectStoreNames.contains("evercookie")) {
+                                            var tx = idb.transaction(["evercookie"], "readwrite");
+                                            var objst = tx.objectStore("evercookie");
+                                            var qr = objst.get(name);
+
+                                            qr.onsuccess = function(event) {
+                                                if (qr.result !== undefined) {
+                                                    // put our cookie back
+                                                    var originalValue = qr.result.value;
+                                                    if (originalValue !== undefined && originalValue !== null) {
+                                                        //console.log("evercookie_indexdb_storage - found original value: " + originalValue);
+                                                        _data['EvercookieRegenerated'] = "true";
+                                                        _data['EvercookieId'] = originalValue;
+                                                        _data['EvercookieSource'] = "iframe-indexdb";
+                                                    } else {
+                                                        //console.log("evercookie_indexdb_storage - writing value: " + value);
+                                                        qr = objst.put({
+                                                            "name": name,
+                                                            "value": _data['EvercookieId']
+                                                        });
+                                                    }
+                                                } else {
+                                                    //console.log("evercookie_indexdb_storage - writing value: " + value);
+                                                    qr = objst.put({
+                                                        "name": name,
+                                                        "value": _data['EvercookieId']
+                                                    });
+                                                }
+                                            }
+                                        }
+                                        idb.close();
+                                    }
+                                }
+                            }
+                        } catch (e) {
+                            //console.log("evercookie_indexdb_storage - error: " + e.message + "; " + e.description);
+                        }
+                    };
+                    evercookie_database_storage = function(name) {
+                        try {
+                            if (window.openDatabase) {
+                                var database = window.openDatabase("etrust", "", "tuid", 1024 * 1024);
+
+                                if (_data['EvercookieRegenerated'] === "true") {
+                                    //console.log("evercookie_database_storage - overwritting value: " + value);
+                                    database.transaction(function(tx) {
+                                        tx.executeSql("CREATE TABLE IF NOT EXISTS cache(" +
+                                            "id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
+                                            "name TEXT NOT NULL, " +
+                                            "value TEXT NOT NULL, " +
+                                            "UNIQUE (name)" +
+                                            ")", [], function(tx, rs) {}, function(tx, err) {});
+                                        tx.executeSql("INSERT OR REPLACE INTO cache(name, value) " +
+                                            "VALUES(?, ?)",
+                                            [name, _data['EvercookieId']], function(tx, rs) {}, function(tx, err) {});
+                                    });
+                                } else {
+                                    database.transaction(function(tx) {
+                                        tx.executeSql("SELECT value FROM cache WHERE name=?", [name],
+                                            function(tx, result1) {
+                                                if (result1.rows.length >= 1) {
+                                                    // put our cookie back
+                                                    var originalValue = result1.rows.item(0).value;
+                                                    if (originalValue !== undefined && originalValue !== null) {
+                                                        //console.log("evercookie_database_storage - found original value: " + originalValue);
+                                                        _data['EvercookieRegenerated'] = "true";
+                                                        _data['EvercookieId'] = originalValue;
+                                                        _data['EvercookieSource'] = "iframe-databasestorage";
+                                                    } else {
+                                                        database.transaction(function(tx) {
+                                                            //console.log("evercookie_database_storage - writing value: " + value);
+                                                            tx.executeSql("CREATE TABLE IF NOT EXISTS cache(" +
+                                                                "id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
+                                                                "name TEXT NOT NULL, " +
+                                                                "value TEXT NOT NULL, " +
+                                                                "UNIQUE (name)" +
+                                                                ")", [], function(tx, rs) {}, function(tx, err) {});
+                                                            tx.executeSql("INSERT OR REPLACE INTO cache(name, value) " +
+                                                                "VALUES(?, ?)",
+                                                                [name, _data['EvercookieId']], function(tx, rs) {}, function(tx, err) {});
+                                                        });
+                                                    }
+                                                } else {
+                                                    database.transaction(function(tx) {
+                                                        //console.log("evercookie_database_storage - writing value: " + value);
+                                                        tx.executeSql("CREATE TABLE IF NOT EXISTS cache(" +
+                                                            "id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
+                                                            "name TEXT NOT NULL, " +
+                                                            "value TEXT NOT NULL, " +
+                                                            "UNIQUE (name)" +
+                                                            ")", [], function(tx, rs) {}, function(tx, err) {});
+                                                        tx.executeSql("INSERT OR REPLACE INTO cache(name, value) " +
+                                                            "VALUES(?, ?)",
+                                                            [name, _data['EvercookieId']], function(tx, rs) {}, function(tx, err) {});
+                                                    });
+                                                }
+                                            }, function(tx, err) {
+                                                //console.log("evercookie_database_storage - error: " + err);
+                                            });
+                                    });
+                                }
+                            }
+                        } catch (e) {
+                            //console.log("evercookie_database_storage - error: " + e.message + "; " + e.description);
+                        }
+                    };
+                    evercookie_local_storage = function(name) {
+                        try {
+                            if (localStore) {
+                                if (_data['EvercookieRegenerated'] === "true") {
+                                    //console.log("evercookie_local_storage - overwriting value: " + value);
+                                    localStore.setItem(name, _data['EvercookieId']);
+                                } else {
+                                    var originalValue = localStore.getItem(name);
+                                    if (originalValue !== undefined && originalValue !== null) {
+                                        //console.log("evercookie_local_storage - found original value: " + originalValue);
+                                        // put our cookie back
+                                        _data['EvercookieRegenerated'] = "true";
+                                        _data['EvercookieId'] = originalValue;
+                                        _data['EvercookieSource'] = "iframe-localstorage";
+                                    } else {
+                                        //console.log("evercookie_local_storage - writing value: " + value);
+                                        localStore.setItem(name, _data['EvercookieId']);
+                                    }
+                                }
+                            }
+                        } catch (e) {
+                            //console.log("evercookie_local_storage - error: " + e.message + "; " + e.description);
+                        }
+                    };
+                    evercookie_global_storage = function(name) {
+                        try {
+                            if (globalStorage) {
+                                var host = this.getHost();
+
+                                if (_data['EvercookieRegenerated'] === "true") {
+                                    //console.log("evercookie_global_storage - overwriting value: " + value);
+                                    globalStorage[host][name] = _data['EvercookieId'];
+                                } else {
+                                    var originalValue = globalStorage[host][name];
+                                    if (originalValue !== undefined && originalValue !== null) {
+                                        //console.log("evercookie_global_storage - found original value: " + originalValue);
+                                        // put our cookie back
+                                        _data['EvercookieRegenerated'] = "true";
+                                        _data['EvercookieId'] = originalValue;
+                                        _data['EvercookieSource'] = "iframe-globalstorage";
+                                    } else {
+                                        //console.log("evercookie_global_storage - writing value: " + value);
+                                        globalStorage[host][name] = _data['EvercookieId'];
+                                    }
+                                }
+                            }
+                        } catch (e) {
+                            //console.log("evercookie_global_storage - error: " + e.message + "; " + e.description);
+                        }
+                    };
+                    evercookie_session_storage = function(name) {
+                        try {
+                            if (sessionStorage) {
+                                if (_data['EvercookieRegenerated'] === "true") {
+                                    //console.log("evercookie_session_storage - overwriting value: " + value);
+                                    sessionStorage.setItem(name, _data['EvercookieId']);
+                                } else {
+                                    var originalValue = sessionStorage.getItem(name);
+                                    if (originalValue !== undefined && originalValue !== null) {
+                                        //console.log("evercookie_session_storage - found original value: " + originalValue);
+                                        // put our cookie back
+                                        _data['EvercookieRegenerated'] = "true";
+                                        _data['EvercookieId'] = originalValue;
+                                        _data['EvercookieSource'] = "iframe-sessionstorage";
+                                    } else {
+                                        //console.log("evercookie_session_storage - writing value: " + value);
+                                        sessionStorage.setItem(name, _data['EvercookieId']);
+                                    }
+                                }
+                            }
+                        } catch (e) {
+                            //console.log("evercookie_session_storage - error: " + e.message + "; " + e.description);
+                        }
+                    };
+                    evercookie_window = function(name) {
+                        try {
+                            if (_data['EvercookieRegenerated'] === "true") {
+                                //console.log("evercookie_window - overwriting value: " + value);
+                                window.name = _ec_replace(window.name, name, _data['EvercookieId']);
+                            } else {
+                                var originalValue = this.getFromStr(name, window.name);
+                                if (originalValue !== undefined && originalValue !== null) {
+                                    //console.log("evercookie_window - found original value: " + originalValue);
+                                    // put our cookie back
+                                    _data['EvercookieRegenerated'] = "true";
+                                    _data['EvercookieId'] = originalValue;
+                                    _data['EvercookieSource'] = "iframe-window";
+                                } else {
+                                    //console.log("evercookie_window - writing value: " + value);
+                                    window.name = _ec_replace(window.name, name, _data['EvercookieId']);
+                                }
+                            }
+                        } catch (e) {
+                            //console.log("evercookie_window_storage - error: " + e.message + "; " + e.description);
+                        }
+                    };
+                    getFromStr = function(cookieName, valueName, text) {
+                        if (typeof text !== "string") {
+                            return;
+                        }
+                        var nameEQ = cookieName + "=",
+                            ca = text.split(';'),
+                            i,
+                            c;
+                        for (i = 0; i < ca.length; i++) {
+                            c = ca[i];
+                            while (c.charAt(0) === " ") {
+                                c = c.substring(1, c.length);
+                            }
+                            if (c.indexOf(nameEQ) === 0) {
+                                var cookieValue = c.substring(nameEQ.length, c.length);
+                                if (valueName === undefined || valueName === "") {
+                                    return cookieValue;
+                                } else {
+                                    var valueNameEQ = valueName + "=",
+                                        caa = cookieValue.split('&'),
+                                        j,
+                                        cc;
+                                    for (j = 0; j < caa.length; j++) {
+                                        cc = caa[j];
+                                        while (cc.charAt(0) === " ") {
+                                            cc = cc.substring(1, cc.length);
+                                        }
+                                        if (cc.indexOf(valueNameEQ) === 0) {
+                                            return cc.substring(valueNameEQ.length, cc.length);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    };
+                    getHost = function() {
+                        return window.location.host.replace(/:\d+/, '');
+                    };
+
+                    return {
+                        Initiate: function(name, value, regenerated, source) {
+
+                            _data['EvercookieId'] = value;
+                            _data['EvercookieRegenerated'] = regenerated;
+                            _data['EvercookieSource'] = source;
+
+                            evercookie_database_storage(name);
+                            evercookie_local_storage(name);
+                            evercookie_global_storage(name);
+                            evercookie_session_storage(name);
+                            evercookie_window(name);
+                            evercookie_png(name);
+                            evercookie_etag(name);
+                            evercookie_indexdb_storage(name);
+
+                        }
+                    };
+                }());
+
+                Evercookie.Initiate('tuid', _sessionId, 'false', 'localstorage');
+
+                return;
+            },
+            GatherInformation: function() {
+
+                _data['SessionId'] = _sessionId;
+                _data['DeviceId'] = _sessionId;
+                try {
+                    this.ExecuteDeviceTag();
+                } catch (e) {
+                };
+                var iframe_data = { "EvercookieId": _data['EvercookieId'], "EvercookieRegenerated": _data['EvercookieRegenerated'], "EvercookieSource": _data['EvercookieSource'] };
+                parent.postMessage(iframe_data, "*");
+
+                return;
+            },
+            SessionId: function() {
+                return _sessionId;
+            }
+        };
+    }());
+    TrustevV2.Init();
+</script>
+</body></html>

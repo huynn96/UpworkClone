@@ -1,0 +1,249 @@
+.no-hide-animation.ng-hide.ng-hide-animate {
+    display: none !important;
+}
+
+input.bpa-card-icon {
+    padding-left: 62px;
+}
+
+.bpa-cards-icon-img {
+    background-image: url('/ab/payments/bundles/odeskbpaui/images/card-number-icons-v2.svg'), none;
+    background-repeat: no-repeat;
+}
+
+.bpa-cards-icon {
+    background-size: 182px;
+    position: absolute;
+    display: block;
+    width: 29px;
+    height: 32px;
+    margin-top: 2px;
+    margin-left: 17px;
+    background-position-x: -136px;
+    background-position-y: 6px;
+}
+
+.bpa-cards-icon-visa {
+    background-position-x: 0px;
+    width: 34px;
+}
+
+.bpa-cards-icon-mastercard {
+    background-position-x: -34px;
+    width: 34px;
+}
+
+.bpa-cards-icon-amex {
+    background-position-x: -68px;
+    width: 34px;
+}
+
+.bpa-cards-icon-discover {
+    background-position-x: -102px;
+    width: 34px;
+}
+
+.bpa-payment-icon-paypal {
+    background-image: url(/ab/payments/bundles/odeskbpaui/images/paypal-small.png);
+    margin-top: 4px;
+    width: 96px;
+    height: 25px;
+    background-repeat: no-repeat;
+}
+
+.bpa-card-lock-icon {
+    background-size: 182px;
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 32px;
+    float: right;
+    margin-top: -33px;
+    left: -130px;
+    background-position-x: -166px;
+}
+
+.bpa-card-lock-icon:after {
+    content: 'Securely Stored';
+    width: 143px;
+    display: inline-block;
+    margin-left: 28px;
+    color: #898989;
+    line-height: 28px;
+}
+
+.bpa-card-icon-list {
+    position: relative;
+    float: right;
+    top: -79px;
+    margin-left: 4px;
+    margin-top: 0;
+    margin-bottom: -30px;
+}
+
+.bpa-primary-payment-icon {
+    position: relative;
+    margin-left: 0;
+    display: inline-block;
+    margin-right: 14px;
+    top: -12px;
+    float: left;
+}
+
+.bpa-mode-inactive {
+    background-color: #F9F9F9;
+    height: 75px;
+}
+
+.bpa-mode-active, .bpa-mode-inactive {
+    overflow: hidden;
+}
+
+.bpa-mode-active {
+    background-color: #fff;
+}
+
+.bpa-form-page.ng-hide-add {
+    height: 0 !important;
+    display: none !important;
+}
+
+.bpa-primary-payment-area {
+    min-height: 56px;
+    padding: 5px 0 5px 0;
+}
+
+.bpa-reset-min-width {
+    min-width: 0 !important;
+}
+
+.bpa-form-page {
+    transition: 0.4s cubic-bezier(0.65, 0.05, 0.36, 1) all;
+    transform: translateX(0px);
+    opacity: 1;
+    overflow: hidden;
+}
+
+.forward-slide .ng-hide {
+    transform: translateX(-50%);
+    opacity: 0;
+}
+
+.backward-slide .ng-hide {
+    transform: translateX(50%);
+    opacity: 0;
+}
+
+.bpa-method-choice {
+   transition:0.4s cubic-bezier(0.65, 0.05, 0.36, 1) all;
+   height:100%;
+   width: 100%;
+}
+
+.bpa-collapsed.ng-hide {
+    display: block !important;
+    min-height: 0px;
+    height: 0px;
+}
+
+.bpa-collapsed {
+   transition:0.3s cubic-bezier(0.65, 0.05, 0.36, 1) all;
+   overflow: hidden;
+}
+
+.bpa-hide-loading .bpa-collapsed {
+    transition: none;
+}
+
+.bpa-hide-loading .bpa-method-choice {
+    transition: none;
+}
+
+.bpa-content {
+    transition:0.3s cubic-bezier(0.65, 0.05, 0.36, 1) all;
+    opacity: 1;
+}
+
+.ng-hide .bpa-content {
+    opacity: 0;
+}
+
+.bpa-min-height-auto {
+    min-height: 0 !important;
+}
+
+.bpa-fix-shadow-left {
+    padding-left: 4px;
+}
+
+@media (max-width: 575px) {
+    .bpa-card-lock-icon {
+        left: -6px;
+    }
+    .bpa-card-lock-icon:after {
+        display: none;
+    }
+    .bpa-responsive-smaller-width .col-sm-6 {
+        width: 50%;
+    }
+}
+
+.bpa-modern-bank-account .bpa-securely-stored {
+    height: 20px;
+    display: inline-block;
+    padding-left: 18px;
+    background: url(/ab/payments/bundles/odeskbpaui/images/card-number-icons-v2.svg) no-repeat -108px 0;
+    background-size: 120px;
+}
+
+.bpa-modern-bank-account .bpa-bank-account-numbers-container {
+    max-width: 448px;
+    max-height: 84px;
+}
+
+.bpa-modern-bank-account .bpa-img-bank-account-numbers {
+    width: 100%;
+    height: 100%;
+}
+
+.bpa-modern-bank-account .bpa-ajax-loader.ng-hide {
+    display: none !important;
+}
+
+/* bpaAsyncIndicator directive related styles */
+
+.form-group .bpa-has-async-indicator {
+    padding-right: 40px;
+}
+
+.form-group .bpa-indicator-anchor {
+    float: right;
+}
+
+.bpa-indicator-anchor .bpa-indicator-icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: auto;
+    right: auto;
+    margin: -30px 0 0 -30px;
+}
+
+/********************************************/
+
+.bpa-subscription-form {
+    min-height: 316px;
+}
+
+li.bpa-list-checked {
+    padding-left: 25px;
+}
+
+li.bpa-list-checked span.glyphicon.air-icon-check {
+    display: inline-block;
+    margin-left: -25px;
+}
+
+.bpa-add-primary-payment .eo-blocker.ng-leave-prepare {
+    display: none !important;
+}

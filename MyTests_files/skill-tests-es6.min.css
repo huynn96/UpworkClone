@@ -1,0 +1,51 @@
+.skill-tests-placeholder {
+    min-height: 100px;
+}
+
+.badge[class*="label-"] {
+    border: 0;
+}
+
+.label-rank1 {
+    background-color: #fec324;
+}
+
+.label-rank2 {
+    background-color: #b1c1cb;
+}
+
+.label-rank3 {
+    background-color: #a9662a;
+}
+
+.label-score10 {
+    background-color: #0682d1;
+}
+
+.label-score20 {
+    background-color: #00a0e8;
+}
+
+.label-score30 {
+    background-color: #03c3e5;
+}
+
+.label-below-avg {
+    background-color: #e55414;
+}
+
+.badge.label-above-avg {
+    color: #000;
+    background-color: #fff;
+}
+
+.label-failed {
+    color: #ef4b0a;
+    background-color: #fff;
+}
+
+.label-passed {
+    background-color: #fec324;
+}
+
+/*# sourceMappingURL=skill-tests-es6.min.css.map*/

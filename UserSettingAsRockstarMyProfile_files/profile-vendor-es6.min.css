@@ -1,0 +1,32 @@
+.invite-interview-form textarea.form-control {
+  resize: none; }
+
+.invite-interview-form .dropdown, .invite-interview-form .eo-dropdown-menu, .invite-interview-form .dropdown-menu {
+  width: 100%; }
+
+#interview-invitation-popup-selected-job button {
+  display: block !important;
+  width: 100%; }
+.std-init-reg-form h3.title {
+  color: #494949;
+  text-align: left;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: Gotham SSm;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.std-init-reg-form .subtitle, .std-init-reg-form .post-a-job {
+  color: #494949;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: Gotham SSm;
+}
+.std-init-reg-form .subtitle {
+  text-align: left;
+  margin-bottom: 15px;
+}
+.std-init-reg-form .btn-primary {
+  width: 100%;
+}
+/*# sourceMappingURL=profile-vendor-es6.min.css.map*/

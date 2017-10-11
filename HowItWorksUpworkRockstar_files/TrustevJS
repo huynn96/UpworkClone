@@ -1,0 +1,912 @@
+var TrustevV2 = TrustevV2 || (function () {
+    var _publicKey = '';
+    var _sessionId = '62b6bd6d-189d-476e-ab28-e3121a4d6cf5';
+    var _deviceId = '62b6bd6d-189d-476e-ab28-e3121a4d6cf5';
+    var _data = {};
+    var _baseUrl = 'https://app.trustev.com/api/v2.0';
+    var _baseHost = 'app.trustev.com';
+    var _isLocationServiceEnabled = 'false';
+    var _evUrl = '';
+
+    return {
+        Init: function() {
+
+            //_publicKey = publicKey;
+            //_sessionId = this.GetCookie("tsid");
+
+            if (_sessionId == "NotSet" || _sessionId == "") {
+                // Generate session Id
+                this.CallAPI("POST", _baseUrl + "/session", "{}", function() {
+                    try {
+                        _sessionId = JSON.parse(this.responseText).SessionId;
+                    } catch (e) {
+                    }
+                });
+
+                if (_sessionId != 'NotSet' && _sessionId != '') {
+                    TrustevV2.SetCookie("tsid", _sessionId, 20);
+                }
+            }
+
+            this.AsyncGatherInformation();
+            this.AsyncGatherLocationInfo();
+
+        },
+        SetCookie: function(key, val, expireInMinutes) {
+            var expires = '';
+            if (expireInMinutes > 0) {
+                var d = new Date();
+                d.setTime(d.getTime() + (expireInMinutes * 60 * 1000));
+                var expires = "expires=" + d.toUTCString();
+            }
+            var domainForCookie = window.location.host.replace(/:\d+/, '');
+            document.cookie = key + "=" + val + ";" + expires + ";secure";
+        },
+        GetCookie: function(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        },
+        CallAPI: function(method, url, json, callback, headers) {
+            try {
+                var xhr = null;
+
+                if (window.XMLHttpRequest) {
+                    xhr = new XMLHttpRequest();
+                } else if (window.ActiveXObject) {
+                    xhr = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+
+                if (xhr) {
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState == XMLHttpRequest.DONE) {
+                            callback.apply(this, [xhr, json]);
+                        }
+                    }
+
+                    xhr.open(method, url, true);
+
+                    // setting headers if they were specified
+                    if (headers !== null && headers !== undefined) {
+                        for (var key in headers) {
+                            if (headers.hasOwnProperty(key)) {
+                                xhr.setRequestHeader(key, headers[key]);
+                            }
+                        }
+                    } else {
+                        xhr.setRequestHeader("Content-Type", "application/json");
+                    }
+
+                    xhr.send(json);
+                }
+            } catch (e) {
+            }
+        },
+        AsyncGatherInformation: function() {
+            if (_sessionId != "NotSet" && _sessionId != "") {
+                setTimeout(function() {
+                    TrustevV2.GatherInformation();
+                }, 0);
+            }
+            return;
+        },
+        AsyncGatherLocationInfo: function() {
+            if (_sessionId !== "NotSet" && _sessionId !== "" && _isLocationServiceEnabled === "true") {
+                setTimeout(function () {
+                    TrustevV2.LocationServices.CallEvUrl();
+                    TrustevV2.LocationServices.GetHtml5Location();
+                }, 0);
+            }
+            return;
+        },
+        ExecuteDeviceTag: function(callback) {
+            // Run device tag / evercookie code 
+            var Evercookie = Evercookie || (function() {
+                var document = window.document;
+                var Image = window.Image;
+                var globalStorage = window.globalStorage;
+                var localStore = window.localStorage;
+                var sessionStorage = window.sessionStorage;
+
+                _ec_replace = function(str, key, value) {
+                    if (str.indexOf("&" + key + "=") > -1 || str.indexOf(key + "=") === 0) {
+                        // find start
+                        var idx = str.indexOf("&" + key + "="),
+                            end,
+                            newstr;
+                        if (idx === -1) {
+                            idx = str.indexOf(key + "=");
+                        }
+                        // find end
+                        end = str.indexOf("&", idx + 1);
+                        if (end !== -1) {
+                            newstr = str.substr(0, idx) + str.substr(end + (idx ? 0 : 1)) + "&" + key + "=" + value;
+                        } else {
+                            newstr = str.substr(0, idx) + "&" + key + "=" + value;
+                        }
+                        return newstr;
+                    } else {
+                        return str + "&" + key + "=" + value;
+                    }
+                }
+                evercookie_indexdb_storage = function(name) {
+                    try {
+                        if (!('indexedDB' in window)) {
+
+                            indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+                            IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction;
+                            IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
+                        }
+
+                        if (indexedDB) {
+                            var ver = 1;
+                            //FF incognito mode restricts indexedb access
+                            var request = indexedDB.open("idb_evercookie", ver);
+
+                            request.onerror = function(e) {
+                                //console.log("evercookie_indexdb_storage.request.onerror - error: " + e.message);
+                            }
+
+                            request.onupgradeneeded = function(event) {
+                                var db = event.target.result;
+
+                                var store = db.createObjectStore("evercookie", {
+                                    keyPath: "name",
+                                    unique: false
+                                });
+                            }
+
+                            if (_data['EvercookieRegenerated'] === "true") {
+                                //console.log("evercookie_indexdb_storage - overwritting value: " + value);
+                                request.onsuccess = function(event) {
+                                    var idb = event.target.result;
+                                    if (idb.objectStoreNames.contains("evercookie")) {
+                                        var tx = idb.transaction(["evercookie"], "readwrite");
+                                        var objst = tx.objectStore("evercookie");
+                                        var qr = objst.put({
+                                            "name": name,
+                                            "value": _data['EvercookieId']
+                                        });
+                                    }
+                                    idb.close();
+                                }
+                            } else {
+                                request.onsuccess = function(event) {
+                                    var idb = event.target.result;
+                                    if (idb.objectStoreNames.contains("evercookie")) {
+                                        var tx = idb.transaction(["evercookie"], "readwrite");
+                                        var objst = tx.objectStore("evercookie");
+                                        var qr = objst.get(name);
+
+                                        qr.onsuccess = function(event) {
+                                            if (qr.result !== undefined) {
+                                                // put our cookie back
+                                                var originalValue = qr.result.value;
+                                                if (originalValue !== undefined && originalValue !== null) {
+                                                    //console.log("evercookie_indexdb_storage - found original value: " + originalValue);
+                                                    _data['EvercookieRegenerated'] = "true";
+                                                    _data['EvercookieId'] = originalValue;
+                                                    _data['EvercookieSource'] = "indexdb";
+                                                } else {
+                                                    //console.log("evercookie_indexdb_storage - writing value: " + value);
+                                                    qr = objst.put({
+                                                        "name": name,
+                                                        "value": _data['EvercookieId']
+                                                    });
+                                                }
+                                            } else {
+                                                //console.log("evercookie_indexdb_storage - writing value: " + value);
+                                                qr = objst.put({
+                                                    "name": name,
+                                                    "value": _data['EvercookieId']
+                                                });
+                                            }
+                                        }
+                                    }
+                                    idb.close();
+                                }
+                            }
+                        }
+                    } catch (e) {
+                        //console.log("evercookie_indexdb_storage - error: " + e.message + "; " + e.description);
+                    }
+                };
+                evercookie_database_storage = function(name) {
+                    try {
+                        if (window.openDatabase) {
+                            var database = window.openDatabase("etrust", "", "tuid", 1024 * 1024);
+
+                            if (_data['EvercookieRegenerated'] === "true") {
+                                //console.log("evercookie_database_storage - overwritting value: " + value);
+                                database.transaction(function(tx) {
+                                    tx.executeSql("CREATE TABLE IF NOT EXISTS cache(" +
+                                        "id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
+                                        "name TEXT NOT NULL, " +
+                                        "value TEXT NOT NULL, " +
+                                        "UNIQUE (name)" +
+                                        ")", [], function(tx, rs) {}, function(tx, err) {});
+                                    tx.executeSql("INSERT OR REPLACE INTO cache(name, value) " +
+                                        "VALUES(?, ?)",
+                                        [name, _data['EvercookieId']], function(tx, rs) {}, function(tx, err) {});
+                                });
+                            } else {
+                                database.transaction(function(tx) {
+                                    tx.executeSql("SELECT value FROM cache WHERE name=?", [name],
+                                        function(tx, result1) {
+                                            if (result1.rows.length >= 1) {
+                                                // put our cookie back
+                                                var originalValue = result1.rows.item(0).value;
+                                                if (originalValue !== undefined && originalValue !== null) {
+                                                    //console.log("evercookie_database_storage - found original value: " + originalValue);
+                                                    _data['EvercookieRegenerated'] = "true";
+                                                    _data['EvercookieId'] = originalValue;
+                                                    _data['EvercookieSource'] = "databasestorage";
+                                                } else {
+                                                    database.transaction(function(tx) {
+                                                        //console.log("evercookie_database_storage - writing value: " + value);
+                                                        tx.executeSql("CREATE TABLE IF NOT EXISTS cache(" +
+                                                            "id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
+                                                            "name TEXT NOT NULL, " +
+                                                            "value TEXT NOT NULL, " +
+                                                            "UNIQUE (name)" +
+                                                            ")", [], function(tx, rs) {}, function(tx, err) {});
+                                                        tx.executeSql("INSERT OR REPLACE INTO cache(name, value) " +
+                                                            "VALUES(?, ?)",
+                                                            [name, _data['EvercookieId']], function(tx, rs) {}, function(tx, err) {});
+                                                    });
+                                                }
+                                            } else {
+                                                database.transaction(function(tx) {
+                                                    //console.log("evercookie_database_storage - writing value: " + value);
+                                                    tx.executeSql("CREATE TABLE IF NOT EXISTS cache(" +
+                                                        "id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
+                                                        "name TEXT NOT NULL, " +
+                                                        "value TEXT NOT NULL, " +
+                                                        "UNIQUE (name)" +
+                                                        ")", [], function(tx, rs) {}, function(tx, err) {});
+                                                    tx.executeSql("INSERT OR REPLACE INTO cache(name, value) " +
+                                                        "VALUES(?, ?)",
+                                                        [name, _data['EvercookieId']], function(tx, rs) {}, function(tx, err) {});
+                                                });
+                                            }
+                                        }, function(tx, err) {
+                                            //console.log("evercookie_database_storage - error: " + err);
+                                        });
+                                });
+                            }
+                        }
+                    } catch (e) {
+                        //console.log("evercookie_database_storage - error: " + e.message + "; " + e.description);
+                    }
+                };
+                evercookie_png = function(name) {
+                    try {
+                        var canvas = document.createElement("canvas"),
+                            img,
+                            ctx,
+                            origvalue;
+                        canvas.style.visibility = "hidden";
+                        canvas.style.position = "absolute";
+                        canvas.width = 12;
+                        canvas.height = 1;
+
+                        if (canvas && canvas.getContext) {
+                            img = new Image();
+                            img.style.visibility = "hidden";
+                            img.style.position = "absolute";
+                            ctx = canvas.getContext("2d");
+
+                            img.onload = function() {
+                                if (_data['EvercookieRegenerated'] !== "true") {
+                                    ctx.drawImage(img, 0, 0);
+
+                                    // get CanvasPixelArray from  given coordinates and dimensions
+                                    var imgd = ctx.getImageData(0, 0, 12, 1),
+                                        pix = imgd.data,
+                                        i,
+                                        n;
+
+                                    var pngData = "";
+                                    // loop over each pixel to get the "RGB" values (ignore alpha)
+                                    for (i = 0, n = pix.length; i < n; i += 4) {
+                                        if (pix[i] === 0) {
+                                            break;
+                                        }
+                                        pngData += String.fromCharCode(pix[i]);
+                                        if (pix[i + 1] === 0) {
+                                            break;
+                                        }
+                                        pngData += String.fromCharCode(pix[i + 1]);
+                                        if (pix[i + 2] === 0) {
+                                            break;
+                                        }
+                                        pngData += String.fromCharCode(pix[i + 2]);
+                                    }
+
+                                    if (pngData !== undefined && pngData !== null) {
+                                        // put our cookie back
+                                        //console.log("evercookie_png - found original value: " + pngData);
+                                        _data['EvercookieRegenerated'] = "true";
+                                        _data['EvercookieId'] = pngData;
+                                        _data['EvercookieSource'] = "png";
+                                    }
+                                }
+                            };
+                            if (_data['EvercookieRegenerated'] === "true") {
+                                //console.log("evercookie_png - overwritting value: " + value);
+                                img.src = _baseUrl + "/epng?re=true";
+                            } else {
+                                //console.log("evercookie_png - calling api for cached value... ");
+                                img.src = _baseUrl + "/epng?re=false";
+                            }
+                        }
+                    } catch (e) {
+                        //console.log("evercookie_png - error: " + e.message + "; " + e.description);
+                    }
+                };
+                evercookie_etag = function(name) {
+                    try {
+                        if (_data['EvercookieRegenerated'] === "true") {
+                            //console.log("evercookie_etag - overwriting value: " + value);
+                            this.CallAPI("GET", _baseUrl + "/etag?re=true", '{}', function() { /* no need to do anything */ });
+                        } else {
+                            this.CallAPI("GET", _baseUrl + "/etag?re=false", '{}', function() { /* no need to do anything */ });
+                        }
+                    } catch (e) {
+                        //console.log("evercookie_etag - error: " + e.message + "; " + e.description);
+                    }
+                };
+                evercookie_local_storage = function(name) {
+                    try {
+                        if (localStore) {
+                            if (_data['EvercookieRegenerated'] === "true") {
+                                //console.log("evercookie_local_storage - overwriting value: " + value);
+                                localStore.setItem(name, _data['EvercookieId']);
+                            } else {
+                                var originalValue = localStore.getItem(name);
+                                if (originalValue !== undefined && originalValue !== null) {
+                                    //console.log("evercookie_local_storage - found original value: " + originalValue);
+                                    // put our cookie back
+                                    _data['EvercookieRegenerated'] = "true";
+                                    _data['EvercookieId'] = originalValue;
+                                    _data['EvercookieSource'] = "localstorage";
+                                } else {
+                                    //console.log("evercookie_local_storage - writing value: " + value);
+                                    localStore.setItem(name, _data['EvercookieId']);
+                                }
+                            }
+                        }
+                    } catch (e) {
+                        //console.log("evercookie_local_storage - error: " + e.message + "; " + e.description);
+                    }
+                };
+                evercookie_global_storage = function(name) {
+                    try {
+                        if (globalStorage) {
+                            var host = this.getHost();
+
+                            if (_data['EvercookieRegenerated'] === "true") {
+                                //console.log("evercookie_global_storage - overwriting value: " + value);
+                                globalStorage[host][name] = _data['EvercookieId'];
+                            } else {
+                                var originalValue = globalStorage[host][name];
+                                if (originalValue !== undefined && originalValue !== null) {
+                                    //console.log("evercookie_global_storage - found original value: " + originalValue);
+                                    // put our cookie back
+                                    _data['EvercookieRegenerated'] = "true";
+                                    _data['EvercookieId'] = originalValue;
+                                    _data['EvercookieSource'] = "globalstorage";
+                                } else {
+                                    //console.log("evercookie_global_storage - writing value: " + value);
+                                    globalStorage[host][name] = _data['EvercookieId'];
+                                }
+                            }
+                        }
+                    } catch (e) {
+                        //console.log("evercookie_global_storage - error: " + e.message + "; " + e.description);
+                    }
+                };
+                evercookie_session_storage = function(name) {
+                    try {
+                        if (sessionStorage) {
+                            if (_data['EvercookieRegenerated'] === "true") {
+                                //console.log("evercookie_session_storage - overwriting value: " + value);
+                                sessionStorage.setItem(name, _data['EvercookieId']);
+                            } else {
+                                var originalValue = sessionStorage.getItem(name);
+                                if (originalValue !== undefined && originalValue !== null) {
+                                    //console.log("evercookie_session_storage - found original value: " + originalValue);
+                                    // put our cookie back
+                                    _data['EvercookieRegenerated'] = "true";
+                                    _data['EvercookieId'] = originalValue;
+                                    _data['EvercookieSource'] = "sessionstorage";
+                                } else {
+                                    //console.log("evercookie_session_storage - writing value: " + value);
+                                    sessionStorage.setItem(name, _data['EvercookieId']);
+                                }
+                            }
+                        }
+                    } catch (e) {
+                        //console.log("evercookie_session_storage - error: " + e.message + "; " + e.description);
+                    }
+                };
+                evercookie_window = function(name) {
+                    try {
+                        if (_data['EvercookieRegenerated'] === "true") {
+                            //console.log("evercookie_window - overwriting value: " + value);
+                            window.name = _ec_replace(window.name, name, _data['EvercookieId']);
+                        } else {
+                            var originalValue = this.getFromStr(name, window.name);
+                            if (originalValue !== undefined && originalValue !== null) {
+                                //console.log("evercookie_window - found original value: " + originalValue);
+                                // put our cookie back
+                                _data['EvercookieRegenerated'] = "true";
+                                _data['EvercookieId'] = originalValue;
+                                _data['EvercookieSource'] = "window";
+                            } else {
+                                //console.log("evercookie_window - writing value: " + value);
+                                window.name = _ec_replace(window.name, name, _data['EvercookieId']);
+                            }
+                        }
+                    } catch (e) {
+                    }
+                };
+                evercookie_iframe = function(callback) {
+                    var iframe = document.createElement('iframe');
+                    iframe.setAttribute("src", 'https://' + _baseHost + '/api/v2.0/Iframe?evercookie=' + _data['EvercookieId'] + '&source=' + _data['EvercookieSource']);
+                    iframe.style.display = 'none';
+                    document.body.appendChild(iframe);
+
+                    function addEverCookieEventListener(obj, evt, func) {
+                        if ('addEventListener' in obj) {
+                            obj.addEventListener(evt, func, false);
+                        } else if ('attachEvent' in obj) { //IE
+                            obj.attachEvent('on' + evt, func);
+                        }
+                    }
+
+                    function iFrameListener(event) {
+                        if (event.data != undefined) {
+                            if (event.data['EvercookieId'] != undefined && event.data['EvercookieRegenerated'] != undefined && event.data['EvercookieSource'] != undefined) {
+
+                                var previousData = _data;
+                                try {
+                                    previousData = JSON.parse(JSON.stringify(_data));
+                                } catch (e) {
+                                }
+
+                                if (event.data['EvercookieRegenerated'] === "true") {
+                                    _data['EvercookieRegenerated'] = event.data['EvercookieRegenerated'];
+                                    _data['EvercookieId'] = event.data['EvercookieId'];
+                                    _data['EvercookieSource'] = event.data['EvercookieSource'];
+                                }
+
+                                if (callback != undefined) {
+                                    callback.apply(this, [previousData, event.data, _data]);
+                                }
+
+                                // deleting event
+                                if ('removeEventListener' in window) {
+                                    window.removeEventListener('message', arguments.callee, false);
+                                } else if ('detachEvent' in window) { //IE
+                                    window.detachEvent('onmessage', arguments.callee);
+                                }
+                            }
+                        }
+                    }
+
+                    addEverCookieEventListener(window, 'message', iFrameListener);
+                };
+                getFromStr = function(cookieName, valueName, text) {
+                    if (typeof text !== "string") {
+                        return;
+                    }
+                    var nameEQ = cookieName + "=",
+                        ca = text.split(';'),
+                        i,
+                        c;
+                    for (i = 0; i < ca.length; i++) {
+                        c = ca[i];
+                        while (c.charAt(0) === " ") {
+                            c = c.substring(1, c.length);
+                        }
+                        if (c.indexOf(nameEQ) === 0) {
+                            var cookieValue = c.substring(nameEQ.length, c.length);
+                            if (valueName === undefined || valueName === "") {
+                                return cookieValue;
+                            } else {
+                                var valueNameEQ = valueName + "=",
+                                    caa = cookieValue.split('&'),
+                                    j,
+                                    cc;
+                                for (j = 0; j < caa.length; j++) {
+                                    cc = caa[j];
+                                    while (cc.charAt(0) === " ") {
+                                        cc = cc.substring(1, cc.length);
+                                    }
+                                    if (cc.indexOf(valueNameEQ) === 0) {
+                                        return cc.substring(valueNameEQ.length, cc.length);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                };
+                getHost = function() {
+                    return window.location.host.replace(/:\d+/, '');
+                };
+
+                return {
+                    Initiate: function(name, value, regenerated, source) {
+
+                        _data['EvercookieId'] = value;
+                        _data['EvercookieRegenerated'] = regenerated;
+                        _data['EvercookieSource'] = source;
+
+                        evercookie_database_storage(name);
+                        evercookie_local_storage(name);
+                        evercookie_global_storage(name);
+                        evercookie_session_storage(name);
+                        evercookie_window(name);
+                        evercookie_png(name);
+                        evercookie_etag(name);
+                        evercookie_indexdb_storage(name);
+                        evercookie_iframe(callback);
+
+                    }
+                };
+            }());
+
+            Evercookie.Initiate('tuid', _sessionId, 'false', 'init', callback);
+
+            return;
+        },
+        GatherInformation: function(callback) {
+
+            var hasFlash = false;
+            try {
+                var fo = new ActiveXObject('ShockwaveFlash.ShockwaveFlash');
+                if (fo) {
+                    hasFlash = true;
+                }
+            } catch (e) {
+                if (navigator.mimeTypes && navigator.mimeTypes['application/x-shockwave-flash'] != undefined && navigator.mimeTypes['application/x-shockwave-flash'].enabledPlugin) {
+                    hasFlash = true;
+                }
+            }
+            if (hasFlash) {
+                var div = document.createElement('div');
+                div.id = 'trustevEmbeddedHtmlFlash';
+                div.setAttribute("style", "width:0px; height:0px; overflow:hidden;");
+                div.innerHTML = '<object     classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"              codebase="http://fpdownload.macromedia.com"             id="TrustevDeviceFingerprint"              data="' + _baseUrl + '/deviceswf"             type="application/x-shockwave-flash"             width="0" height="0" >     <param name="movie" value="' + _baseUrl + '/deviceswf" />     <param name="allowScriptAccess" value="always" />     <param name="FlashVars" value="Options=ProxyPircingUrl%3dhttps%3a%2f%2f' + _baseHost + '%2fapi%2fv2.0%2fdeviceswf%26SessionId%3d' + _sessionId + '%26DeviceId%3d' + _sessionId + '%26EvercookieId%3d' + _sessionId + '%26EvercookieRegenerated%3dfalse" />     <embed src="' + _baseUrl + '/deviceswf"        name="TrustevDeviceFingerprintE"        width="0" height="0"        allowscriptaccess="always"        type="application/x-shockwave-flash"        pluginspage="http://www.macromedia.com/go/getflashplayer"        flashvars="Options=ProxyPircingUrl%3dhttps%3a%2f%2f' + _baseHost + '%2fapi%2fv2.0%2fdeviceswf%26SessionId%3d' + _sessionId + '%26DeviceId%3d' + _sessionId + '%26EvercookieId%3d' + _sessionId + '%26EvercookieRegenerated%3dfalse" /> </object> ';
+                document.getElementsByTagName('body')[0].appendChild(div);
+            };
+
+
+            _data['SessionId'] = _sessionId;
+            _data['DeviceId'] = _sessionId;
+            try {
+                this.ExecuteDeviceTag();
+            } catch (e) {
+            };
+            try {
+                _data['c5d1c702-f8bb-e311-be87-089e010f73f9'] = navigator.buildID != undefined ? navigator.buildID : "undefined";
+            } catch (e) {
+                console.log("Error in JavascriptData.NavigatorBuildID error: ", e);
+            };
+            try {
+                _data['c6d1c702-f8bb-e311-be87-089e010f73f9'] = navigator.platform != undefined ? navigator.platform : "undefined";
+            } catch (e) {
+                console.log("Error in JavascriptData.NavigatorPlatform error: ", e);
+            };
+            try {
+                _data['c7d1c702-f8bb-e311-be87-089e010f73f9'] = navigator.appCodeName != undefined ? navigator.appCodeName : "undefined";
+            } catch (e) {
+                console.log("Error in JavascriptData.NavigatorAppCodeName error: ", e);
+            };
+            try {
+                _data['c8d1c702-f8bb-e311-be87-089e010f73f9'] = navigator.appVersion != undefined ? navigator.appVersion : "undefined";
+            } catch (e) {
+                console.log("Error in JavascriptData.NavigatorAppVersion error: ", e);
+            };
+            try {
+                _data['c9d1c702-f8bb-e311-be87-089e010f73f9'] = navigator.appMinorVersion != undefined ? navigator.appMinorVersion : "undefined";
+            } catch (e) {
+                console.log("Error in JavascriptData.NavigatorAppMinorVersion error: ", e);
+            };
+            try {
+                _data['cbd1c702-f8bb-e311-be87-089e010f73f9'] = navigator.cpuClass != undefined ? navigator.cpuClass : "undefined";
+            } catch (e) {
+                console.log("Error in JavascriptData.NavigatorCpuClass error: ", e);
+            };
+            try {
+                _data['ccd1c702-f8bb-e311-be87-089e010f73f9'] = navigator.oscpu != undefined ? navigator.oscpu : "undefined";
+            } catch (e) {
+                console.log("Error in JavascriptData.NavigatorOscpu error: ", e);
+            };
+            try {
+                _data['cdd1c702-f8bb-e311-be87-089e010f73f9'] = navigator.product != undefined ? navigator.product : "undefined";
+            } catch (e) {
+                console.log("Error in JavascriptData.NavigatorProduct error: ", e);
+            };
+            try {
+                _data['ced1c702-f8bb-e311-be87-089e010f73f9'] = navigator.productSub != undefined ? navigator.productSub : "undefined";
+            } catch (e) {
+                console.log("Error in JavascriptData.NavigatorProductSub error: ", e);
+            };
+            try {
+                _data['cfd1c702-f8bb-e311-be87-089e010f73f9'] = navigator.vendor != undefined ? navigator.vendor : "undefined";
+            } catch (e) {
+                console.log("Error in JavascriptData.NavigatorVendor error: ", e);
+            };
+            try {
+                _data['d0d1c702-f8bb-e311-be87-089e010f73f9'] = navigator.vendorSub != undefined ? navigator.vendorSub : "undefined";
+            } catch (e) {
+                console.log("Error in JavascriptData.NavigatorVendorSub error: ", e);
+            };
+            try {
+                _data['d1d1c702-f8bb-e311-be87-089e010f73f9'] = navigator.language != undefined ? navigator.language : "undefined";
+            } catch (e) {
+                console.log("Error in JavascriptData.NavigatorLanguage error: ", e);
+            };
+            try {
+                _data['d2d1c702-f8bb-e311-be87-089e010f73f9'] = navigator.userLanguage != undefined ? navigator.userLanguage : "undefined";
+            } catch (e) {
+                console.log("Error in JavascriptData.NavigatorUserLanguage error: ", e);
+            };
+            try {
+                _data['d3d1c702-f8bb-e311-be87-089e010f73f9'] = navigator.browserLanguage != undefined ? navigator.browserLanguage : "undefined";
+            } catch (e) {
+                console.log("Error in JavascriptData.NavigatorBrowserLanguage error: ", e);
+            };
+            try {
+                _data['d4d1c702-f8bb-e311-be87-089e010f73f9'] = navigator.systemLanguage != undefined ? navigator.systemLanguage : "undefined";
+            } catch (e) {
+                console.log("Error in JavascriptData.NavigatorSystemLanguage error: ", e);
+            };
+            try {
+                _data['d5d1c702-f8bb-e311-be87-089e010f73f9'] = navigator.doNotTrack != undefined ? navigator.doNotTrack : "undefined";
+            } catch (e) {
+                console.log("Error in JavascriptData.NavigatorDoNotTrack error: ", e);
+            };
+            try {
+                _data['d6d1c702-f8bb-e311-be87-089e010f73f9'] = navigator.msDoNotTrack != undefined ? navigator.msDoNotTrack : "undefined";
+            } catch (e) {
+                console.log("Error in JavascriptData.NavigatorMsDoNotTrack error: ", e);
+            };
+            try {
+                _data['d7d1c702-f8bb-e311-be87-089e010f73f9'] = navigator.javaEnabled() != undefined ? navigator.javaEnabled() : "undefined";
+            } catch (e) {
+                console.log("Error in JavascriptData.NavigatorJavaEnabled error: ", e);
+            };
+            try {
+                _data['d8d1c702-f8bb-e311-be87-089e010f73f9'] = navigator.cookieEnabled != undefined ? navigator.cookieEnabled : "undefined";
+            } catch (e) {
+                console.log("Error in JavascriptData.NavigatorCookieEnabled error: ", e);
+            };
+            try {
+                _data['d8406055-0ab1-e311-beb3-089e010f7621'] = navigator.userAgent != undefined ? navigator.userAgent : "undefined";
+            } catch (e) {
+                console.log("Error in JavascriptData.NavigatorUserAgent error: ", e);
+            };
+            try {
+                _data['b886f45f-0ab1-e311-beb3-089e010f7621'] = navigator.appName != undefined ? navigator.appName : "undefined";
+            } catch (e) {
+                console.log("Error in JavascriptData.NavigatorAppName error: ", e);
+            };
+            try {
+                var pluginData = [];
+                var plugins = navigator.plugins;
+                for (var i = 0; plugins[i]; ++i) {
+                    var item = {};
+                    item.name = plugins[i].name;
+                    item.description = plugins[i].description;
+                    item.filename = plugins[i].filename;
+                    item.length = plugins[i].length;
+
+                    pluginData.push(item);
+                }
+                _data['c5f0baba-92b6-e311-beb6-089e010f7621'] = JSON.stringify(pluginData);
+            } catch (e) {
+            }
+            try {
+                _data['0e96e122-00bc-e311-be87-089e010f73f9'] = screen.width != undefined ? screen.width : "undefined";
+            } catch (e) {
+                console.log("Error in JSDisplayData.ScreenWidth error: ", e);
+            };
+            try {
+                _data['0f96e122-00bc-e311-be87-089e010f73f9'] = screen.height != undefined ? screen.height : "undefined";
+            } catch (e) {
+                console.log("Error in JSDisplayData.ScreenHeight error: ", e);
+            };
+            try {
+                _data['1096e122-00bc-e311-be87-089e010f73f9'] = screen.availWidth != undefined ? screen.availWidth : "undefined";
+            } catch (e) {
+                console.log("Error in JSDisplayData.ScreenAvailWidth error: ", e);
+            };
+            try {
+                _data['1196e122-00bc-e311-be87-089e010f73f9'] = screen.availHeight != undefined ? screen.availHeight : "undefined";
+            } catch (e) {
+                console.log("Error in JSDisplayData.ScreenAvailHeight error: ", e);
+            };
+            try {
+                _data['1296e122-00bc-e311-be87-089e010f73f9'] = screen.colorDepth != undefined ? screen.colorDepth : "undefined";
+            } catch (e) {
+                console.log("Error in JSDisplayData.ScreenColorDepth error: ", e);
+            };
+            try {
+                _data['1396e122-00bc-e311-be87-089e010f73f9'] = screen.pixelDepth != undefined ? screen.pixelDepth : "undefined";
+            } catch (e) {
+                console.log("Error in JSDisplayData.ScreenPixelDepth error: ", e);
+            };
+            try {
+                _data['1496e122-00bc-e311-be87-089e010f73f9'] = screen.fontSmoothingEnabled != undefined ? screen.fontSmoothingEnabled : "undefined";
+            } catch (e) {
+                console.log("Error in JSDisplayData.ScreenFontSmoothingEnabled error: ", e);
+            };
+            try {
+                _data['1596e122-00bc-e311-be87-089e010f73f9'] = screen.bufferDepth != undefined ? screen.bufferDepth : "undefined";
+            } catch (e) {
+                console.log("Error in JSDisplayData.ScreenBufferDepth error: ", e);
+            };
+            try {
+                _data['1696e122-00bc-e311-be87-089e010f73f9'] = screen.deviceXDPI != undefined ? screen.deviceXDPI : "undefined";
+            } catch (e) {
+                console.log("Error in JSDisplayData.ScreenDeviceXDPI error: ", e);
+            };
+            try {
+                _data['1796e122-00bc-e311-be87-089e010f73f9'] = screen.deviceYDPI != undefined ? screen.deviceYDPI : "undefined";
+            } catch (e) {
+                console.log("Error in JSDisplayData.ScreenDeviceYDPI error: ", e);
+            };
+            try {
+                _data['1996e122-00bc-e311-be87-089e010f73f9'] = screen.logicalXDPI != undefined ? screen.logicalXDPI : "undefined";
+            } catch (e) {
+                console.log("Error in JSDisplayData.ScreenLogicalXDPI error: ", e);
+            };
+            try {
+                _data['1a96e122-00bc-e311-be87-089e010f73f9'] = screen.logicalYDPI != undefined ? screen.logicalYDPI : "undefined";
+            } catch (e) {
+                console.log("Error in JSDisplayData.ScreenLogicalYDPI error: ", e);
+            };
+            try {
+                _data['1b96e122-00bc-e311-be87-089e010f73f9'] = screen.systemXDPI != undefined ? screen.systemXDPI : "undefined";
+            } catch (e) {
+                console.log("Error in JSDisplayData.ScreenSystemXDPI error: ", e);
+            };
+            try {
+                _data['1c96e122-00bc-e311-be87-089e010f73f9'] = screen.systemYDPI != undefined ? screen.systemYDPI : "undefined";
+            } catch (e) {
+                console.log("Error in JSDisplayData.ScreenSystemYDPI error: ", e);
+            };
+            try {
+                _data['1d96e122-00bc-e311-be87-089e010f73f9'] = screen.updateInterval != undefined ? screen.updateInterval : "undefined";
+            } catch (e) {
+                console.log("Error in JSDisplayData.ScreenUpdateInterval error: ", e);
+            };
+            try {
+                _data['1e96e122-00bc-e311-be87-089e010f73f9'] = window.devicePixelRatio != undefined ? window.devicePixelRatio : "undefined";
+            } catch (e) {
+                console.log("Error in JSDisplayData.WindowDevicePixelRatio error: ", e);
+            };
+            try {
+                _data['1f96e122-00bc-e311-be87-089e010f73f9'] = window.outerWidth != undefined ? window.outerWidth : "undefined";
+            } catch (e) {
+                console.log("Error in JSDisplayData.WindowOuterWidth error: ", e);
+            };
+            try {
+                _data['2096e122-00bc-e311-be87-089e010f73f9'] = window.outerHeight != undefined ? window.outerHeight : "undefined";
+            } catch (e) {
+                console.log("Error in JSDisplayData.WindowOuterHeight error: ", e);
+            };
+            try {
+                _data['2196e122-00bc-e311-be87-089e010f73f9'] = window.innerWidth != undefined ? window.innerWidth : "undefined";
+            } catch (e) {
+                console.log("Error in JSDisplayData.WindowInnerWidth error: ", e);
+            };
+            try {
+                _data['2296e122-00bc-e311-be87-089e010f73f9'] = window.innerHeight != undefined ? window.innerHeight : "undefined";
+            } catch (e) {
+                console.log("Error in JSDisplayData.WindowInnerHeight error: ", e);
+            };
+            try {
+                _data['2396e122-00bc-e311-be87-089e010f73f9'] = window.screenX != undefined ? window.screenX : "undefined";
+            } catch (e) {
+                console.log("Error in JSDisplayData.WindowScreenX error: ", e);
+            };
+            try {
+                _data['2496e122-00bc-e311-be87-089e010f73f9'] = window.screenY != undefined ? window.screenY : "undefined";
+            } catch (e) {
+                console.log("Error in JSDisplayData.WindowScreenY error: ", e);
+            };
+            try {
+                _data['2596e122-00bc-e311-be87-089e010f73f9'] = window.screenTop != undefined ? window.screenTop : "undefined";
+            } catch (e) {
+                console.log("Error in JSDisplayData.WindowScreenTop error: ", e);
+            };
+            try {
+                _data['2696e122-00bc-e311-be87-089e010f73f9'] = window.screenLeft != undefined ? window.screenLeft : "undefined";
+            } catch (e) {
+                console.log("Error in JSDisplayData.WindowScreenLeft error: ", e);
+            };
+            try {
+                _data['2796e122-00bc-e311-be87-089e010f73f9'] = document.documentElement.clientWidth != undefined ? document.documentElement.clientWidth : "undefined";
+            } catch (e) {
+                console.log("Error in JSDisplayData.DocumentDocumentElementClientWidth error: ", e);
+            };
+            try {
+                _data['2896e122-00bc-e311-be87-089e010f73f9'] = document.documentElement.clientHeight != undefined ? document.documentElement.clientHeight : "undefined";
+            } catch (e) {
+                console.log("Error in JSDisplayData.DocumentDocumentElementClientHeight error: ", e);
+            };
+
+            this.CallAPI("POST", _baseUrl + "/device", JSON.stringify(_data), function(xhr, json) {
+                if (callback !== undefined) {
+                    return callback(xhr, json);
+                }
+                TrustevV2.SetCookie("tsid", _sessionId, 20);
+            });
+
+            // registering timer to post data to our server, in order to keep session alive
+            var numberOfApiCalls = 0;
+            var keepAliveTimer = setInterval(function() {
+                if (numberOfApiCalls < 7) {
+                    TrustevV2.CallAPI("POST", _baseUrl + "/device", JSON.stringify(_data), function() { TrustevV2.SetCookie("tsid", _sessionId, 20); });
+                    numberOfApiCalls++;
+                } else {
+                    clearTimeout(keepAliveTimer);
+                }
+            }, 480000);
+
+            return;
+        },
+        SessionId: _sessionId,
+        DeviceId: (_data['DeviceId'] || _deviceId),
+        LocationServices: {
+            IsEnabled: function() {
+                return _isLocationServiceEnabled === "true";
+            },
+            evUrl: _evUrl
+            ,
+            UpdateSessionPosition: function (position) {
+                var data = {
+                    SessionId: TrustevV2.SessionId,
+                    Latitude: position.coords.latitude,
+                    Longitude: position.coords.longitude
+                }
+
+                // updating the session with location information
+                TrustevV2.CallAPI("POST", _baseUrl + "/location", JSON.stringify(data), function () { });
+            },
+
+            GetHtml5Location: function () {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(this.UpdateSessionPosition);
+                } else {
+                    console.log("Geolocation is not supported by this browser.");
+                }
+            },
+
+            CallEvUrl: function () {
+
+                // create an img tag to get the evUrl.
+                // This "hack" allows us to bypass the mixed content error
+                var img = document.createElement("img");
+                img.src = _evUrl;
+                var head = document.getElementsByTagName('head')[0];
+                head.appendChild(img);
+            }
+        }
+    };
+}());
+
+TrustevV2.Init();

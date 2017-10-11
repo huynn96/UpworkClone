@@ -1,0 +1,81 @@
+
+<!-- saved from url=(0053)https://s.tagove.com/cookie.html?x=0.7450945617998883 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <script>
+        function log(msg){
+            window.parent.postMessage({
+                logTGCookieFrame:msg
+            },'*');
+        }
+
+        function createCookie(name,value,secodns) {
+            if (secodns) {
+                var date = new Date();
+                date.setTime(date.getTime()+(secodns*1000));
+                var expires = "; expires="+date.toGMTString();
+            }
+            else var expires = "";
+            document.cookie = name+"="+encodeURIComponent(value)+expires+"; path=/";
+        }
+
+        function getCookie(name) {
+            var value = "; " + document.cookie;
+            var parts = value.split("; " + name + "=");
+            if (parts.length == 2) return decodeURIComponent(parts.pop().split(";").shift());
+        }
+
+        function getFixCookie(name){
+            var list=[],data;
+            data=getCookie(name);
+            if(data)
+                list.push(data);
+
+            /*data=sessionStorage.getItem(name);
+            if(data)
+                list.push(data);*/
+
+            data=localStorage.getItem(name);
+            if(data)
+                list.push(data);
+
+            log('get: '+name+' value:'+JSON.stringify(list));
+            return list;
+        }
+
+        function setFixCookie(name,value,expired){
+            if(!expired)
+                (localStorage).setItem(name,value);
+            /*sessionStorage.setItem(name,value);*/
+            createCookie(name,value,expired);
+            log('set: '+name+' value:'+value);
+        }
+
+        function onMessage(event){
+            var origin = event.origin || event.originalEvent.origin; // For Chrome, the origin property is in the event.originalEvent object.
+            var data=event.data;
+            var win=event.source;
+            if(data.method=='get'){
+                var back={
+                    msgTagoveId:data.msgTagoveId,
+                    list:getFixCookie(data.name),
+                };
+                win.postMessage(back,origin);
+            } else if(data.method=='set'){
+                setFixCookie(data.name,data.value,data.expires);
+                var back={
+                    msgTagoveId:data.msgTagoveId,
+                    done:true,
+                };
+                win.postMessage(back,origin);
+            }
+        }
+
+        if (typeof window.addEventListener !== 'undefined') {
+            window.addEventListener('message', onMessage, false);
+        } else {
+            window.attachEvent('onmessage', onMessage);
+        }
+    </script>
+</head>
+<body>
+</body></html>

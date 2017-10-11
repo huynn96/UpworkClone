@@ -1,0 +1,135 @@
+.o-left-border {
+    border-left: 1px solid #d2d6de;
+}
+.o-skill-tag {
+    font-weight: normal;
+    cursor: pointer;
+}
+.drop-box {
+    background: none repeat scroll 0 0 #F8F8F8;
+    border: 5px dashed #DDD;
+    text-align: center;
+}
+
+.drop-box.dragover {
+    border-color: #7bd454;
+}
+
+
+.eo-profile-image-upload > .row > .column-wrapper-right .btn-link {
+    padding-right: 20px;
+}
+
+/*workaround */
+.up-thumb-crop-dialog > .modal-dialog.modal-lg,
+.portraitDialog > .modal-dialog.modal-lg {
+    width: 760px;
+}
+
+.up-thumb-crop-dialog .column-wrapper-right p {
+    display: none;
+}
+
+.up-thumb-crop-dialog .column-wrapper-right .avatar-wrapper {
+    margin-top: 100px;
+}
+
+/* end workaround*/.fe-ui-window.fe-ui-profile-visibility .modal-title .glyphicon, .fe-ui-application.fe-ui-profile-visibility .modal-title .glyphicon {
+  margin: 0; }
+
+.fe-ui-window.fe-ui-profile-visibility .b-info-text, .fe-ui-application.fe-ui-profile-visibility .b-info-text {
+  min-height: 280px; }
+
+.fe-ui-window.fe-ui-profile-visibility .b-visibility-list, .fe-ui-application.fe-ui-profile-visibility .b-visibility-list {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  padding: 0 0 30px;
+  align-content: space-between; }
+  .fe-ui-window.fe-ui-profile-visibility .b-visibility-list .eo-button-box, .fe-ui-application.fe-ui-profile-visibility .b-visibility-list .eo-button-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: auto; }
+    .fe-ui-window.fe-ui-profile-visibility .b-visibility-list .eo-button-box.active:after, .fe-ui-application.fe-ui-profile-visibility .b-visibility-list .eo-button-box.active:after {
+      border-left: 4px solid #37a000;
+      left: -2px;
+      right: auto;
+      top: -2px;
+      bottom: -2px; }
+    .fe-ui-window.fe-ui-profile-visibility .b-visibility-list .eo-button-box .icon, .fe-ui-application.fe-ui-profile-visibility .b-visibility-list .eo-button-box .icon {
+      display: inline-block;
+      margin: 0 15px 0 0;
+      vertical-align: middle;
+      width: 30px; }
+    .fe-ui-window.fe-ui-profile-visibility .b-visibility-list .eo-button-box .text, .fe-ui-application.fe-ui-profile-visibility .b-visibility-list .eo-button-box .text {
+      display: inline-block;
+      width: 90%;
+      white-space: normal;
+      text-align: left;
+      vertical-align: middle; }
+    .fe-ui-window.fe-ui-profile-visibility .b-visibility-list .eo-button-box.disabled, .fe-ui-window.fe-ui-profile-visibility .b-visibility-list .eo-button-box.disabled:active, .fe-ui-window.fe-ui-profile-visibility .b-visibility-list .eo-button-box.disabled:hover, .fe-ui-window.fe-ui-profile-visibility .b-visibility-list .eo-button-box[disabled], .fe-ui-window.fe-ui-profile-visibility .b-visibility-list .eo-button-box[disabled]:active, .fe-ui-window.fe-ui-profile-visibility .b-visibility-list .eo-button-box[disabled]:hover, .fe-ui-application.fe-ui-profile-visibility .b-visibility-list .eo-button-box.disabled, .fe-ui-application.fe-ui-profile-visibility .b-visibility-list .eo-button-box.disabled:active, .fe-ui-application.fe-ui-profile-visibility .b-visibility-list .eo-button-box.disabled:hover, .fe-ui-application.fe-ui-profile-visibility .b-visibility-list .eo-button-box[disabled], .fe-ui-application.fe-ui-profile-visibility .b-visibility-list .eo-button-box[disabled]:active, .fe-ui-application.fe-ui-profile-visibility .b-visibility-list .eo-button-box[disabled]:hover {
+      color: #a0a0a0 !important;
+      border-color: #e0e0e0;
+      background: #e0e0e0 !important;
+      text-shadow: none;
+      text-decoration: none;
+      outline: none !important;
+      cursor: not-allowed;
+      pointer-events: none;
+      box-shadow: none; }
+
+.fe-ui-window.fe-ui-profile-visibility .fe-ui-profile-visibility-directive, .fe-ui-application.fe-ui-profile-visibility .fe-ui-profile-visibility-directive {
+  position: relative; }
+  .fe-ui-window.fe-ui-profile-visibility .fe-ui-profile-visibility-directive .icon, .fe-ui-application.fe-ui-profile-visibility .fe-ui-profile-visibility-directive .icon {
+    margin: 0;
+    vertical-align: middle; }
+  .fe-ui-window.fe-ui-profile-visibility .fe-ui-profile-visibility-directive .btn, .fe-ui-application.fe-ui-profile-visibility .fe-ui-profile-visibility-directive .btn {
+    display: inline-block;
+    vertical-align: middle; }
+
+.fe-ui-window.fe-ui-profile-visibility .modal-header .close:before, .fe-ui-application.fe-ui-profile-visibility .modal-header .close:before {
+  content: ''; }
+.fe-progress-bar {
+    border: 1px solid #37a000;
+    height: 10px;
+    width: 100%;
+}
+
+.fe-progress-bar-filled {
+    background-color: #37a000;
+    height: 100%;
+    width: 100%;
+}
+
+.fe-percent-title {
+    vertical-align: top;
+    line-height: 1.0;
+    font-size: 10px;
+}
+
+.fe-fwh-spinner {
+    position: absolute;
+}
+
+.fe-cat-wrapper {
+    position: relative;
+}
+
+.fe-ui-pc-pencil {
+    margin: 0;
+    padding: 0;
+}
+
+.fe-ui-profile-completeness label:first-of-type a:hover {
+    text-decoration: none;
+}
+
+.fe-ui-availability .icon {
+    margin: 0;
+}
+
+.fe-fwh-increase-completnes .media .glyphicon {
+    color: #37a000;
+}
+/*# sourceMappingURL=profile.settings-es6.min.css.map*/

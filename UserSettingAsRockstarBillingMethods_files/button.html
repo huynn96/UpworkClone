@@ -1,0 +1,3962 @@
+<!DOCTYPE html>
+<!-- saved from url=(0180)https://www.paypal.com/webapps/hermes/button?env=production&locale.x=en_US&style.size=medium&style.color=blue&style.shape=rect&style.label=pay&version=4&uid=0d0fbd0c71&xcomponent=1 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="robots" content="noindex">
+
+        <title>PayPal</title>
+    </head>
+
+    <body class="">
+
+    
+        <style type="text/css">
+            
+
+    html, body {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    * {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+
+    /* Base Button */
+
+    .paypal-button {
+        display: block;
+        white-space: nowrap;
+        margin: 0;
+        background: 0;
+        border: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        text-transform: none;
+        font-weight: 500;
+        -webkit-font-smoothing: antialiased;
+        font-smoothing: antialiased;
+        z-index: 0;
+        font-size: 0;
+
+        width: 100%;
+
+        min-width: 100px;
+        min-height: 24px;
+
+        box-sizing: border-box;
+    }
+
+
+
+    .paypal-button .paypal-button-content {
+        display: inline-block;
+        padding: 4px 8px 4px;
+        border: 1px solid transparent;
+        border-radius: 0 3px 3px 0;
+        position: relative;
+        width: 100%;
+        box-sizing: border-box;
+        border: none;
+        vertical-align: top;
+        cursor: pointer;
+        outline: none;
+    }
+
+    .paypal-button .paypal-button-content:hover {
+        box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.2), 0 0 1px 1px rgba(255, 255, 255, 0.2);
+    }
+
+    .paypal-button .paypal-button-content:focus {
+        box-shadow: -1px -1px 18px 1px rgba(0, 0, 0, 0.25) inset;
+    }
+
+    .paypal-button .paypal-button-content:nth-child(2):focus {
+        box-shadow: -1px -1px 18px 1px rgba(0, 0, 0, 0.25) inset;
+    }
+
+    .paypal-button .paypal-button-content .logo {
+        padding: 0;
+        display: inline-block;
+        background: none;
+        border: none;
+        width: auto;
+    }
+
+    .paypal-button .paypal-button-content .logo.logo-pp {
+        margin-right: 2px;
+    }
+
+    .paypal-button .paypal-button-content .text {
+        display: inline-block;
+        white-space: pre;
+    }
+
+    .paypal-button.paypal-branding-unbranded .paypal-button-content .text .branding {
+        display: none;
+    }
+
+    .paypal-button .paypal-button-content .logo, .paypal-button .paypal-button-content .text {
+        vertical-align: top;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        text-align: left;
+        visibility: hidden;
+    }
+
+    .paypal-button .paypal-tagline {
+        max-width: 100%;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: normal;
+        display: block;
+        text-align: center;
+        width: auto;
+        margin-top: 2px;
+        visibility: hidden;
+    }
+
+    .paypal-button .paypal-tagline.paypal-tagline-color-blue {
+        color: #003366;
+    }
+
+    .paypal-button .paypal-tagline.paypal-tagline-color-black {
+        color: #6C7378;
+    }
+
+    /* Small */
+
+    @media only screen and (min-width : 0px) {
+        .paypal-button {
+            max-width: 200px;
+        }
+
+        .paypal-button .paypal-button-content {
+            height: 26px;
+            border-radius: 13px;
+        }
+
+        .paypal-button .paypal-button-content,
+        .paypal-button .paypal-tagline {
+            font-size: 10px;
+        }
+
+        .paypal-button.paypal-branding-unbranded .paypal-button-content {
+            font-size: 13px;
+        }
+
+        .paypal-button .paypal-button-content .logo.logo-pp {
+            height: 18px;
+        }
+
+        .paypal-button .paypal-button-content .logo.logo-paypal,
+        .paypal-button .paypal-button-content .logo.logo-venmo,
+        .paypal-button .paypal-button-content .logo.logo-credit {
+            height: 17px;
+        }
+
+        .paypal-button.paypal-shape-rect .paypal-button-content {
+            border-radius: 4px;
+        }
+    }
+
+    @media only screen and (max-width : 147px) {
+
+        .paypal-button .paypal-button-content.paypal-label-credit .logo.logo-paypal {
+            display: none;
+        }
+
+        .paypal-button.paypal-layout-dual .paypal-button-content:nth-child(2) {
+            display: none;
+        }
+
+        .paypal-button .paypal-tagline {
+            display: none;
+        }
+    }
+
+    @media only screen and (min-width : 148px) {
+
+        .paypal-button.paypal-layout-dual .paypal-button-content .logo.logo-pp {
+            height: 16px;
+        }
+
+        .paypal-button.paypal-layout-dual .paypal-button-content .logo.logo-paypal,
+        .paypal-button.paypal-layout-dual .paypal-button-content .logo.logo-venmo,
+        .paypal-button.paypal-layout-dual .paypal-button-content .logo.logo-credit {
+            height: 15px;
+        }
+
+        .paypal-button.paypal-layout-dual .paypal-button-content {
+            width: 49%;
+        }
+
+        .paypal-button.paypal-layout-dual .paypal-button-content:nth-child(1) {
+            margin-right: 2%;
+        }
+    }
+
+    /* Medium */
+
+    @media only screen and (min-width : 200px) {
+
+        .paypal-button {
+            max-width: 300px;
+        }
+
+        .paypal-button .paypal-button-content {
+            height: 32px;
+            border-radius: 16px;
+        }
+
+        .paypal-button .paypal-button-content,
+        .paypal-button .paypal-tagline {
+            font-size: 12px;
+        }
+
+        .paypal-button.paypal-branding-unbranded .paypal-button-content  {
+            font-size: 15px;
+        }
+
+        .paypal-button .paypal-button-content .logo.logo-pp {
+            height: 23px;
+        }
+
+        .paypal-button .paypal-button-content .logo.logo-paypal,
+        .paypal-button .paypal-button-content .logo.logo-venmo,
+        .paypal-button .paypal-button-content .logo.logo-credit {
+            height: 22px;
+        }
+
+        .paypal-button.paypal-layout-dual .paypal-button-content .logo.logo-pp {
+            height: 21px;
+        }
+
+        .paypal-button.paypal-layout-dual .paypal-button-content .logo.logo-paypal,
+        .paypal-button.paypal-layout-dual .paypal-button-content .logo.logo-venmo,
+        .paypal-button.paypal-layout-dual .paypal-button-content .logo.logo-credit {
+            height: 20px;
+        }
+
+        .paypal-button.paypal-shape-rect .paypal-button-content {
+            border-radius: 6px;
+        }
+    }
+
+    /* Large */
+
+    @media only screen and (min-width : 300px) {
+
+        .paypal-button {
+            max-width: 500px;
+        }
+
+        .paypal-button .paypal-button-content {
+            height: 42px;
+            border-radius: 21px;
+        }
+
+        .paypal-button .paypal-button-content,
+        .paypal-button .paypal-tagline {
+            font-size: 14px;
+        }
+
+        .paypal-button.paypal-branding-unbranded .paypal-button-content  {
+            font-size: 18px;
+        }
+
+        .paypal-button .paypal-button-content .logo.logo-pp {
+            height: 30px;
+        }
+
+        .paypal-button .paypal-button-content .logo.logo-paypal,
+        .paypal-button .paypal-button-content .logo.logo-venmo,
+        .paypal-button .paypal-button-content .logo.logo-credit {
+            height: 27px;
+        }
+
+        .paypal-button.paypal-layout-dual .paypal-button-content .logo.logo-pp {
+            height: 27px;
+        }
+
+        .paypal-button.paypal-layout-dual .paypal-button-content .logo.logo-paypal,
+        .paypal-button.paypal-layout-dual .paypal-button-content .logo.logo-venmo,
+        .paypal-button.paypal-layout-dual .paypal-button-content .logo.logo-credit {
+            height: 24px;
+        }
+
+        .paypal-button.paypal-shape-rect .paypal-button-content {
+            border-radius: 6px;
+        }
+    }
+
+
+    /* Gold */
+
+    .paypal-button .paypal-button-content.paypal-color-gold {
+        background: #ffc439;
+        color: #000;
+        text-shadow: 0px 1px 0 #ffdc88;
+    }
+
+    /* Blue */
+
+    .paypal-button .paypal-button-content.paypal-color-blue {
+        background: #009cde;
+        color: #fff;
+        text-shadow: 0px -1px 0 #0d86bb;
+    }
+
+    /* Silver */
+
+    .paypal-button .paypal-button-content.paypal-color-silver {
+        background: #eee;
+        color: #000;
+        text-shadow: 0px -1px 0 #ccc;
+    }
+
+     /* Black */
+
+    .paypal-button .paypal-button-content.paypal-color-black {
+        background: #2C2E2F;
+        color: #fff;
+        text-shadow: 0px 1px 0 #6C7378;
+    }
+
+
+
+
+     /* Credit Button */
+
+    .paypal-button .paypal-button-content.paypal-label-credit.paypal-color-creditblue {
+        background: #003087;
+        color: #fff;
+        text-shadow: 0px -1px 0 #0d86bb;
+    }
+
+    .paypal-button .paypal-button-content.paypal-label-credit .text {
+        display: none !important;
+    }
+
+    .paypal-button.paypal-branding-unbranded .paypal-button-content  {
+        min-width: 60%;
+        width: auto;
+        font-weight: 900;
+    }
+
+        </style>
+
+        <div id="paypal-button" class="paypal-button paypal-branding-branded paypal-layout-single paypal-shape-rect">
+            
+        <div class="paypal-button-content paypal-label-pay paypal-color-blue paypal-logo-color-white" role="button" tabindex="0">
+            <span class="text" style="visibility: visible;">Pay with </span><img class="logo logo-paypal logo-paypal-blue" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjMyIiB2aWV3Qm94PSIwIDAgMTAwIDMyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaW5ZTWluIG1lZXQiPgogICAgPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTSAxMiA1LjMxNSBMIDQuMiA1LjMxNSBDIDMuNyA1LjMxNSAzLjIgNS43MTUgMy4xIDYuMjE1IEwgMCAyNi4yMTUgQyAtMC4xIDI2LjYxNSAwLjIgMjYuOTE1IDAuNiAyNi45MTUgTCA0LjMgMjYuOTE1IEMgNC44IDI2LjkxNSA1LjMgMjYuNTE1IDUuNCAyNi4wMTUgTCA2LjIgMjAuNjE1IEMgNi4zIDIwLjExNSA2LjcgMTkuNzE1IDcuMyAxOS43MTUgTCA5LjggMTkuNzE1IEMgMTQuOSAxOS43MTUgMTcuOSAxNy4yMTUgMTguNyAxMi4zMTUgQyAxOSAxMC4yMTUgMTguNyA4LjUxNSAxNy43IDcuMzE1IEMgMTYuNiA2LjAxNSAxNC42IDUuMzE1IDEyIDUuMzE1IFogTSAxMi45IDEyLjYxNSBDIDEyLjUgMTUuNDE1IDEwLjMgMTUuNDE1IDguMyAxNS40MTUgTCA3LjEgMTUuNDE1IEwgNy45IDEwLjIxNSBDIDcuOSA5LjkxNSA4LjIgOS43MTUgOC41IDkuNzE1IEwgOSA5LjcxNSBDIDEwLjQgOS43MTUgMTEuNyA5LjcxNSAxMi40IDEwLjUxNSBDIDEyLjkgMTAuOTE1IDEzLjEgMTEuNjE1IDEyLjkgMTIuNjE1IFoiPjwvcGF0aD4KICAgIDxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik0gMzUuMiAxMi41MTUgTCAzMS41IDEyLjUxNSBDIDMxLjIgMTIuNTE1IDMwLjkgMTIuNzE1IDMwLjkgMTMuMDE1IEwgMzAuNyAxNC4wMTUgTCAzMC40IDEzLjYxNSBDIDI5LjYgMTIuNDE1IDI3LjggMTIuMDE1IDI2IDEyLjAxNSBDIDIxLjkgMTIuMDE1IDE4LjQgMTUuMTE1IDE3LjcgMTkuNTE1IEMgMTcuMyAyMS43MTUgMTcuOCAyMy44MTUgMTkuMSAyNS4yMTUgQyAyMC4yIDI2LjUxNSAyMS45IDI3LjExNSAyMy44IDI3LjExNSBDIDI3LjEgMjcuMTE1IDI5IDI1LjAxNSAyOSAyNS4wMTUgTCAyOC44IDI2LjAxNSBDIDI4LjcgMjYuNDE1IDI5IDI2LjgxNSAyOS40IDI2LjgxNSBMIDMyLjggMjYuODE1IEMgMzMuMyAyNi44MTUgMzMuOCAyNi40MTUgMzMuOSAyNS45MTUgTCAzNS45IDEzLjExNSBDIDM2IDEyLjkxNSAzNS42IDEyLjUxNSAzNS4yIDEyLjUxNSBaIE0gMzAuMSAxOS44MTUgQyAyOS43IDIxLjkxNSAyOC4xIDIzLjQxNSAyNS45IDIzLjQxNSBDIDI0LjggMjMuNDE1IDI0IDIzLjExNSAyMy40IDIyLjQxNSBDIDIyLjggMjEuNzE1IDIyLjYgMjAuODE1IDIyLjggMTkuODE1IEMgMjMuMSAxNy43MTUgMjQuOSAxNi4yMTUgMjcgMTYuMjE1IEMgMjguMSAxNi4yMTUgMjguOSAxNi42MTUgMjkuNSAxNy4yMTUgQyAzMCAxNy44MTUgMzAuMiAxOC43MTUgMzAuMSAxOS44MTUgWiI+PC9wYXRoPgogICAgPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTSA1NS4xIDEyLjUxNSBMIDUxLjQgMTIuNTE1IEMgNTEgMTIuNTE1IDUwLjcgMTIuNzE1IDUwLjUgMTMuMDE1IEwgNDUuMyAyMC42MTUgTCA0My4xIDEzLjMxNSBDIDQzIDEyLjgxNSA0Mi41IDEyLjUxNSA0Mi4xIDEyLjUxNSBMIDM4LjQgMTIuNTE1IEMgMzggMTIuNTE1IDM3LjYgMTIuOTE1IDM3LjggMTMuNDE1IEwgNDEuOSAyNS41MTUgTCAzOCAzMC45MTUgQyAzNy43IDMxLjMxNSAzOCAzMS45MTUgMzguNSAzMS45MTUgTCA0Mi4yIDMxLjkxNSBDIDQyLjYgMzEuOTE1IDQyLjkgMzEuNzE1IDQzLjEgMzEuNDE1IEwgNTUuNiAxMy40MTUgQyA1NS45IDEzLjExNSA1NS42IDEyLjUxNSA1NS4xIDEyLjUxNSBaIj48L3BhdGg+CiAgICA8cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNIDY3LjUgNS4zMTUgTCA1OS43IDUuMzE1IEMgNTkuMiA1LjMxNSA1OC43IDUuNzE1IDU4LjYgNi4yMTUgTCA1NS41IDI2LjExNSBDIDU1LjQgMjYuNTE1IDU1LjcgMjYuODE1IDU2LjEgMjYuODE1IEwgNjAuMSAyNi44MTUgQyA2MC41IDI2LjgxNSA2MC44IDI2LjUxNSA2MC44IDI2LjIxNSBMIDYxLjcgMjAuNTE1IEMgNjEuOCAyMC4wMTUgNjIuMiAxOS42MTUgNjIuOCAxOS42MTUgTCA2NS4zIDE5LjYxNSBDIDcwLjQgMTkuNjE1IDczLjQgMTcuMTE1IDc0LjIgMTIuMjE1IEMgNzQuNSAxMC4xMTUgNzQuMiA4LjQxNSA3My4yIDcuMjE1IEMgNzIgNi4wMTUgNzAuMSA1LjMxNSA2Ny41IDUuMzE1IFogTSA2OC40IDEyLjYxNSBDIDY4IDE1LjQxNSA2NS44IDE1LjQxNSA2My44IDE1LjQxNSBMIDYyLjYgMTUuNDE1IEwgNjMuNCAxMC4yMTUgQyA2My40IDkuOTE1IDYzLjcgOS43MTUgNjQgOS43MTUgTCA2NC41IDkuNzE1IEMgNjUuOSA5LjcxNSA2Ny4yIDkuNzE1IDY3LjkgMTAuNTE1IEMgNjguNCAxMC45MTUgNjguNSAxMS42MTUgNjguNCAxMi42MTUgWiI+PC9wYXRoPgogICAgPHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTSA5MC43IDEyLjUxNSBMIDg3IDEyLjUxNSBDIDg2LjcgMTIuNTE1IDg2LjQgMTIuNzE1IDg2LjQgMTMuMDE1IEwgODYuMiAxNC4wMTUgTCA4NS45IDEzLjYxNSBDIDg1LjEgMTIuNDE1IDgzLjMgMTIuMDE1IDgxLjUgMTIuMDE1IEMgNzcuNCAxMi4wMTUgNzMuOSAxNS4xMTUgNzMuMiAxOS41MTUgQyA3Mi44IDIxLjcxNSA3My4zIDIzLjgxNSA3NC42IDI1LjIxNSBDIDc1LjcgMjYuNTE1IDc3LjQgMjcuMTE1IDc5LjMgMjcuMTE1IEMgODIuNiAyNy4xMTUgODQuNSAyNS4wMTUgODQuNSAyNS4wMTUgTCA4NC4zIDI2LjAxNSBDIDg0LjIgMjYuNDE1IDg0LjUgMjYuODE1IDg0LjkgMjYuODE1IEwgODguMyAyNi44MTUgQyA4OC44IDI2LjgxNSA4OS4zIDI2LjQxNSA4OS40IDI1LjkxNSBMIDkxLjQgMTMuMTE1IEMgOTEuNCAxMi45MTUgOTEuMSAxMi41MTUgOTAuNyAxMi41MTUgWiBNIDg1LjUgMTkuODE1IEMgODUuMSAyMS45MTUgODMuNSAyMy40MTUgODEuMyAyMy40MTUgQyA4MC4yIDIzLjQxNSA3OS40IDIzLjExNSA3OC44IDIyLjQxNSBDIDc4LjIgMjEuNzE1IDc4IDIwLjgxNSA3OC4yIDE5LjgxNSBDIDc4LjUgMTcuNzE1IDgwLjMgMTYuMjE1IDgyLjQgMTYuMjE1IEMgODMuNSAxNi4yMTUgODQuMyAxNi42MTUgODQuOSAxNy4yMTUgQyA4NS41IDE3LjgxNSA4NS43IDE4LjcxNSA4NS41IDE5LjgxNSBaIj48L3BhdGg+CiAgICA8cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNIDk1LjEgNS45MTUgTCA5MS45IDI2LjIxNSBDIDkxLjggMjYuNjE1IDkyLjEgMjYuOTE1IDkyLjUgMjYuOTE1IEwgOTUuNyAyNi45MTUgQyA5Ni4yIDI2LjkxNSA5Ni43IDI2LjUxNSA5Ni44IDI2LjAxNSBMIDEwMCA2LjExNSBDIDEwMC4xIDUuNzE1IDk5LjggNS40MTUgOTkuNCA1LjQxNSBMIDk1LjggNS40MTUgQyA5NS40IDUuMzE1IDk1LjIgNS41MTUgOTUuMSA1LjkxNSBaIj48L3BhdGg+Cjwvc3ZnPgo=" alt="paypal" style="visibility: visible;">
+        </div>
+    
+            
+        <div class="paypal-tagline paypal-tagline-color-blue" style="visibility: visible;">
+            The safer, easier way to pay
+        </div>
+    
+        </div>
+
+        <script>
+            (
+    function componentScript() {
+
+        function getElements(selector, parent) {
+            parent = parent || document;
+            return Array.prototype.slice.call(parent.querySelectorAll(selector));
+        }
+
+        function showElement(el, displayType) {
+            el.style.display = displayType || 'block';
+        }
+
+        function hideElement(el) {
+            el.style.display = 'none';
+        }
+
+        function makeElementVisible(el) {
+            el.style.visibility = 'visible';
+        }
+
+        function makeElementInvisible(el) {
+            el.style.visibility = 'hidden';
+        }
+
+        function hasDimensions(el) {
+            var rect = el.getBoundingClientRect();
+            return Boolean(rect.height && rect.width);
+        }
+
+        function isHidden(el) {
+            var computedStyle = window.getComputedStyle(el);
+            return (!computedStyle || computedStyle.display === 'none');
+        }
+
+        function displayedElementsHaveDimensions(elements) {
+            return elements.every(function(el) {
+                return hasDimensions(el) || isHidden(el);
+            });
+        }
+
+        function onDisplay(elements, method) {
+            if (displayedElementsHaveDimensions(elements)) {
+                method();
+                return;
+            }
+
+            var interval = setInterval(function() {
+                if (displayedElementsHaveDimensions(elements)) {
+                    clearInterval(interval);
+                    method();
+                    return;
+                }
+            }, 5);
+        }
+
+        function isOverflowing(el) {
+
+            if (el.offsetWidth < el.scrollWidth || el.offsetHeight < el.scrollHeight) {
+                return true;
+            }
+
+            var parent = el.parentNode;
+
+            if (!parent) {
+                return false;
+            }
+
+            var e = el.getBoundingClientRect();
+            var p = parent.getBoundingClientRect();
+
+            if (e.top < p.top || e.left < p.left || e.right > p.right || e.bottom > p.bottom) {
+                return true;
+            }
+
+            if (e.left < 0 || e.top < 0 || (e.left + e.width) > window.innerWidth || (e.top + e.height) > window.innerHeight) {
+                return true;
+            }
+
+            return false;
+        }
+
+        var buttons = getElements('.paypal-button-content');
+        var tagline = getElements('.paypal-tagline');
+
+        function toggleTagline() {
+            if (tagline.some(isOverflowing)) {
+                tagline.forEach(makeElementInvisible);
+            } else {
+                tagline.forEach(makeElementVisible);
+            }
+        }
+
+        buttons.forEach(function(button) {
+
+            var images = getElements('.logo', button);
+            var text   = getElements('.text', button);
+
+            function showText() {
+                text.forEach(function(el) { showElement(el, 'inline-block') });
+            }
+
+            function toggleText() {
+                if (images.some(isOverflowing) || text.some(isOverflowing)) {
+                    text.forEach(hideElement);
+                } else {
+                    text.forEach(makeElementVisible);
+                }
+            }
+
+            onDisplay(images, function() {
+                images.forEach(makeElementVisible);
+                toggleTagline();
+                toggleText();
+
+                window.addEventListener('resize', function() {
+                    toggleTagline();
+                    showText();
+                    toggleText();
+                });
+            });
+        });
+    }
+)();
+        </script>
+    
+
+        <script src="./checkout.js" data-paypal-checkout="" data-no-bridge="" data-state="ppxo_meta" data-env="production"></script>
+
+        <script>
+            window.angular = {
+                value: function() {}
+            };
+
+            window.meta    = {
+    "correlationId": "7426db1982383",
+    "corp": false,
+    "ipaddress": "14.162.145.62",
+    "timestamp": "2017-06-28T22:49:44.000Z",
+    "buildId": "x",
+    "requestTime": 1507540012553,
+    "pageID": "1baff81a",
+    "geolocation": "VN",
+    "userGuid": "0049e6a015f0a114ea2d143ffff73794",
+    "xoScriptUrl": "https://www.paypalobjects.com/js/xo/hermes/1.1.0/framework.js",
+    "staticUrl": "https://www.paypalobjects.com/web/res/d42/8ff1bb7fdb5d425394ef0a7ed6a05",
+    "configUrl": "/webapps/hermes/static",
+    "ipcountry": "VN",
+    "az": "dcg12",
+    "config": {
+        "showProcessorIcon": true,
+        "disableUlTimeout": true,
+        "disableLightbox": false,
+        "enableGuestWps": true,
+        "enableShippingTaxGuestWPS": true,
+        "enableInventoryWPS": true,
+        "enableInventoryGuestWPS": true,
+        "enableShoppingCartWPS": true,
+        "bmlMaxSoftDeclines": 3,
+        "enablePreload": true,
+        "blockStudentAccount": true,
+        "enableNewMemberDecisioning": true,
+        "minCreditAmtNoInterest": {
+            "US": 99
+        },
+        "windowloadTimeout": {
+            "throttle": 0,
+            "testTimeout": 600000
+        },
+        "bootTimeout": {
+            "throttle": 50,
+            "test": 15
+        },
+        "safeApply": true,
+        "scriptLoadTest": {
+            "enable": true
+        },
+        "fallbackEnabled": true,
+        "hermesXoonRedirect": true,
+        "enableCPL": {
+            "throttle": 100
+        },
+        "unselectableLanguages": [],
+        "unsupportedLanguages": [],
+        "disableCardArt": true,
+        "pxpBlacklist": {
+            "merchant": [
+                "EJ63KQ3GZ2ZQU"
+            ]
+        },
+        "disabledMerchantLocaleCountries": [
+            "C2",
+            "CN"
+        ],
+        "capeMayflyUniqueId": "hermesnodeweb-",
+        "choiceExperiment": {
+            "preferredCheckbox": [
+                "4",
+                "5",
+                "6",
+                "7"
+            ],
+            "multipleFi": [
+                "2",
+                "5"
+            ],
+            "selectFi": [
+                "3",
+                "6",
+                "7"
+            ],
+            "skipSelectFi": [
+                "7"
+            ],
+            "ignored": {
+                "multipleFi": [
+                    "balanceWithPreferred",
+                    "noMerchant"
+                ],
+                "selectFi": [
+                    "noBilling",
+                    "balanceWithPreferred",
+                    "hasMerchantCountryChoice",
+                    "singleCurrency",
+                    "noMerchant",
+                    "noMSB",
+                    "noPAD",
+                    "noSplitBalance",
+                    "isNotGambling"
+                ]
+            }
+        },
+        "urls": {
+            "xoScriptUrl": "https://www.paypalobjects.com/js/xo/hermes/1.1.0/framework.js",
+            "xoConfigUrl": "https://www.paypal.com/webapps/hermes/static/js/config.js",
+            "baseUrl": "/webapps/hermes",
+            "logUrl": "/webapps/hermes/api/log",
+            "staticUrl": "/webapps/hermes/static",
+            "fptiScriptUrl": "https://www.paypalobjects.com/pa/js/min/pa.js",
+            "fptiBeaconUrl": "https://t.paypal.com/ts",
+            "fraudnetUrl": {
+                "active": "https://www.paypalobjects.com/webstatic/r/fb/fb-all-prod.pp.min.js",
+                "passive": "https://c.paypal.com/webstatic/r/fb/fb-all-prod.pp2.min.js"
+            },
+            "onboarding": "https://www.paypal.com/webapps/xoonboarding",
+            "tagProdUrl": "https://www.paypalobjects.com/tagmgmt/bootstrap.js",
+            "tagStageUrl": "https://nexus.ensighten.com/paypal/stage/Bootstrap.js",
+            "dispatch": {
+                "xoon": "https://msmaster.qa.paypal.com"
+            },
+            "venmoAppSwitchURL": "https://venmo.com/",
+            "fallbackUrl": {
+                "buyNow": "/webapps/hermes/fallback?product=buyNow",
+                "cartUpload": "/webapps/hermes/fallback?product=cartUpload",
+                "ux": "/webapps/hermes/fallback?product=ec",
+                "aries": "/webapps/aries",
+                "xoon": "/webapps/xoonboarding",
+                "invoice": "/cgi-bin/webscr?cmd=_pay-inv&xo_node_fallback=true"
+            },
+            "nbrUrl": "/de/cgi-bin/webscr?cmd=_negative_balance_collections",
+            "ulLogoutUrl": "/signin/signout?hard=true",
+            "authChallengeNodeUrl": "https://www.paypal.com/auth/stepup",
+            "creditTerms": "https://www.billmelater.com/cm/paypal/landers/17ppcACQ.html",
+            "creditReuseTerms": "https://www.billmelater.com/cm/paypal/landers/17ppcREUSE.html",
+            "errorUrl": "/error",
+            "incontextScript": "https://www.paypalobjects.com/api"
+        },
+        "features": {
+            "AR": {
+                "rmSpinnerText": false,
+                "eligiblePurchase": false,
+                "eligibleReturnPurchase": true
+            },
+            "AT": {
+                "isoCurrencyFormat": true,
+                "eligiblePurchase": true,
+                "eligibleReturnPurchase": false
+            },
+            "AU": {
+                "addressNormalization": true,
+                "choiceExperiment": true,
+                "choiceBalance": true,
+                "directDebitAgreement": false,
+                "newForgotPasswordSupported": true,
+                "ryiOptIn": true,
+                "eligiblePurchase": false,
+                "eligibleReturnPurchase": true
+            },
+            "BE": {
+                "isoCurrencyFormat": true,
+                "eligiblePurchase": false,
+                "eligibleReturnPurchase": true
+            },
+            "CA": {
+                "choiceExperiment": true,
+                "newForgotPasswordSupported": true,
+                "ryiOptIn": true,
+                "eligiblePurchase": false,
+                "eligibleReturnPurchase": true
+            },
+            "CH": {
+                "isoCurrencyFormat": true,
+                "eligiblePurchase": true,
+                "eligibleReturnPurchase": false
+            },
+            "DK": {
+                "isoCurrencyFormat": true,
+                "eligiblePurchase": true,
+                "eligibleReturnPurchase": false
+            },
+            "ES": {
+                "isoCurrencyFormat": true,
+                "newForgotPasswordSupported": true,
+                "ryiOptIn": true,
+                "eligiblePurchase": true,
+                "eligibleReturnPurchase": false
+            },
+            "FR": {
+                "isoCurrencyFormat": true,
+                "newForgotPasswordSupported": true,
+                "ryiOptIn": true,
+                "eligiblePurchase": true,
+                "eligibleReturnPurchase": false
+            },
+            "IT": {
+                "newForgotPasswordSupported": true,
+                "ryiOptIn": true,
+                "eligiblePurchase": false,
+                "eligibleReturnPurchase": true
+            },
+            "MX": {
+                "showAcceptedCardLogos": false,
+                "eligiblePurchase": false,
+                "eligibleReturnPurchase": true
+            },
+            "NL": {
+                "isoCurrencyFormat": true,
+                "eligiblePurchase": false,
+                "eligibleReturnPurchase": true
+            },
+            "NO": {
+                "isoCurrencyFormat": true,
+                "eligiblePurchase": false,
+                "eligibleReturnPurchase": true
+            },
+            "PL": {
+                "isoCurrencyFormat": true,
+                "eligiblePurchase": true,
+                "eligibleReturnPurchase": false
+            },
+            "RU": {
+                "collectKYC": true,
+                "qiwiCardSupported": true,
+                "eligiblePurchase": false,
+                "eligibleReturnPurchase": true
+            },
+            "SE": {
+                "isoCurrencyFormat": true,
+                "eligiblePurchase": true,
+                "eligibleReturnPurchase": false
+            },
+            "SG": {
+                "newForgotPasswordSupported": true,
+                "eligiblePurchase": false,
+                "eligibleReturnPurchase": true
+            },
+            "TR": {
+                "isoCurrencyFormat": true,
+                "rmSpinnerText": false,
+                "eligiblePurchase": false,
+                "eligibleReturnPurchase": true
+            },
+            "DEFAULT": {
+                "addressLookup": false,
+                "changeShippingCountry": true,
+                "choiceBalance": false,
+                "choiceExperiment": false,
+                "enableStickyFunding": false,
+                "jqueryAjax": true,
+                "maestroCvvRequired": false,
+                "preferredShipping": true,
+                "propValue": true,
+                "riskyLoginContingency": true,
+                "showPayWithCreditOffer": false,
+                "showPolicyAgreement": false,
+                "supportBlockNonDomesticShipping": false,
+                "defaultLoginMethodUL": true,
+                "enableOneTouchInternalIP": true,
+                "landingAbTest": true,
+                "showAcceptedCardLogos": true,
+                "languageToggle": true,
+                "creditInstallmentOffers": false,
+                "enableManageWallet": true,
+                "rmSpinnerText": false,
+                "oneTouchPersonalization": true,
+                "pomaPasswordRecovery": false,
+                "morsValuePropOffers": false,
+                "rtl": true,
+                "padToggleFeatureSupported": false,
+                "padToggleWalletSupported": false,
+                "ryiOptIn": false,
+                "simplifiedCheckout": false,
+                "newMemberExperience": false,
+                "eligiblePurchase": false,
+                "eligibleReturnPurchase": true,
+                "creditOfferSeeTermsUrl": "https://www.paypal.com/us/webapps/mpp/credit-easy-payments?",
+                "redirectToCape": "0",
+                "capeUrl": "https://www.paypal.com/ppcreditapply/he/us?key="
+            },
+            "BR": {
+                "addressNormalization": true,
+                "cardTypeServiceCallRequired": true,
+                "checkLandingParam": true,
+                "maskCVV": true,
+                "shippingAddressNormalization": true,
+                "showAcceptedCardLogos": true,
+                "unsupportedPayeeCurrency": true,
+                "uxFallback": true,
+                "eligiblePurchase": false,
+                "eligibleReturnPurchase": true,
+                "ryiOptIn": true,
+                "FormatAddressForNormalization": "AddressBR",
+                "sortStatesForAddress": "provinceListBR",
+                "zipcodeInputParams": {
+                    "formatZip": true,
+                    "maxLength": 9,
+                    "minLength": 5,
+                    "formatPattern": "[^0-9]"
+                }
+            },
+            "C2": {
+                "cardTypeServiceCallRequired": true,
+                "eligiblePurchase": false,
+                "eligibleReturnPurchase": true,
+                "dualCardTypes": {
+                    "CUP": "^CUP$"
+                }
+            },
+            "DE": {
+                "newForgotPasswordSupported": true,
+                "addBank": true,
+                "padToggleFeatureSupported": true,
+                "padToggleWalletSupported": true,
+                "ryiOptIn": true,
+                "eligiblePurchase": true,
+                "eligibleReturnPurchase": false,
+                "redirectToCape": 100,
+                "capeUrl": "https://www.paypal.com/ppcreditapply/he/de?key="
+            },
+            "GB": {
+                "choiceExperiment": true,
+                "maestroCvvRequired": true,
+                "newForgotPasswordSupported": true,
+                "creditInstallmentOffers": true,
+                "redirectToCape": 100,
+                "blockCreditBanners": false,
+                "ryiOptIn": false,
+                "eligiblePurchase": false,
+                "eligibleReturnPurchase": true,
+                "capeUrl": "https://www.paypal.com/ppcreditapply/he/gb?key="
+            },
+            "HK": {
+                "newForgotPasswordSupported": true,
+                "eligiblePurchase": false,
+                "eligibleReturnPurchase": true,
+                "nameFormat": "LastFirst"
+            },
+            "JP": {
+                "showAcceptedCardLogos": true,
+                "showPolicyAgreement": true,
+                "disableFullWidthCharacters": true,
+                "eligiblePurchase": true,
+                "eligibleReturnPurchase": false,
+                "nameFormat": "LastFirst",
+                "zipcodeInputParams": {
+                    "formatZip": true,
+                    "maxLength": 8,
+                    "minLength": 3,
+                    "formatPattern": "[^0-9]"
+                }
+            },
+            "TW": {
+                "newForgotPasswordSupported": true,
+                "eligiblePurchase": false,
+                "eligibleReturnPurchase": true,
+                "nameFormat": "LastFirst"
+            },
+            "US": {
+                "changeShippingCountry": true,
+                "giftCard": false,
+                "newForgotPasswordSupported": true,
+                "showPaypalPolicies": true,
+                "showPhoneDisclosure": true,
+                "creditInstallmentOffers": true,
+                "supportBlockNonDomesticShipping": true,
+                "redirectToCape": 100,
+                "phoneConsent": true,
+                "morsValuePropOffers": true,
+                "choiceExperiment": true,
+                "choiceBalance": true,
+                "ryiOptIn": true,
+                "newMemberExperience": true,
+                "eligiblePurchase": false,
+                "eligibleReturnPurchase": true,
+                "creditOfferSeeTermsUrl": "https://www.paypal.com/us/webapps/mpp/credit-easy-payments?"
+            }
+        },
+        "purchaseProtectionProp": {
+            "pxp": {
+                "pgName": "xo_hermes_purchase_protection",
+                "patterns": "xo_hermes_purchase_protection_treatment"
+            }
+        },
+        "fallbackWhitelist": {
+            "throttle": 10,
+            "whitelisted": [
+                "buyer_ineligible",
+                "transaction_ineligible",
+                "ui_unhandled_response_status_404",
+                "ul_load_timeout",
+                "ui_unhandled_api_error",
+                "gce_not_supported",
+                "UNSUPPORTED_CUP_SECURECARD",
+                "INVALID_IBAN_CODE",
+                "MANDATE_METHOD_NOT_ELIGIBLE",
+                "SEPA_ACCEPT_CONTINGENCY",
+                "ROUTING_NUMBER_NOT_SUPPORTED",
+                "fallback_merchant_BA_nocards"
+            ],
+            "exceptions": {
+                "K5GPWSS6GRSTC": [
+                    "windowload_timed_out"
+                ],
+                "H2TCH5BL3VBH4": [
+                    "windowload_timed_out"
+                ],
+                "LS8WLBLXPYQEJ": "windowload_timed_out",
+                "2KX9J9MPNNG54": [
+                    "ul_load_timeout",
+                    "windowload_timed_out"
+                ],
+                "BR": [
+                    "windowload_timed_out"
+                ]
+            }
+        },
+        "disableMerchantForStickyBA": [
+            "7PCCZSK8KNQNC",
+            "HPA2FSJN9ZPRL",
+            "A2ZWHC6LATX5A"
+        ],
+        "forceCookiesDisabled": [
+            "2ZEHYJ9KV7XZU",
+            "3GE7WZTZVHD44",
+            "3L96P5SPM9TY2",
+            "3LWC6DDP3QV96",
+            "4EKZUVKMFWPE4",
+            "4GPAW7J4N7MJS",
+            "59K2QRYYSFJU4",
+            "5HP7BLEWUD4U2",
+            "5XU8KL5NKH4ZW",
+            "98YYCFFJNPKR8",
+            "AW538GXAZV788",
+            "BFL7HFYR2S4AL",
+            "EJP3L2LCJLR2W",
+            "F8KUSVLTFSBR6",
+            "FUAN38EF6XZNJ",
+            "HRN3K38HHEJKG",
+            "KTP56GJZDRPD2",
+            "SR6YGVCDRKNT8",
+            "UMBWHC38PBAKC",
+            "UWH9TDVFHV6WS",
+            "VU7P9REG8HYVC",
+            "Z9FY3JQ9AGJQ8",
+            "ZNESVVRVPVQ96"
+        ],
+        "hideCancelLinkForMerchant": [
+            "7FKYYZTSKCS34"
+        ],
+        "venmoBillingWhitelist": [
+            "D6AR47J7JCQVL",
+            "V7VXZW2ZM7TL2",
+            "E3MGB5DHMV3HW",
+            "W6ZR3TVY5JWWE",
+            "G74EQYSQLQ558",
+            "YCH95EYB58GDJ",
+            "LUC4QWGDSASBS"
+        ],
+        "defaultLanguageException": {
+            "BE": "nl",
+            "GB": "en",
+            "HK": "zh",
+            "PT": "pt"
+        },
+        "apacCountries": [
+            "BN",
+            "BT",
+            "C2",
+            "FM",
+            "HK",
+            "ID",
+            "IN",
+            "JP",
+            "KH",
+            "KR",
+            "LA",
+            "LK",
+            "MN",
+            "MV",
+            "MY",
+            "NP",
+            "NZ",
+            "PH",
+            "SG",
+            "TH",
+            "TO",
+            "TW",
+            "VN",
+            "WS"
+        ],
+        "ulMeta": {
+            "iframeCopy": false,
+            "allowKMLIForInternalIP": true,
+            "enableOneTouchByDefault": false,
+            "stsClientIdUL": "AfC7MRCuR0r3zXzYAiQzXwSGfSr6fSvaJ2lh8adnWkT45wIhhsbGWy1dD8bx",
+            "stsReturnUrl": "https://www.paypal.com/checkoutnow/2",
+            "pxpExpId": "xo_hermesnode_ul",
+            "kmliContentExpId": "xo_hermesnode_kmli_content",
+            "ulReturnUri": "https://www.paypal.com/checkoutnow/2",
+            "authChallengeReturnUri": "webapps/hermes",
+            "hermesnodePxpConfig": "xo_hermesnode_config"
+        },
+        "pxpExperiments": {
+            "BR": {
+                "xo_br_hermesnode_login_design": {
+                    "pgName": "xo_hermesnode_login_design",
+                    "pattern": "xo_br_hermesnode_login_design_[\\w]+",
+                    "params": {
+                        "ctx.COUNTRY": "BR"
+                    }
+                },
+                "xo_br_hermesnode_ryi_design": {
+                    "pgName": "xo_hermesnode_ryi_design",
+                    "pattern": "xo_br_hermesnode_ryi_design_[\\w]+",
+                    "params": {
+                        "ctx.COUNTRY": "BR"
+                    }
+                }
+            },
+            "stickyBillingAgreementPxp": {
+                "pgName": "xo_hermes_sticky_ba",
+                "pattern": "xo_hermes_sticky_ba_test_group"
+            }
+        },
+        "locale": {
+            "country": {
+                "resolvers": [
+                    "viaCountryPreference",
+                    "viaLocaleTestUrlParam",
+                    "viaUserProfile",
+                    "viaMerchantParam",
+                    "viaCheckoutSession",
+                    "viaLangCookie",
+                    "viaIP",
+                    "viaCountryCoBrand",
+                    "viaCheckoutShipping",
+                    "viaMerchantCountry",
+                    "viaBrowserPref",
+                    "viaDefault"
+                ]
+            },
+            "lang": {
+                "resolvers": [
+                    "viaLanguagePreference",
+                    "viaLocaleTestUrlParam",
+                    "viaUserProfile",
+                    "viaMerchantParam",
+                    "viaLangCookie",
+                    "viaMerchantLocale",
+                    "viaBrowserPref",
+                    "viaDefault"
+                ]
+            }
+        },
+        "betaLanguages": [
+            "he",
+            "ar"
+        ],
+        "topup": {
+            "autoload_minimum_threshold": "0",
+            "currency": "USD",
+            "topupAmounts": [
+                "10",
+                "20",
+                "50",
+                "100"
+            ]
+        },
+        "tokenizedWalletCookieURL": "/webapps/hermes/mobile/tokenizedWallet",
+        "tealeaf": {
+            "throttle": "50",
+            "captureMode": "domcap",
+            "scriptSrcPattern": "https://www.paypalobjects.com/js/xo/tealeaf-hermes-prod_%.min.js"
+        },
+        "currencySymbols": {
+            "ALL": "L",
+            "AFN": "؋",
+            "ARS": "$",
+            "AWG": "ƒ",
+            "AUD": "$",
+            "AZN": "₼",
+            "BSD": "$",
+            "BBD": "$",
+            "BTN": "BTN",
+            "BYR": "p.",
+            "BZD": "BZ$",
+            "BMD": "$",
+            "BOB": "Bs.",
+            "BAM": "KM",
+            "BWP": "P",
+            "BGN": "лв",
+            "BRL": "R$",
+            "BND": "$",
+            "KHR": "៛",
+            "CAD": "$",
+            "KYD": "$",
+            "CLP": "$",
+            "CNY": "¥",
+            "COP": "$",
+            "CRC": "₡",
+            "HRK": "kn",
+            "CUP": "₱",
+            "CZK": "Kč",
+            "DKK": "Dkr",
+            "DOP": "RD$",
+            "XCD": "$",
+            "EGP": "£",
+            "SVC": "$",
+            "EEK": "kr",
+            "EUR": "€",
+            "FKP": "£",
+            "FJD": "$",
+            "GHC": "¢",
+            "GIP": "£",
+            "GTQ": "Q",
+            "GGP": "£",
+            "GYD": "$",
+            "HNL": "L",
+            "HKD": "$",
+            "HUF": "Ft",
+            "ISK": "kr",
+            "INR": "₹",
+            "IDR": "Rp",
+            "IRR": "﷼",
+            "IMP": "£",
+            "ILS": "₪",
+            "JMD": "J$",
+            "JPY": "¥",
+            "JEP": "£",
+            "KES": "KSh",
+            "KZT": "лв",
+            "KPW": "₩",
+            "KRW": "₩",
+            "KGS": "лв",
+            "LAK": "₭",
+            "LVL": "Ls",
+            "LBP": "£",
+            "LRD": "$",
+            "LTL": "Lt",
+            "MKD": "ден",
+            "MVR": "MVR",
+            "MYR": "RM",
+            "MUR": "₨",
+            "MXN": "$",
+            "MNT": "₮",
+            "MZN": "MT",
+            "NAD": "$",
+            "NPR": "₨",
+            "ANG": "ƒ",
+            "NZD": "$",
+            "NIO": "C$",
+            "NGN": "₦",
+            "NOK": "Nkr",
+            "OMR": "﷼",
+            "PKR": "₨",
+            "PAB": "B/.",
+            "PYG": "Gs",
+            "PEN": "S/.",
+            "PHP": "₱",
+            "PLN": "zł",
+            "QAR": "﷼",
+            "RON": "lei",
+            "RUB": "",
+            "SHP": "£",
+            "SAR": "﷼",
+            "RSD": "Дин.",
+            "SCR": "₨",
+            "SGD": "$",
+            "SBD": "$",
+            "SOS": "S",
+            "ZAR": "R",
+            "LKR": "₨",
+            "SEK": "kr",
+            "CHF": "Fr.",
+            "SRD": "$",
+            "SYP": "£",
+            "TOP": "T$",
+            "TZS": "TSh",
+            "TWD": "NT$",
+            "THB": "฿",
+            "TTD": "TT$",
+            "TL": "TL",
+            "TRY": "",
+            "TRL": "₤",
+            "TVD": "$",
+            "UGX": "USh",
+            "UAH": "₴",
+            "GBP": "£",
+            "USD": "$",
+            "UYU": "$U",
+            "UZS": "лв",
+            "VEF": "Bs",
+            "VND": "₫",
+            "WST": "$",
+            "YER": "﷼",
+            "ZWD": "Z$"
+        },
+        "currencyFormat": {
+            "AE": {
+                "ar": {
+                    ",": "٬",
+                    ".": "٫"
+                }
+            },
+            "AG": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "AI": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "AR": {
+                "es": {
+                    ",": ".",
+                    ".": ","
+                }
+            },
+            "AT": {
+                "de": {
+                    ",": ".",
+                    ".": ","
+                }
+            },
+            "AU": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "BA": {
+                "en": {
+                    ",": ".",
+                    ".": ","
+                }
+            },
+            "BB": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "BE": {
+                "en": {
+                    ",": ".",
+                    ".": ","
+                },
+                "fr": {
+                    ",": ".",
+                    ".": ","
+                },
+                "nl": {
+                    ",": ".",
+                    ".": ","
+                }
+            },
+            "BF": {
+                "fr": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "BH": {
+                "ar": {
+                    ",": "٬",
+                    ".": "٫"
+                }
+            },
+            "BG": {
+                "en": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "BI": {
+                "fr": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "BJ": {
+                "fr": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "BM": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "BO": {
+                "es": {
+                    ",": ".",
+                    ".": ","
+                }
+            },
+            "BR": {
+                "pt": {
+                    ",": ".",
+                    ".": ","
+                }
+            },
+            "BS": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "BW": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "BZ": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "CA": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                },
+                "fr": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "CD": {
+                "fr": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "CG": {
+                "fr": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "CH": {
+                "de": {
+                    ",": "'",
+                    ".": "."
+                },
+                "fr": {
+                    ",": " ",
+                    ".": "."
+                }
+            },
+            "CI": {
+                "fr": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "CK": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "CL": {
+                "es": {
+                    ",": ".",
+                    ".": ","
+                }
+            },
+            "CM": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                },
+                "fr": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "CO": {
+                "es": {
+                    ",": ".",
+                    ".": ","
+                }
+            },
+            "CR": {
+                "es": {
+                    ",": ".",
+                    ".": ","
+                }
+            },
+            "CY": {
+                "en": {
+                    ",": ".",
+                    ".": ","
+                }
+            },
+            "CZ": {
+                "en": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "DE": {
+                "de": {
+                    ",": ".",
+                    ".": ","
+                }
+            },
+            "DJ": {
+                "fr": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "DK": {
+                "da": {
+                    ",": ".",
+                    ".": ","
+                }
+            },
+            "DM": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "DO": {
+                "es": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "DZ": {
+                "ar": {
+                    ",": ".",
+                    ".": ","
+                },
+                "fr": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "EC": {
+                "es": {
+                    ",": ".",
+                    ".": ","
+                }
+            },
+            "EE": {
+                "en": {
+                    ",": ".",
+                    ".": ","
+                }
+            },
+            "EG": {
+                "ar": {
+                    ",": "٬",
+                    ".": "٫"
+                }
+            },
+            "ER": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "ES": {
+                "es": {
+                    ",": ".",
+                    ".": ","
+                }
+            },
+            "FI": {
+                "en": {
+                    ",": ".",
+                    ".": ","
+                }
+            },
+            "FJ": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "FK": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "FM": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "FR": {
+                "fr": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "GA": {
+                "fr": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "GB": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "GD": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "GF": {
+                "fr": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "GI": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "GL": {
+                "da": {
+                    ",": ".",
+                    ".": ","
+                }
+            },
+            "GM": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "GN": {
+                "fr": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "GP": {
+                "fr": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "GR": {
+                "en": {
+                    ",": ".",
+                    ".": ","
+                }
+            },
+            "GT": {
+                "es": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "GY": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "HK": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "HN": {
+                "es": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "HU": {
+                "en": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "ID": {
+                "en": {
+                    ",": ".",
+                    ".": "."
+                },
+                "id": {
+                    ",": ".",
+                    ".": ","
+                }
+            },
+            "IE": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "IL": {
+                "he": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "IN": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "IT": {
+                "it": {
+                    ",": ".",
+                    ".": ","
+                }
+            },
+            "JM": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "JO": {
+                "ar": {
+                    ",": "٬",
+                    ".": "٫"
+                }
+            },
+            "JP": {
+                "ja": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "KE": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "KI": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "KM": {
+                "fr": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "KN": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "KR": {
+                "en": {
+                    ",": " ",
+                    ".": ","
+                },
+                "ko": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "KW": {
+                "ar": {
+                    ",": "٬",
+                    ".": "٫"
+                }
+            },
+            "KY": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "LC": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "LS": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "LU": {
+                "de": {
+                    ",": ".",
+                    ".": ","
+                },
+                "en": {
+                    ",": ".",
+                    ".": ","
+                },
+                "fr": {
+                    ",": ".",
+                    ".": ","
+                }
+            },
+            "LT": {
+                "en": {
+                    ",": ".",
+                    ".": ","
+                }
+            },
+            "LV": {
+                "en": {
+                    ",": ".",
+                    ".": ","
+                }
+            },
+            "MA": {
+                "ar": {
+                    ",": ".",
+                    ".": ","
+                },
+                "fr": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "MC": {
+                "fr": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "MG": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                },
+                "fr": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "MH": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "ML": {
+                "fr": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "MQ": {
+                "fr": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "MR": {
+                "fr": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "MS": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "MT": {
+                "en": {
+                    ",": ".",
+                    ".": ","
+                }
+            },
+            "MU": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                },
+                "fr": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "MW": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "MX": {
+                "es": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "NA": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "NC": {
+                "fr": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "NE": {
+                "fr": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "NF": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "NG": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "NI": {
+                "es": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "NL": {
+                "nl": {
+                    ",": ".",
+                    ".": ","
+                }
+            },
+            "NO": {
+                "nb": {
+                    ",": " ",
+                    ".": ","
+                },
+                "no": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "NR": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "NU": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "NZ": {
+                "en": {
+                    ",": ".",
+                    ".": ","
+                }
+            },
+            "OM": {
+                "ar": {
+                    ",": "٬",
+                    ".": "٫"
+                }
+            },
+            "PA": {
+                "es": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "PE": {
+                "es": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "PF": {
+                "fr": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "PG": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "PH": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "PL": {
+                "pl": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "PM": {
+                "fr": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "PN": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "PT": {
+                "en": {
+                    ",": ".",
+                    ".": ","
+                },
+                "pt": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "PW": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "PY": {
+                "es": {
+                    ",": ".",
+                    ".": ","
+                }
+            },
+            "QA": {
+                "ar": {
+                    ",": "٬",
+                    ".": "٫"
+                }
+            },
+            "RE": {
+                "fr": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "RO": {
+                "en": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "RU": {
+                "ru": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "RW": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                },
+                "fr": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "SA": {
+                "ar": {
+                    ",": "٬",
+                    ".": "٫"
+                }
+            },
+            "SB": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "SC": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                },
+                "fr": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "SE": {
+                "sv": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "SG": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "SH": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "SI": {
+                "en": {
+                    ",": ".",
+                    ".": ","
+                }
+            },
+            "SK": {
+                "en": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "SL": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "SN": {
+                "fr": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "SV": {
+                "es": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "SZ": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "TC": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "TD": {
+                "fr": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "TG": {
+                "fr": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "TH": {
+                "th": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "TN": {
+                "ar": {
+                    ",": ".",
+                    ".": ","
+                },
+                "fr": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "TO": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "TR": {
+                "tr": {
+                    ",": ".",
+                    ".": ","
+                }
+            },
+            "TT": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "TV": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "TW": {
+                "en": {
+                    ",": ""
+                },
+                "zh": {
+                    ",": ""
+                }
+            },
+            "TZ": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "UA": {
+                "en": {
+                    ",": " ",
+                    ".": ","
+                },
+                "ru": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "UG": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "US": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                },
+                "es": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "UY": {
+                "es": {
+                    ",": ".",
+                    ".": ","
+                }
+            },
+            "VC": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "VE": {
+                "es": {
+                    ",": ".",
+                    ".": ","
+                }
+            },
+            "VG": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "VU": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                },
+                "fr": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "WF": {
+                "fr": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "WS": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "YE": {
+                "ar": {
+                    ",": "٬",
+                    ".": "٫"
+                }
+            },
+            "YT": {
+                "fr": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "ZA": {
+                "en": {
+                    ",": " ",
+                    ".": ","
+                }
+            },
+            "ZM": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            },
+            "ZW": {
+                "en": {
+                    ",": ",",
+                    ".": "."
+                }
+            }
+        },
+        "supportedCountries": {
+            "MT": [
+                "en"
+            ],
+            "MU": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "MV": [
+                "en"
+            ],
+            "MW": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "MX": [
+                "es",
+                "en"
+            ],
+            "MY": [
+                "en"
+            ],
+            "MZ": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "NA": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "NC": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "NE": [
+                "fr",
+                "en",
+                "es",
+                "zh"
+            ],
+            "JP": [
+                "ja",
+                "en"
+            ],
+            "JO": [
+                "ar",
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "IL": [
+                "he",
+                "en"
+            ],
+            "IE": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "ID": [
+                "id",
+                "en"
+            ],
+            "HU": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "JM": [
+                "es",
+                "en",
+                "fr",
+                "zh"
+            ],
+            "IT": [
+                "it",
+                "en"
+            ],
+            "IS": [
+                "en"
+            ],
+            "IN": [
+                "en"
+            ],
+            "SA": [
+                "ar",
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "RW": [
+                "fr",
+                "en",
+                "es",
+                "zh"
+            ],
+            "RU": [
+                "ru",
+                "en"
+            ],
+            "RS": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "RO": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "RE": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "QA": [
+                "en",
+                "fr",
+                "es",
+                "zh",
+                "ar"
+            ],
+            "PY": [
+                "es",
+                "en"
+            ],
+            "SC": [
+                "fr",
+                "en",
+                "es",
+                "zh"
+            ],
+            "SB": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "AZ": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "BA": [
+                "en"
+            ],
+            "KY": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "AU": [
+                "en"
+            ],
+            "KZ": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "AW": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "BF": [
+                "fr",
+                "en",
+                "es",
+                "zh"
+            ],
+            "BG": [
+                "en"
+            ],
+            "BB": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "BE": [
+                "en",
+                "nl",
+                "fr"
+            ],
+            "KH": [
+                "en"
+            ],
+            "KI": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "BH": [
+                "ar",
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "KE": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "BI": [
+                "fr",
+                "en",
+                "es",
+                "zh"
+            ],
+            "KG": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "KR": [
+                "ko",
+                "en"
+            ],
+            "KW": [
+                "ar",
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "KM": [
+                "fr",
+                "en",
+                "es",
+                "zh"
+            ],
+            "KN": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "LI": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "LK": [
+                "en"
+            ],
+            "LA": [
+                "en"
+            ],
+            "US": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "LC": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "UY": [
+                "es",
+                "en",
+                "fr",
+                "zh"
+            ],
+            "LU": [
+                "en",
+                "de",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "LV": [
+                "en",
+                "ru",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "LS": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "LT": [
+                "en",
+                "ru",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "TT": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "TV": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "MA": [
+                "ar",
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "TN": [
+                "ar",
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "TO": [
+                "en"
+            ],
+            "MC": [
+                "fr",
+                "en"
+            ],
+            "UA": [
+                "en",
+                "ru",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "UG": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "TW": [
+                "zh",
+                "en"
+            ],
+            "TZ": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "GD": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "GB": [
+                "en"
+            ],
+            "GF": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "GE": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "FO": [
+                "da",
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "FM": [
+                "en"
+            ],
+            "GA": [
+                "fr",
+                "en",
+                "es",
+                "zh"
+            ],
+            "FR": [
+                "fr",
+                "en"
+            ],
+            "GL": [
+                "da",
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "GI": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "NG": [
+                "en"
+            ],
+            "NF": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "NL": [
+                "nl",
+                "en"
+            ],
+            "NI": [
+                "es",
+                "en",
+                "fr",
+                "zh"
+            ],
+            "NP": [
+                "en"
+            ],
+            "NO": [
+                "no",
+                "en"
+            ],
+            "NU": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "NR": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "OM": [
+                "ar",
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "NZ": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "GT": [
+                "es",
+                "en",
+                "fr",
+                "zh"
+            ],
+            "GW": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "GY": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "HK": [
+                "en",
+                "zh"
+            ],
+            "GM": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "GN": [
+                "fr",
+                "en",
+                "es",
+                "zh"
+            ],
+            "GP": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "GR": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "HN": [
+                "es",
+                "en",
+                "fr",
+                "zh"
+            ],
+            "HR": [
+                "en"
+            ],
+            "SJ": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "SK": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "SL": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "SM": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "SE": [
+                "sv",
+                "en"
+            ],
+            "SG": [
+                "en"
+            ],
+            "SH": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "SI": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "SN": [
+                "fr",
+                "en",
+                "es",
+                "zh"
+            ],
+            "SO": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "DK": [
+                "da",
+                "en"
+            ],
+            "DJ": [
+                "fr",
+                "en",
+                "es",
+                "zh"
+            ],
+            "DE": [
+                "de",
+                "en"
+            ],
+            "CZ": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "CY": [
+                "en"
+            ],
+            "CV": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "CR": [
+                "es",
+                "en",
+                "fr",
+                "zh"
+            ],
+            "CO": [
+                "es",
+                "en",
+                "fr",
+                "zh"
+            ],
+            "DO": [
+                "es",
+                "en",
+                "fr",
+                "zh"
+            ],
+            "DM": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "MH": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "MG": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "YT": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "ME": [
+                "en"
+            ],
+            "YE": [
+                "ar",
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "MD": [
+                "en"
+            ],
+            "MQ": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "MN": [
+                "en"
+            ],
+            "ML": [
+                "fr",
+                "en",
+                "es",
+                "zh"
+            ],
+            "MK": [
+                "en"
+            ],
+            "VG": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "VE": [
+                "es",
+                "en",
+                "fr",
+                "zh"
+            ],
+            "MS": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "VC": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "VA": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "MR": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "WS": [
+                "en"
+            ],
+            "WF": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "VU": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "VN": [
+                "en",
+                "vi"
+            ],
+            "ET": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "FI": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "ER": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "ES": [
+                "es",
+                "en"
+            ],
+            "EE": [
+                "en",
+                "ru",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "EG": [
+                "ar",
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "DZ": [
+                "ar",
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "EC": [
+                "es",
+                "en",
+                "fr",
+                "zh"
+            ],
+            "FJ": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "FK": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "PM": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "AI": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "ZM": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "PN": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "AG": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "ZA": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "PH": [
+                "en"
+            ],
+            "AE": [
+                "en",
+                "fr",
+                "es",
+                "zh",
+                "ar"
+            ],
+            "PL": [
+                "pl",
+                "en"
+            ],
+            "AD": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "ZW": [
+                "en"
+            ],
+            "AO": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "PF": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "AN": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "PG": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "AM": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "PA": [
+                "es",
+                "en",
+                "fr",
+                "zh"
+            ],
+            "AL": [
+                "en"
+            ],
+            "PE": [
+                "es",
+                "en",
+                "fr",
+                "zh"
+            ],
+            "AT": [
+                "de",
+                "en"
+            ],
+            "AR": [
+                "es",
+                "en"
+            ],
+            "PT": [
+                "pt",
+                "en"
+            ],
+            "PW": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "BM": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "BJ": [
+                "fr",
+                "en",
+                "es",
+                "zh"
+            ],
+            "BO": [
+                "es",
+                "en",
+                "fr",
+                "zh"
+            ],
+            "BN": [
+                "en"
+            ],
+            "BS": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "BR": [
+                "pt",
+                "en"
+            ],
+            "BW": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "BT": [
+                "en"
+            ],
+            "BZ": [
+                "es",
+                "en",
+                "fr",
+                "zh"
+            ],
+            "BY": [
+                "en"
+            ],
+            "TD": [
+                "fr",
+                "en",
+                "es",
+                "zh"
+            ],
+            "TC": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "TH": [
+                "th",
+                "en"
+            ],
+            "TG": [
+                "fr",
+                "en",
+                "es",
+                "zh"
+            ],
+            "ST": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "SR": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "SZ": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "SV": [
+                "es",
+                "en",
+                "fr",
+                "zh"
+            ],
+            "TM": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "TJ": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "C2": [
+                "zh",
+                "en"
+            ],
+            "CA": [
+                "en",
+                "fr"
+            ],
+            "CD": [
+                "fr",
+                "en",
+                "es",
+                "zh"
+            ],
+            "CG": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "CH": [
+                "de",
+                "fr",
+                "en"
+            ],
+            "CI": [
+                "fr",
+                "en"
+            ],
+            "CK": [
+                "en",
+                "fr",
+                "es",
+                "zh"
+            ],
+            "CL": [
+                "es",
+                "en",
+                "fr",
+                "zh"
+            ],
+            "CM": [
+                "fr",
+                "en"
+            ],
+            "CN": [
+                "zh"
+            ]
+        },
+        "regions": {
+            "EM": [],
+            "LATAM": [
+                "JM",
+                "PY",
+                "KY",
+                "AW",
+                "BB",
+                "KN",
+                "LC",
+                "UY",
+                "TT",
+                "GD",
+                "NI",
+                "GT",
+                "GY",
+                "HN",
+                "CR",
+                "CO",
+                "DO",
+                "DM",
+                "VG",
+                "VE",
+                "MS",
+                "VC",
+                "EC",
+                "FK",
+                "AI",
+                "AG",
+                "AN",
+                "PA",
+                "PE",
+                "BM",
+                "BO",
+                "BS",
+                "BZ",
+                "TC",
+                "SR",
+                "SV",
+                "CL"
+            ],
+            "EMEA": [
+                "MT",
+                "MU",
+                "MW",
+                "MZ",
+                "NA",
+                "NC",
+                "NE",
+                "JO",
+                "HU",
+                "IS",
+                "SA",
+                "RW",
+                "RS",
+                "RO",
+                "RE",
+                "QA",
+                "SC",
+                "AZ",
+                "BA",
+                "KZ",
+                "BF",
+                "BG",
+                "BH",
+                "KE",
+                "BI",
+                "KG",
+                "KW",
+                "KM",
+                "LI",
+                "LU",
+                "GH",
+                "LV",
+                "LS",
+                "LT",
+                "MA",
+                "TN",
+                "MC",
+                "UA",
+                "UG",
+                "TZ",
+                "GF",
+                "GE",
+                "FO",
+                "GA",
+                "GL",
+                "GI",
+                "NG",
+                "OM",
+                "GW",
+                "GM",
+                "GN",
+                "GP",
+                "GR",
+                "HR",
+                "SJ",
+                "SK",
+                "SL",
+                "SM",
+                "SH",
+                "SI",
+                "SN",
+                "SO",
+                "DJ",
+                "CZ",
+                "CY",
+                "CV",
+                "MG",
+                "YT",
+                "ME",
+                "YE",
+                "MD",
+                "MQ",
+                "ML",
+                "MK",
+                "VA",
+                "MR",
+                "WF",
+                "ET",
+                "FI",
+                "ER",
+                "EE",
+                "EG",
+                "DZ",
+                "PM",
+                "ZM",
+                "ZA",
+                "AE",
+                "AD",
+                "ZW",
+                "AO",
+                "PF",
+                "AM",
+                "AL",
+                "BJ",
+                "BW",
+                "BY",
+                "TD",
+                "TG",
+                "ST",
+                "SZ",
+                "TM",
+                "TJ",
+                "CD",
+                "CG",
+                "CI",
+                "CK",
+                "CM"
+            ],
+            "APAC": [
+                "MV",
+                "MY",
+                "ID",
+                "SB",
+                "KH",
+                "KI",
+                "KR",
+                "LK",
+                "LA",
+                "TV",
+                "TO",
+                "FM",
+                "NF",
+                "NP",
+                "NU",
+                "NR",
+                "NZ",
+                "MH",
+                "MN",
+                "WS",
+                "VU",
+                "VN",
+                "FJ",
+                "PN",
+                "PH",
+                "PG",
+                "PW",
+                "BN",
+                "BT"
+            ]
+        },
+        "enableInventory": true,
+        "floopydoops": true
+    },
+    "dc": "slc",
+    "env": "production",
+    "fallbackURL": "/webapps/hermes/fallback?product=ec",
+    "logURL": "/webapps/hermes/api/log",
+    "logAppName": "hermesnodeweb",
+    "locality": {
+        "country": "VN",
+        "lang": "en"
+    },
+    "xcomponent": true,
+    "isMobile": false,
+    "assetPreload": false,
+    "performanceVariant": {},
+    "integrationCTX": {},
+    "query": {},
+    "headers": {
+        "x-csrf-jwt": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6IkRXcXRpQUdzbGlSSnVDTy1aaEd6eVV1a1lhUDJrTGxseTF0TjNrTVNYZUcxaFZRVVlUbDdXWVc0Z1p1REJIekk5cVZncEk0cTFzOE9HZ1J0OU5XTXZtdlo3enFUYldyQi1QSWVKbWdnWElVQ0tUNkRiN1NVWTh6WmVjMWhFa0NKYWhzVFVOMzIzY3hTNk5XQ0xMUmg4RnIxLUJJdTAxcHFZc1RRRjVaWHJtdVotaGpmMzlkUEw5SkFKaEciLCJpYXQiOjE1MDc1NDAwMTIsImV4cCI6MTUwNzU0MzYxMn0.9hltORcNLZfX36_Oviee0F1AlR9LmqD1KcRKpdAXSos",
+        "x-csrf-jwt-hash": "bca47af5116f6a9b586c0fab96ea968c4bde53057b19889a43a3bdf7a11f6675",
+        "x-cookies": "{\"tD08unW5xWPYcc3Vtbf3fJ3V3AQpBSPfm6WSV5oz4qyqFW9g\":\"xNVl3pzdMRBEQ8YDeIQziOuEfpZlBWEsLJucY1OM0puP7GApg8CN8pzeDflg9uXSE6G-E7u3PAWCdqUt\",\"ag57olvZ7MWSTJXCB7PUbg1HbJ7ibAsoAYd73FZ9IOdz_8eW4AApCl4lKlO\":\"os42IcwyGZMXneKuYNqLp64jYDIzsr-C8FAXm8FkxujesB92uG7suBU-Wlj2_ChNkx2y1ImNEhgADno9AELSSMLOZvyFQMrJl3vzYVP4TZLbiUhnkh4HDp954LTNdYVACs3JmG2ngpYgRIz1WHFtJCFdC4i6Kt8stEXFjye5C62d2r-pavebPa5h8lGm0rAIE57qKKqU6OqpFXNTSSK63D8FFF_OeJ61_zNg7hAQHDJXzWQtkVT0Q5uetyFQkVfHq9RMTP2i2-Ch1C3hd7FH5wsd8B4qjN5m_IRiEO2MoZdUdtG24UUEd8RnfyOerNnYXVWhTTlOhBv47cs032B3pvy8SlwlQl_Nxpkz5JhaoS-5mCfdSCOq2CK2AJxC33XouK-0L3L_RiMCgnaxlRPxMknXtSgMx1DXpXx997zk47wpcqBK8BZ5Ewx8j7QlUJnjA6pL2d0igaL_fejwC26LgY39yIfpcoQGneSqDUm1cixNkdexGj7MEbCRSO9G4OCzz_LaBuxCyMyxM5mFPhNV3GYRZaP-mE_tTadGZo53a-RpnbTv59-lrIfzq7zOsqGXH_kXYFAebuzHdWyt\",\"iQCnhIy5-64PvineZIGVfUafYGUgmm9iludbMKXVIUhFSMEA\":\"ITePCSDmHvjDCYZZlEFatP1UlHblIsyGTH1fwlr9qbu_H1gDackSO550v8-AZfyO4kNgBeNh2oCG-oz1\"}",
+        "x-cookies-hash": "d436d4a08ff4a144dc86d89973a4e2d0937b3df1a411cd43f5f1814fec9a8421"
+    }
+};
+            window.cookies = {};
+        </script>
+
+        <script src="./config.js" onerror="scripterror(event)"></script>
+        <script src="./button.js" onerror="scripterror(event)"></script>
+
+<script nonce="">
+window.preload("get", "/webapps/hermes/api/auth", {
+    "ack": "success",
+    "data": {
+        "logged_in": false,
+        "guest": false,
+        "remembered": false,
+        "password_less": false,
+        "auth_state": "ANONYMOUS",
+        "refresh_token": false,
+        "access_token_present": false,
+        "is_auth_api_call": true,
+        "buyer_id": "",
+        "buyer_ipcountry": "VN",
+        "idTokenPresent": false,
+        "upsellOptInDisplayed": false,
+        "ryiOptIn": {
+            "termsDisplayed": false
+        },
+        "ota": false,
+        "remembered_device_token": false,
+        "remembered_partner_assertion": false
+    },
+    "meta": {
+        "calc": "7426db1982383",
+        "rlog": "sR6DFbqbw2SAxMvNxa1HUTbNIUfNgovz9l3XN1mD3cYMEwBeC3EdBnPj65awwPtykE6w4jLpc397KTPowMeLXw_15f00630e0b"
+    },
+    "server": "DKD4dV_TmAGl5eQnFa1at_wXM98iBlfYwks7VLu-pq3XsrozqWmnWu_XRBpiSO57K5FVhcydn0Ejlw7ONRIZSMy5_PZolIwu3Mtj5KUHXMeEZZoSYan44R81ZNT7iZmKX9eGiuWlfSPvopPJHiPziazq4yhvsjTyca3H_YR48bD3mYBnn9OWtT3pZtiQ2Fx93fOol-PS2ftsSNyZH_JXFoTxJCbscscarWM6DugQ_w1dauWuiVsisG"
+}, "auth");
+</script>
+
+<script nonce="">
+window.preload("get", "/webapps/hermes/api/locale?ipCountry=VN&localeParam=en_US", {
+    "ack": "success",
+    "data": {
+        "country": "US",
+        "lang": "en"
+    },
+    "meta": {
+        "calc": "7426db1982383",
+        "rlog": "sR6DFbqbw2SAxMvNxa1HUTbNIUfNgovz9l3XN1mD3cYMEwBeC3EdBnPj65awwPtykE6w4jLpc397KTPowMeLXw_15f00630e0b"
+    },
+    "server": "1gvWBLJVm-wzWxxtNLM0012AtUyIe7hKV9uHpo9enW7SFaI3fa_OsIYJHmTyX-IGH6IRmvW0CmKYT7kwDmA3VHLoagTHEqk2RhnCKLYPfOz7xIkTw-14OXPxYtnXES5mtZSyDEHUAHrD9ZCqwjMiehAMOjBXL_elmLiVbQEaXR8NBPKXFUNeIXXcwq3iXEanDusqV2IxRRvHVylbX3kPcuyAHOgXy7gH9d0aTIjMd_P3IY8ZOt7J60"
+}, "locale");
+</script>
+
+<script nonce="">
+window.preloadComplete();
+</script>
+<style type="text/css">
+    /* Buy Now Button */
+
+    .fundingInstruments {
+        padding-top: 3px;
+    }
+
+
+    @media only screen and (min-height: 22px) and (min-width: 100px) {
+        .cardIcons {
+            display: inline-block;
+            background: url('https://www.paypalobjects.com/images/checkout/incontext/network_and_bank_icons_small_1x.png') no-repeat;
+            height: 20px;
+            padding-right: 5px;
+        }
+
+        .cardIcons.VISA {
+            background-position: -12px -40px;
+            width: 28px;
+        }
+
+        .cardIcons.MASTERCARD {
+            background-position: -12px -70px;
+            width: 26px;
+        }
+
+        .cardIcons.DISCOVER {
+            background-position: -12px -100px;
+            width: 29px;
+        }
+
+        .cardIcons.AMEX {
+            background-position: -12px -130px;
+            width: 20px;
+        }
+
+        .cardIcons.MAESTRO {
+            background-position: -12px -220px;
+            width: 24px;
+        }
+
+        .cardIcons.SWITCH {
+            background-position: -12px -220px;
+            width: 24px;
+        }
+
+        .cardIcons.CBNATIONALE {
+            background-position: -12px -280px;
+            width: 24px;
+        }
+
+        .cardIcons.COFINOGA {
+            background-position: -12px -310px;
+            width: 30px;
+        }
+
+        .cardIcons.JCB {
+            background-position: -12px -430px;
+            width: 21px;
+        }
+
+        .cardIcons.HIPER {
+            background-position: -12px -460px;
+            width: 25px;
+        }
+
+        .cardIcons.ELO {
+            background-position: -12px -490px;
+            width: 19px;
+        }
+
+        .cardIcons.HIPERCARD {
+            background-position: -12px -520px;
+            width: 30px;
+        }
+
+        .cardIcons.CUP {
+            background-position: -12px -580px;
+            width: 24px;
+        }
+
+        .cardIcons.CETELEM {
+            background-position: -12px -760px;
+            width: 31px;
+        }
+
+        .cardIcons.COFIDIS {
+            background-position: -12px -790px;
+            width: 32px;
+        }
+    }
+
+
+
+    @media only screen and (min-width: 200px) and (min-height: 59px) {
+        .cardIcons {
+            display: inline-block;
+            background: url('https://www.paypalobjects.com/images/checkout/incontext/network_and_bank_icons_big_1x.png') no-repeat;
+            height: 27px;
+            padding-right: 5px;
+        }
+
+        .cardIcons.VISA {
+            background-position: -12px -47px;
+            width: 36px;
+        }
+
+        .cardIcons.MASTERCARD {
+            background-position: -12px -84px;
+            width: 35px;
+        }
+
+        .cardIcons.DISCOVER {
+            background-position: -12px -121px;
+            width: 38px;
+        }
+
+        .cardIcons.AMEX {
+            background-position: -12px -158px;
+            width: 25px;
+        }
+
+        .cardIcons.MAESTRO {
+            background-position: -12px -269px;
+            width: 31px;
+        }
+
+        .cardIcons.SWITCH {
+            background-position: -12px -269px;
+            width: 31px;
+        }
+
+        .cardIcons.CBNATIONALE {
+            background-position: -12px -343px;
+            width: 31px;
+        }
+
+        .cardIcons.COFINOGA {
+            background-position: -12px -380px;
+            width: 38px;
+        }
+
+        .cardIcons.JCB {
+            background-position: -12px -528px;
+            width: 27px;
+        }
+
+        .cardIcons.HIPER {
+            background-position: -12px -565px;
+            width: 32px;
+        }
+
+        .cardIcons.ELO {
+            background-position: -12px -602px;
+            width: 25px;
+        }
+
+        .cardIcons.HIPERCARD {
+            background-position: -12px -639px;
+            width: 39px;
+        }
+
+        .cardIcons.CUP {
+            background-position: -12px -713px;
+            width: 31px;
+        }
+
+        .cardIcons.CETELEM {
+            background-position: -12px -935px;
+            width: 40px;
+        }
+
+        .cardIcons.COFIDIS {
+            background-position: -12px -972px;
+            width: 42px;
+        }
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: ~"2/1"), only screen and (min-device-pixel-ratio: 2) {
+
+        @media only screen and (min-height: 22px) and (min-width: 100px) {
+            .cardIcons {
+                display: inline-block;
+                background: url('https://www.paypalobjects.com/images/checkout/incontext/network_and_bank_icons_small_2x.png') no-repeat;
+                background-size: 90px 970px;
+                height: 20px;
+                padding-right: 5px;
+            }
+
+            .cardIcons.VISA {
+                background-position: -12px -40px;
+                width: 28px;
+            }
+
+            .cardIcons.MASTERCARD {
+                background-position: -12px -70px;
+                width: 26px;
+            }
+
+            .cardIcons.DISCOVER {
+                background-position: -12px -100px;
+                width: 29px;
+            }
+
+            .cardIcons.AMEX {
+                background-position: -12px -130px;
+                width: 20px;
+            }
+
+            .cardIcons.MAESTRO {
+                background-position: -12px -220px;
+                width: 24px;
+            }
+
+            .cardIcons.SWITCH {
+                background-position: -12px -220px;
+                width: 24px;
+            }
+
+            .cardIcons.CBNATIONALE {
+                background-position: -12px -280px;
+                width: 24px;
+            }
+
+            .cardIcons.COFINOGA {
+                background-position: -12px -310px;
+                width: 30px;
+            }
+
+            .cardIcons.JCB {
+                background-position: -12px -430px;
+                width: 21px;
+            }
+
+            .cardIcons.HIPER {
+                background-position: -12px -460px;
+                width: 25px;
+            }
+
+            .cardIcons.ELO {
+                background-position: -10px -490px;
+                width: 19px;
+            }
+
+            .cardIcons.HIPERCARD {
+                background-position: -12px -520px;
+                width: 30px;
+            }
+
+            .cardIcons.CUP {
+                background-position: -12px -580px;
+                width: 24px;
+            }
+
+            .cardIcons.CETELEM {
+                background-position: -12px -760px;
+                width: 31px;
+            }
+
+            .cardIcons.COFIDIS {
+                background-position: -12px -790px;
+                width: 32px;
+            }
+        }
+
+
+
+        @media only screen and (min-width: 200px) and (min-height: 59px) {
+            .cardIcons {
+                display: inline-block;
+                background: url('https://www.paypalobjects.com/images/checkout/incontext/network_and_bank_icons_big_2x.png') no-repeat;
+                background-size: 110px 1393px;
+                height: 27px;
+                padding-right: 5px;
+            }
+
+            .cardIcons.VISA {
+                background-position: -12px -47px;
+                width: 36px;
+            }
+
+            .cardIcons.MASTERCARD {
+                background-position: -12px -84px;
+                width: 35px;
+            }
+
+            .cardIcons.DISCOVER {
+                background-position: -12px -121px;
+                width: 38px;
+            }
+
+            .cardIcons.AMEX {
+                background-position: -12px -158px;
+                width: 25px;
+            }
+
+            .cardIcons.MAESTRO {
+                background-position: -12px -269px;
+                width: 25px;
+            }
+
+            .cardIcons.SWITCH {
+                background-position: -12px -269px;
+                width: 31px;
+            }
+
+            .cardIcons.CBNATIONALE {
+                background-position: -12px -343px;
+                width: 31px;
+            }
+
+            .cardIcons.COFINOGA {
+                background-position: -12px -380px;
+                width: 38px;
+            }
+
+            .cardIcons.JCB {
+                background-position: -12px -528px;
+                width: 27px;
+            }
+
+            .cardIcons.HIPER {
+                background-position: -12px -565px;
+                width: 32px;
+            }
+
+            .cardIcons.ELO {
+                background-position: -12px -602px;
+                width: 25px;
+            }
+
+            .cardIcons.HIPERCARD {
+                background-position: -12px -639px;
+                width: 39px;
+            }
+
+            .cardIcons.CUP {
+                background-position: -12px -713px;
+                width: 31px;
+            }
+
+            .cardIcons.CETELEM {
+                background-position: -12px -935px;
+                width: 40px;
+            }
+
+            .cardIcons.COFIDIS {
+                background-position: -12px -972px;
+                width: 42px;
+            }
+        }
+    }
+
+</style>
+
+
+
+</body></html>
