@@ -400,7 +400,7 @@
                     <div class="row m-0-top buckets-container" data-stat-first-load="bucket-navigation">
                         <div class="col-md-12">
                             <div class="air-card p-0 m-md-top">
-                                <div class="breadcrumb breadcrumb-lg m-0"><!----><a data-ng-if="true"
+                                <div onclick="back()" class="breadcrumb breadcrumb-lg m-0"><!----><a data-ng-if="true"
                                         data-ui-sref=".jobDetails" data-ng-click="changeBucket(&#39;job-details&#39;)"
                                         data-ng-enter="changeBucket(&#39;job-details&#39;)"
                                         data-ng-class="{&#39;active&#39;: activeBucket == &#39;job-details&#39;}"
@@ -3907,6 +3907,7 @@
                                                                                                             data-is-show-create-job-link="isShowCreateJobLink"
                                                                                                             data-append-to-body="true"
                                                                                                             data-job-post-kvl=""
+                                                                                                            id="invite"
                                                                                                             data-event-log-location="ats"
                                                                                                             data-btn-class="btn btn-block btn-primary btn-sm m-0-top m-0-left-right m-sm-bottom"
                                                                                                             data-event-log-sublocation="eventLogSublocation"
@@ -4249,6 +4250,7 @@
                                                                                                             data-job-post-kvl=""
                                                                                                             data-event-log-location="ats"
                                                                                                             data-btn-class="btn btn-block btn-primary btn-sm m-0-top m-0-left-right m-sm-bottom"
+                                                                                                            id="invite"
                                                                                                             data-event-log-sublocation="eventLogSublocation"
                                                                                                             data-log-trigger="click"
                                                                                                             data-log-event="click"
@@ -7391,7 +7393,19 @@ NREUM.info = {
     "errorBeacon"    : "bam.nr-data.net",
     "agent"          : ""
 }</script>
+<div id="showModal" class="popover left fade size-lg in" ng-class="{ in: isOpen(), 'size-sm': size == 'sm', 'size-md': size == 'md', 'size-lg': size == 'lg' }" eo-tooltip-animation-class="fade" eo-tooltip-classes="" eo-popover-popup="" title="" content="/ab/ats-aas/bundles/odeskinterviewinvitation/js/invitation/form.html?cdd227f" placement="left" popup-class="" dynamicplacement="" dynamicposition="" responsive="" watchcontent="" hoverable="" animation="animation" is-open="isOpen" origin-scope="origScope" size="lg" set-manually-loaded-status="false" style="visibility: visible; display: none; top: 253px; left: 897.484px; width: 400px; height: 370px;">
+    <div class="arrow" style="top: 183px;"></div>
+    <div class="popover-inner">
+        <!----><a class="close pull-right" ng-click="close()" ng-if="closeButton"><span aria-hidden="true" class="glyphicon-sm air-icon-close"></span></a><!---->
+        <!---->
+        <div class="popover-content break" eo-tooltip-template-transclude="contentExp()" eo-tooltip-template-transclude-scope="originScope()" ng-show="isContentLoaded"><div data-ng-controller="interviewInvitationController as inviteCtrl" data-message="Please wait..." class=""><div data-eo-block=""><div class="clearfix"><!----><div class="pull-left"><a data-ng-href="/freelancers/~01589f9d0b8bdfb8e1" data-ng-click="inviteCtrl.logEvent('click', 'open_portrait')" href="/freelancers/~01589f9d0b8bdfb8e1"><!----><img data-ng-if="::userAvatarUrl" data-ng-src="https://odesk-prod-portraits.s3.amazonaws.com/Users:harry-pan:PortraitUrl_100?AWSAccessKeyId=1XVAX3FNQZAFC9GJCFR2&amp;Expires=2147483647&amp;Signature=xxlkIzBGkOpVL1ir3lXwpyvzM0I%3D&amp;1494179766145308" class="avatar avatar-xs m-0-top-bottom m-0-left m-sm-right" src="https://odesk-prod-portraits.s3.amazonaws.com/Users:harry-pan:PortraitUrl_100?AWSAccessKeyId=1XVAX3FNQZAFC9GJCFR2&amp;Expires=2147483647&amp;Signature=xxlkIzBGkOpVL1ir3lXwpyvzM0I%3D&amp;1494179766145308"><!----> <!----></a></div><div><a data-ng-href="/freelancers/~01589f9d0b8bdfb8e1" data-ng-click="inviteCtrl.logEvent('click', 'open_name')" href="/freelancers/~01589f9d0b8bdfb8e1">Harry P.</a></div><div><strong data-qa="freelancer_title">Shopify Theme &amp; App, Ruby on Rails, Laravel/Vue, Angular, Reactjs</strong></div></div><form name="inviteForm" class="invite-interview-form ng-pristine ng-valid ng-valid-required ng-valid-minlength"><div class="form-group m-0-bottom"><label for="interview-invitation-popup-message" class="width-xs m-sm-top">Message</label><div data-ng-messages="inviteForm.message.$error" class="pull-right p-0 m-0 ng-inactive"><!----><!----></div><textarea  class="form-control ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required ng-valid-minlength" name="message" id="interview-invitation-popup-message" placeholder="Message" rows="8" data-up-disintermediation="" data-up-disintermediation-context="'interview-invitation-form'" data-up-disintermediation-analytics="" data-ng-model="inviteCtrl.message" data-ng-required="true" data-ng-minlength="10" required="required">Hello!
 
+I'd like to invite you to apply to my job. Please review the job post and apply if you're available.
+
+Ha Ha</textarea><!----><!----><!----><button data-ng-click="inviteCtrl.onFormSubmit()" data-ng-if="clientOpenJobs.length > 0 || openingUid" data-ng-disabled="inviteCtrl.isLoading || inviteCtrl.inProgressError || !inviteForm.$valid" type="submit" class="btn btn-primary col-xs-12 m-0-left m-md-top m-0-bottom">Send Invitation</button><!----><div class="clearfix"></div><!----></div></form><!----></div></div></div>
+        <div eo-block="false" ng-class="{'eo-block-none loading' : !isContentLoaded}" class=""><!----></div>
+    </div>
+</div>
 </body>
 <script type="text/javascript">
     $(document).ready(function () {
@@ -7410,9 +7424,16 @@ NREUM.info = {
             $('#dev-search').removeClass('in').addClass('collapse').css("height", "0")
         });
 
+        $("#invite").click(function () {
+            $('#showModal').toggle()
+        });
+
         $(".account-dropdown").click(function () {
             $(this).toggleClass("open")
         });
     });
+    function back(argument) {
+        location.href='/JobPostings.html';
+    }
 </script>
 </html>

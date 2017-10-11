@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9590e059-2596-4f47-9e6f-ab7e99968af6" name="Default" comment="add inviteDev">
+    <list default="true" id="9590e059-2596-4f47-9e6f-ab7e99968af6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JobPostings.html" afterPath="$PROJECT_DIR$/JobPostings.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inviteJob.html" afterPath="$PROJECT_DIR$/inviteJob.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,80 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="JobPostings.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/JobPostings.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="255" column="1381" lean-forward="true" selection-start-line="255" selection-start-column="1381" selection-end-line="255" selection-end-column="1381" />
-              <folding>
-                <element signature="e#1789#1793#0" expanded="true" />
-                <element signature="e#1853#1858#0" expanded="true" />
-                <element signature="e#1889#1894#0" expanded="true" />
-                <element signature="e#1918#1923#0" expanded="true" />
-                <element signature="e#1948#1953#0" expanded="true" />
-                <element signature="e#2003#2008#0" expanded="true" />
-                <element signature="e#2029#2034#0" expanded="true" />
-                <element signature="e#2052#2057#0" expanded="true" />
-                <element signature="e#2076#2081#0" expanded="true" />
-                <element signature="e#2116#2121#0" expanded="true" />
-                <element signature="e#2149#2154#0" expanded="true" />
-                <element signature="e#2241#2245#0" expanded="true" />
-                <element signature="e#2245#2249#0" expanded="true" />
-                <element signature="e#2256#2260#0" expanded="true" />
-                <element signature="e#21518#21523#0" expanded="true" />
-                <element signature="e#21548#21553#0" expanded="true" />
-                <element signature="e#22038#22043#0" expanded="true" />
-                <element signature="e#23721#23726#0" expanded="true" />
-                <element signature="e#23976#23981#0" expanded="true" />
-                <element signature="e#24478#24483#0" expanded="true" />
-                <element signature="e#25029#25034#0" expanded="true" />
-                <element signature="e#26207#26212#0" expanded="true" />
-                <element signature="e#26503#26508#0" expanded="true" />
-                <element signature="e#26775#26780#0" expanded="true" />
-                <element signature="e#27945#27950#0" expanded="true" />
-                <element signature="e#28721#28726#0" expanded="true" />
-                <element signature="e#28991#28996#0" expanded="true" />
-                <element signature="e#29412#29417#0" expanded="true" />
-                <element signature="e#30161#30166#0" expanded="true" />
-                <element signature="e#31708#31713#0" expanded="true" />
-                <element signature="e#31976#31981#0" expanded="true" />
-                <element signature="e#33380#33385#0" expanded="true" />
-                <element signature="e#34631#34636#0" expanded="true" />
-                <element signature="e#35303#35308#0" expanded="true" />
-                <element signature="e#35559#35564#0" expanded="true" />
-                <element signature="e#36314#36319#0" expanded="true" />
-                <element signature="e#36821#36826#0" expanded="true" />
-                <element signature="e#44497#44502#0" expanded="true" />
-                <element signature="e#45162#45167#0" expanded="true" />
-                <element signature="e#45678#45683#0" expanded="true" />
-                <element signature="e#47242#47247#0" expanded="true" />
-                <element signature="e#47505#47510#0" expanded="true" />
-                <element signature="e#47774#47779#0" expanded="true" />
-                <element signature="e#49200#49205#0" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#textarea#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#ul#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#65772#65776#0" expanded="true" />
-                <element signature="e#69025#69029#0" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#form#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#85243#85248#0" expanded="true" />
-                <element signature="e#85861#85866#0" expanded="true" />
-                <element signature="e#86098#86103#0" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#form#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#textarea#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#form#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#106664#106669#0" expanded="true" />
-                <element signature="e#106682#106686#0" expanded="true" />
-                <element signature="e#106698#106703#0" expanded="true" />
-                <element signature="e#115430#115435#0" expanded="true" />
-                <element signature="e#115613#115618#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -170,6 +97,157 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="ignore_missing_gitignore" value="true" />
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/FindJobsUpwork.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/FindJobsUpwork_files/816554411748126</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/FindJobsUpwork_files/air2.global.5.1.0.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/FindJobsUpwork_files/c9e72fe.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/FindJobsUpwork_files/config.aspx</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/FindJobsUpwork_files/fonts.air2-icons.1.16.0.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/FindJobsUpwork_files/fonts.gotham-async.1.16.0.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/FindJobsUpwork_files/fonts.gotham.1.16.0.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/FindJobsUpwork_files/no-results.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/FindJobsUpwork_files/nrse.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/JobDetail.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/JobDetail_files/816554411748126</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/JobDetail_files/8d82adc.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/JobDetail_files/FUP4R77Y9Z.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/JobDetail_files/LUP4R77Y9ZE.json</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/JobDetail_files/UP4R77Y9Z.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/JobDetail_files/Users-huynn96-PortraitUrl</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/JobDetail_files/air.components.3.5.6.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/JobDetail_files/air.global.3.5.6.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/JobDetail_files/analytics.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/JobDetail_files/core.3.5.6.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/JobDetail_files/data_f291d842c15945d8a003a5ee9d8e41a7.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/JobDetail_files/f725e87.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/JobDetail_files/fbevents.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/JobDetail_files/fonts.air-icons-async.1.15.0.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/JobDetail_files/fonts.air-icons.1.15.0.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/JobDetail_files/fonts.gotham-async.1.15.0.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/JobDetail_files/fonts.gotham.1.15.0.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/JobDetail_files/gtm.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/JobDetail_files/insight.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/JobDetail_files/ip</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/JobDetail_files/main.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/JobDetail_files/maketutorial_lib_2692.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/JobDetail_files/nr-1059.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/JobDetail_files/nrse.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/JobDetail_files/prelib-plugin-909cf417-e291-45c9-84ec-0727c29402b2.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/JobDetail_files/saved_resource.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/JobDetail_files/settings.txt</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/JobDetail_files/walkme_0dc202b3af9c445882f2b5b06a958676_https.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/JobDetail_files/widget_6edd7036e0514ebeaa22a3ba12bf297a.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/JobDetail_files/wmjQuery171.js</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -197,7 +275,7 @@
       <workItem from="1507705048783" duration="815000" />
       <workItem from="1507710590549" duration="146000" />
       <workItem from="1507711603170" duration="88000" />
-      <workItem from="1507712534273" duration="800000" />
+      <workItem from="1507712534273" duration="1758000" />
     </task>
     <task id="LOCAL-00001" summary="clear script login">
       <created>1507704559900</created>
@@ -206,17 +284,23 @@
       <option name="project" value="LOCAL" />
       <updated>1507704559900</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add invite job">
+      <created>1507713546623</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1507713546623</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2420000" />
+    <option name="totallyTimeSpent" value="3378000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="724" y="218" width="1920" height="1053" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -242,7 +326,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="clear script login" />
-    <option name="LAST_COMMIT_MESSAGE" value="clear script login" />
+    <MESSAGE value="add invite job" />
+    <option name="LAST_COMMIT_MESSAGE" value="add invite job" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -324,23 +409,23 @@
         <state relative-caret-position="450">
           <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
-            <element signature="e#1542#1546#0" expanded="true" />
-            <element signature="e#1660#1664#0" expanded="true" />
-            <element signature="e#1834#1838#0" expanded="true" />
-            <element signature="e#1959#1963#0" expanded="true" />
-            <element signature="e#3439#3443#0" expanded="true" />
-            <element signature="e#3503#3508#0" expanded="true" />
-            <element signature="e#3540#3545#0" expanded="true" />
-            <element signature="e#3602#3607#0" expanded="true" />
-            <element signature="e#3632#3637#0" expanded="true" />
-            <element signature="e#3687#3692#0" expanded="true" />
-            <element signature="e#3713#3718#0" expanded="true" />
-            <element signature="e#3736#3741#0" expanded="true" />
-            <element signature="e#3760#3765#0" expanded="true" />
-            <element signature="e#3800#3805#0" expanded="true" />
-            <element signature="e#3898#3902#0" expanded="true" />
-            <element signature="e#3902#3906#0" expanded="true" />
-            <element signature="e#3913#3917#0" expanded="true" />
+            <element signature="e#1542#1546#0" expanded="false" />
+            <element signature="e#1660#1664#0" expanded="false" />
+            <element signature="e#1834#1838#0" expanded="false" />
+            <element signature="e#1959#1963#0" expanded="false" />
+            <element signature="e#3439#3443#0" expanded="false" />
+            <element signature="e#3503#3508#0" expanded="false" />
+            <element signature="e#3540#3545#0" expanded="false" />
+            <element signature="e#3602#3607#0" expanded="false" />
+            <element signature="e#3632#3637#0" expanded="false" />
+            <element signature="e#3687#3692#0" expanded="false" />
+            <element signature="e#3713#3718#0" expanded="false" />
+            <element signature="e#3736#3741#0" expanded="false" />
+            <element signature="e#3760#3765#0" expanded="false" />
+            <element signature="e#3800#3805#0" expanded="false" />
+            <element signature="e#3898#3902#0" expanded="false" />
+            <element signature="e#3902#3906#0" expanded="false" />
+            <element signature="e#3913#3917#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -441,31 +526,31 @@
         <state relative-caret-position="1092">
           <caret line="7415" column="7" lean-forward="false" selection-start-line="7415" selection-start-column="7" selection-end-line="7415" selection-end-column="7" />
           <folding>
-            <element signature="e#1542#1546#0" expanded="true" />
-            <element signature="e#1660#1664#0" expanded="true" />
-            <element signature="e#1834#1838#0" expanded="true" />
-            <element signature="e#1959#1963#0" expanded="true" />
-            <element signature="e#3439#3443#0" expanded="true" />
-            <element signature="e#3503#3508#0" expanded="true" />
-            <element signature="e#3540#3545#0" expanded="true" />
-            <element signature="e#3602#3607#0" expanded="true" />
-            <element signature="e#3632#3637#0" expanded="true" />
-            <element signature="e#3687#3692#0" expanded="true" />
-            <element signature="e#3713#3718#0" expanded="true" />
-            <element signature="e#3736#3741#0" expanded="true" />
-            <element signature="e#3760#3765#0" expanded="true" />
-            <element signature="e#3800#3805#0" expanded="true" />
-            <element signature="e#3898#3902#0" expanded="true" />
-            <element signature="e#3902#3906#0" expanded="true" />
-            <element signature="e#3913#3917#0" expanded="true" />
+            <element signature="e#1542#1546#0" expanded="false" />
+            <element signature="e#1660#1664#0" expanded="false" />
+            <element signature="e#1834#1838#0" expanded="false" />
+            <element signature="e#1959#1963#0" expanded="false" />
+            <element signature="e#3439#3443#0" expanded="false" />
+            <element signature="e#3503#3508#0" expanded="false" />
+            <element signature="e#3540#3545#0" expanded="false" />
+            <element signature="e#3602#3607#0" expanded="false" />
+            <element signature="e#3632#3637#0" expanded="false" />
+            <element signature="e#3687#3692#0" expanded="false" />
+            <element signature="e#3713#3718#0" expanded="false" />
+            <element signature="e#3736#3741#0" expanded="false" />
+            <element signature="e#3760#3765#0" expanded="false" />
+            <element signature="e#3800#3805#0" expanded="false" />
+            <element signature="e#3898#3902#0" expanded="false" />
+            <element signature="e#3902#3906#0" expanded="false" />
+            <element signature="e#3913#3917#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/JobPostings.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="255" column="1381" lean-forward="true" selection-start-line="255" selection-start-column="1381" selection-end-line="255" selection-end-column="1381" />
+        <state relative-caret-position="-324">
+          <caret line="255" column="1582" lean-forward="false" selection-start-line="255" selection-start-column="1582" selection-end-line="255" selection-end-column="1582" />
           <folding>
             <element signature="e#1789#1793#0" expanded="true" />
             <element signature="e#1853#1858#0" expanded="true" />
