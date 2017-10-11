@@ -13429,336 +13429,167 @@ Update: 31 July 2017
                             <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
                             <!----><!----><!----><!----><!----><!----><!----><!---->
                             <!----><!---->
-                            <section class="job-tile air-card-hover hover m-0-top" data-ng-if="!loadingSpinner"
-                                     data-ng-repeat="job in jobListController.jobs" style="">
-                                <!---->
-                                <div data-job-tile="::job" data-v2="true"><!---->
-                                    <!---->
-                                    <div data-job-tile-visible="jsuJobTileController.job"
-                                         data-v2="jsuJobTileController.isV2"
-                                         data-ng-if="!jsuJobTileController.job.feedback" class=""><!---->
-                                        <!---->
-                                        <div data-job-tile-medium="jsuJobTileVisibleController.job"
-                                             data-ng-click="jsuJobTileVisibleController.openJdSlider($event)"
-                                             data-v2="jsuJobTileVisibleController.isV2"
-                                             data-ng-if="jsuJobTileVisibleController.isTileMedium()"><!---->
-                                            <!---->
-                                            <!---->
-                                            <!---->
-                                            <div data-ng-if="::jsuJobTileMediumController.isV2" class="row">
-                                                <div class="col-md-10">
-                                                    <h4 data-job-title="::jsuJobTileMediumController.job"
-                                                        class="job-title m-0-top m-sm-bottom"><a
-                                                            data-ng-bind-html="::jsuJobTitleController.job.title|truncateHtmlByWords:jsuJobTitleController.wordsThreshold"
-                                                            data-ng-click="jsuJobTitleController.onJobTitleClick($event)"
-                                                            data-ng-href="/jobs/_~0166a765ba90fe444e/"
-                                                            class="job-title-link break visited"
-                                                            data-ng-class="{&#39;text-muted&#39;: jsuJobTitleController.isHidden}"
-                                                            data-itemprop="url"
-                                                            href="https://www.upwork.com/jobs/_~0166a765ba90fe444e/">Looking
-                                                        for a Content writer for niche blog with excellent article
-                                                        writing skills</a>
-                                                    </h4>
-                                                    <small class="text-muted display-inline-block m-sm-top">
-            <span data-job-type="::jsuJobTileMediumController.job"><!---->
-                <!----><strong data-ng-if="::jsuJobTypeController.isFixed()" class="js-type">Fixed-Price</strong><!---->
+                            <section class="job-tile air-card-hover hover m-0-top" data-ng-if="!loadingSpinner" data-ng-repeat="job in jobListController.jobs" style="">
                 <!---->
+                <div data-job-tile="::job" data-v2="true"><!---->
+<!----><div data-job-tile-visible="jsuJobTileController.job" data-v2="jsuJobTileController.isV2" data-ng-if="!jsuJobTileController.job.feedback" class=""><!---->
+<!----><div data-job-tile-medium="jsuJobTileVisibleController.job" data-ng-click="jsuJobTileVisibleController.openJdSlider($event)" data-v2="jsuJobTileVisibleController.isV2" data-ng-if="jsuJobTileVisibleController.isTileMedium()"><!---->
+<!---->
+<!---->
+<!----><div data-ng-if="::jsuJobTileMediumController.isV2" class="row">
+    <div class="col-md-10">
+        <h4 data-job-title="::jsuJobTileMediumController.job" class="job-title m-0-top m-sm-bottom"><a data-ng-bind-html="::jsuJobTitleController.job.title|truncateHtmlByWords:jsuJobTitleController.wordsThreshold" data-ng-click="jsuJobTitleController.onJobTitleClick($event)" data-ng-href="JobDetail.html" class="job-title-link break visited" data-ng-class="{'text-muted': jsuJobTitleController.isHidden}" data-itemprop="url" href="JobDetail.html"><span class="highlight">Searching</span> <span class="highlight">for</span> <span class="highlight">a</span> <span class="highlight">crazy</span> <span class="highlight">as</span> <span class="highlight">hell</span> <span class="highlight">Full</span> <span class="highlight">Stack</span> <span class="highlight">JavaScript</span> <span class="highlight">Developer</span></a>
+</h4>
+        <small class="text-muted display-inline-block m-sm-top">
+            <span data-job-type="::jsuJobTileMediumController.job"><!---->
+<!----><strong data-ng-if="::jsuJobTypeController.isFixed()" class="js-type">Fixed-Price</strong><!---->
+<!---->
 </span>
-                                                        <span data-job-tier="::jsuJobTileMediumController.job"><!----><span
-                                                                data-ng-if="::jsuJobTierController.hasTier()"
-                                                                class="js-contractor-tier">
+            <span data-job-tier="::jsuJobTileMediumController.job"><!----><span data-ng-if="::jsuJobTierController.hasTier()" class="js-contractor-tier">
     -
     Intermediate ($$)
 </span><!---->
 </span>
-                                                        <span data-job-budget="::jsuJobTileMediumController.job"><!----><span
-                                                                data-ng-if="::jsuJobBudgetController.isFixed()"
-                                                                class="js-budget">
+            <span data-job-budget="::jsuJobTileMediumController.job"><!----><span data-ng-if="::jsuJobBudgetController.isFixed()" class="js-budget">
     -
-                                                            <!----><span
-                                                                data-ng-if="::!jsuJobBudgetController.isShortFormat">Est. Budget:</span>
-                                                            <!---->
-                                                            <!----><span
-                                                                data-ng-if="::jsuJobBudgetController.job.amount.amount"
-                                                                data-itemprop="baseSalary">
-        $5
+    <!----><span data-ng-if="::!jsuJobBudgetController.isShortFormat">Est. Budget:</span><!---->
+    <!----><span data-ng-if="::jsuJobBudgetController.job.amount.amount" data-itemprop="baseSalary">
+        $200
     </span><!---->
-                                                            <!---->
+    <!---->
 </span><!---->
-                                                            <!---->
+<!---->
 </span>
-                                                        <span data-job-duration="::jsuJobTileMediumController.job"><!---->
+            <span data-job-duration="::jsuJobTileMediumController.job"><!---->
 </span>
-                                                        <span data-job-posted-time="::jsuJobTileMediumController.job"><span
-                                                                class="js-posted">
+            <span data-job-posted-time="::jsuJobTileMediumController.job"><span class="js-posted">
     <!----><span data-ng-if="::!jsuJobPostedTimeController.isShortFormat" class="">
         -
         Posted
     </span><!---->
-    <time data-eo-relative="2017-10-11T07:08:06+00:00" data-short="::jsuJobPostedTimeController.isShortFormat"
-          data-itemprop="datePosted" datetime="2017-10-11T07:08:06+00:00">10 minutes ago</time>
+    <time data-eo-relative="2017-09-26T13:21:49+00:00" data-short="::jsuJobPostedTimeController.isShortFormat" data-itemprop="datePosted" datetime="2017-09-26T13:21:49+00:00">14 days ago</time>
 </span>
 </span>
-                                                    </small>
-                                                    <div class="m-sm-top"
-                                                         data-job-location-requirement="::jsuJobTileMediumController.job">
-                                                        <!---->
-                                                    </div>
-                                                    <div class="m-sm-top"
-                                                         data-job-description="::jsuJobTileMediumController.job">
-                                                        <div class="description break"
-                                                             data-ng-class="{&#39;hide-less-button&#39;: jsuJobDescriptionController.areSkillsRevealedFromTruncation()}">
-                                                            <div data-eo-truncation-html-unsafe="::jsuJobDescriptionController.job.description"
-                                                                 data-eo-chars-threshold="250"
-                                                                 data-eo-on-truncation-toggle="::jsuJobDescriptionController.eoOnTruncationToggle"
-                                                                 data-is-open="jsuJobDescriptionController.isTruncationOpen"
-                                                                 class="m-sm-bottom"><span data-ng-show="!isOpen"
-                                                                                           class="">
-    <span data-ng-bind-html="truncatedHtml">Looking for a Content writer for niche blog with excellent article writing skills.</span>
-                                                                <!---->
+        </small>
+        <div class="m-sm-top" data-job-location-requirement="::jsuJobTileMediumController.job"><!---->
+</div>
+        <div class="m-sm-top" data-job-description="::jsuJobTileMediumController.job"><div class="description break" data-ng-class="{'hide-less-button': jsuJobDescriptionController.areSkillsRevealedFromTruncation()}">
+    <div data-eo-truncation-html-unsafe="::jsuJobDescriptionController.job.description" data-eo-chars-threshold="250" data-eo-on-truncation-toggle="::jsuJobDescriptionController.eoOnTruncationToggle" data-is-open="jsuJobDescriptionController.isTruncationOpen" class="m-sm-bottom"><span data-ng-show="!isOpen" class="">
+    <span data-ng-bind-html="truncatedHtml">We need <span class="highlight">a</span> <span class="highlight">crazy</span> <span class="highlight">for</span> <span class="highlight">JavaScript</span> technologies <span class="highlight">developer</span> and can work with any JS technology be it MEAN/MERN stack or Meteor-Blaze/REACT/Angular stack.  ... We need a crazy for JavaScript technologies developer and can work with any JS technology be it  ...</span>
+    <!----><a data-ng-if="truncationMade" data-ng-click="toggle()" class="eo-truncate-toggle-text eo-truncate-toggle-text-open" href="javascript:void(0)">
+           more
+    </a><!---->
 </span>
-                                                                <span data-ng-show="isOpen" class="ng-hide">
-    <span data-ng-bind-html="htmlToTruncate">Looking for a Content writer for niche blog with excellent article writing skills.</span>
+<span data-ng-show="isOpen" class="ng-hide">
+    <span data-ng-bind-html="htmlToTruncate">We need <span class="highlight">a</span> <span class="highlight">crazy</span> <span class="highlight">for</span> <span class="highlight">JavaScript</span> technologies <span class="highlight">developer</span> and can work with any JS technology be it MEAN/MERN stack or Meteor-Blaze/REACT/Angular stack.  ... We need a crazy for JavaScript technologies developer and can work with any JS technology be it MEAN/MERN <span class="highlight">stack</span> or Meteor-Blaze/REACT/Angular <span class="highlight">stack</span>. Is up to the mark, ready to work and doesn't worry about getting rich from one project.
+
+ ... Is up to the mark, ready to work and doesn't worry about getting rich from one project.
+
+We have <span class="highlight">a</span> pipeline of many projects and this project is <span class="highlight">a</span> test project <span class="highlight">for</span> coming up better paying and cool projects.
+
+</span>
     <a data-ng-click="toggle()" class="eo-truncate-toggle-text eo-truncate-toggle-text-open" href="javascript:void(0)">
            less
     </a>
 </span>
-                                                            </div>
-                                                            <!---->
-                                                            <!----><span
-                                                                data-job-skills="jsuJobDescriptionController.job"
-                                                                data-ng-if="jsuJobDescriptionController.areSkillsVisible()"><span
-                                                                class="js-skills skills m-sm-top m-md-bottom">
-    <!----><a data-ng-repeat="skill in ::jsuJobSkillsController.job.skills|limitTo:5"
-              data-ng-mouseenter="jsuJobSkillsController.fetchSkillInfo(skill.name)"
-              data-eo-popover-html-unsafe="Loading..." data-eo-popover-trigger="mouseenter"
-              data-eo-popover-popup-delay="300" data-eo-popover-placement="bottom" data-eo-popover-append-to-body="true"
-              data-ng-click="jsuJobSkillsController.onJobSkillClick(skill)"
-              data-ng-href="/o/jobs/browse/skill/article-writing/" class="o-tag-skill nowrap" target="_self"
-              eo-popover-id="3606" href="https://www.upwork.com/o/jobs/browse/skill/article-writing/">
-        <span data-ng-class="::{highlight: skill.highlighted}">Article Writing</span>
-    </a><!----><a data-ng-repeat="skill in ::jsuJobSkillsController.job.skills|limitTo:5"
-                  data-ng-mouseenter="jsuJobSkillsController.fetchSkillInfo(skill.name)"
-                  data-eo-popover-html-unsafe="A blog is a personal journal published on the World Wide Web consisting of discrete entries (&quot;posts&quot;) typically displayed in reverse chronological order so the most recent post appears first."
-                  data-eo-popover-trigger="mouseenter" data-eo-popover-popup-delay="300"
-                  data-eo-popover-placement="bottom" data-eo-popover-append-to-body="true"
-                  data-ng-click="jsuJobSkillsController.onJobSkillClick(skill)"
-                  data-ng-href="/o/jobs/browse/skill/blog-writing/" class="o-tag-skill nowrap" target="_self"
-                  eo-popover-id="3609" href="https://www.upwork.com/o/jobs/browse/skill/blog-writing/">
-        <span data-ng-class="::{highlight: skill.highlighted}">Blog Writing</span>
-    </a><!----><a data-ng-repeat="skill in ::jsuJobSkillsController.job.skills|limitTo:5"
-                  data-ng-mouseenter="jsuJobSkillsController.fetchSkillInfo(skill.name)"
-                  data-eo-popover-html-unsafe="Loading..." data-eo-popover-trigger="mouseenter"
-                  data-eo-popover-popup-delay="300" data-eo-popover-placement="bottom"
-                  data-eo-popover-append-to-body="true" data-ng-click="jsuJobSkillsController.onJobSkillClick(skill)"
-                  data-ng-href="/o/jobs/browse/skill/content-writing/" class="o-tag-skill nowrap" target="_self"
-                  eo-popover-id="3612" href="https://www.upwork.com/o/jobs/browse/skill/content-writing/">
-        <span data-ng-class="::{highlight: skill.highlighted}">Content Writing</span>
-    </a><!----><a data-ng-repeat="skill in ::jsuJobSkillsController.job.skills|limitTo:5"
-                  data-ng-mouseenter="jsuJobSkillsController.fetchSkillInfo(skill.name)"
-                  data-eo-popover-html-unsafe="Loading..." data-eo-popover-trigger="mouseenter"
-                  data-eo-popover-popup-delay="300" data-eo-popover-placement="bottom"
-                  data-eo-popover-append-to-body="true" data-ng-click="jsuJobSkillsController.onJobSkillClick(skill)"
-                  data-ng-href="/o/jobs/browse/skill/copywriting/" class="o-tag-skill nowrap" target="_self"
-                  eo-popover-id="3615" href="https://www.upwork.com/o/jobs/browse/skill/copywriting/">
-        <span data-ng-class="::{highlight: skill.highlighted}">Copywriting</span>
-    </a><!----><a data-ng-repeat="skill in ::jsuJobSkillsController.job.skills|limitTo:5"
-                  data-ng-mouseenter="jsuJobSkillsController.fetchSkillInfo(skill.name)"
-                  data-eo-popover-html-unsafe="Creative writing is considered to be any writing, fiction, poetry, or non-fiction, that goes outside the bounds of normal professional, journalistic, academic, and technical forms of literature. Works which fall into this category include novels, epics, short stories, and poems."
-                  data-eo-popover-trigger="mouseenter" data-eo-popover-popup-delay="300"
-                  data-eo-popover-placement="bottom" data-eo-popover-append-to-body="true"
-                  data-ng-click="jsuJobSkillsController.onJobSkillClick(skill)"
-                  data-ng-href="/o/jobs/browse/skill/creative-writing/" class="o-tag-skill nowrap" target="_self"
-                  eo-popover-id="3618" href="https://www.upwork.com/o/jobs/browse/skill/creative-writing/">
-        <span data-ng-class="::{highlight: skill.highlighted}">Creative Writing</span>
-    </a><!---->
-                                                            <!----><span
-                                                                data-ng-if="::jsuJobSkillsController.job.skills.length - 5 &gt; 0"
-                                                                class="text-muted m-0 p-0">
-        2 more
-    </span><!---->
-</span>
-</span><!---->
-                                                        </div>
-                                                    </div>
-                                                    <div>
-            <span data-job-proposals="jsuJobTileMediumController.job.proposalsTier"><!----><small
-                    data-ng-if="jsuJobProposalsController.proposalsTier" class="display-inline-block m-md-right">
+</div>
+    <!---->
+    <!---->
+</div>
+</div>
+        <div>
+            <span data-job-proposals="jsuJobTileMediumController.job.proposalsTier"><!----><small data-ng-if="jsuJobProposalsController.proposalsTier" class="display-inline-block m-md-right">
     <span class="text-muted">Proposals:</span>
-    <strong data-ng-bind="jsuJobProposalsController.proposalsTier">Less than 5</strong>
+    <strong data-ng-bind="jsuJobProposalsController.proposalsTier">20 to 50</strong>
 </small><!---->
 </span>
-                                                        <span data-job-freelancers-to-hire="::jsuJobTileMediumController.job.freelancersToHire"><!----><small
-                                                                data-ng-if="::jsuJobFreelancersToHireController.freelancersToHire &gt; 1"
-                                                                class="display-inline-block m-md-right">
-    <span class="text-muted">Number of freelancers needed:</span>
-    <strong>2</strong>
-</small><!---->
+            <span data-job-freelancers-to-hire="::jsuJobTileMediumController.job.freelancersToHire"><!---->
 </span>
-                                                    </div>
-                                                    <!---->
-                                                    <small data-ng-if="::jsuJobTileMediumController.job.client">
-                                                        <strong class="text-muted display-inline-block m-sm-top">Client:</strong>
-                                                        <span data-job-previous-client-info="::jsuJobTileMediumController.job.client"><!---->
+        </div>
+        <!----><small data-ng-if="::jsuJobTileMediumController.job.client">
+            <strong class="text-muted display-inline-block m-sm-top">Client:</strong>
+            <span data-job-previous-client-info="::jsuJobTileMediumController.job.client"><!---->
 </span>
-                                                        <span data-job-client-info="::jsuJobTileMediumController.job"><!----><span
-                                                                data-ng-if="::!jsuJobClientInfoController.shouldShowPreviousClientInfo()">
+            <span data-job-client-info="::jsuJobTileMediumController.job"><!----><span data-ng-if="::!jsuJobClientInfoController.shouldShowPreviousClientInfo()">
     <span data-job-enterprise-badge="::jsuJobClientInfoController.job"><!---->
 
 </span>
-    <span data-job-client-payment-verified="::jsuJobClientInfoController.job.client.paymentVerificationStatus"><!---->
-        <!----><span data-ng-if="::jsuJobClientPaymentVerifiedController.verificationStatus != 1"
-                     class="payment-status badge badge-unverified m-sm-right p-md-left">
-    <span aria-hidden="true" class="glyphicon air-icon-unverified"></span>
+    <span data-job-client-payment-verified="::jsuJobClientInfoController.job.client.paymentVerificationStatus"><!----><span data-ng-if="::jsuJobClientPaymentVerifiedController.verificationStatus == 1" class="payment-status badge badge-verified m-sm-right p-md-left">
+    <span aria-hidden="true" class="glyphicon air-icon-verified"></span>
     <strong class="text-muted">
-        <!----><small data-ng-if="::!jsuJobClientPaymentVerifiedController.isShortFormat">Payment unverified</small>
-        <!---->
+        <!----><small data-ng-if="::!jsuJobClientPaymentVerifiedController.isShortFormat">Payment verified</small><!---->
         <!---->
     </strong>
 </span><!---->
+<!---->
 </span>
-    <span data-job-client-feedback="::jsuJobClientInfoController.job.client"><span
-            class="js-feedback display-inline-block vertical-align-text-bottom">
-    <span data-eo-rating="" data-ng-model="::jsuJobClientFeedbackController.client.totalFeedback"
-          data-rating-define="star" data-read-only="true" data-stars="5" data-star-radius="5"
-          data-eo-popover-html-unsafe="No feedback yet" data-eo-popover-trigger="mouseenter"
-          data-eo-popover-popup-delay="300" class="ng-pristine ng-untouched ng-valid ng-not-empty" eo-popover-id="3665"><div
-            class="stars" ng-mousemove="changeRating($event)" ng-mouseleave="leaveRating()"
-            style="visibility: visible;">
+    <span data-job-client-feedback="::jsuJobClientInfoController.job.client"><span class="js-feedback display-inline-block vertical-align-text-bottom">
+    <span data-eo-rating="" data-ng-model="::jsuJobClientFeedbackController.client.totalFeedback" data-rating-define="star" data-read-only="true" data-stars="5" data-star-radius="5" data-eo-popover-html-unsafe="4.78 Stars, based on 204 feedbacks" data-eo-popover-trigger="mouseenter" data-eo-popover-popup-delay="300" class="ng-pristine ng-untouched ng-valid ng-not-empty" eo-popover-id="11981"><div class="stars" ng-mousemove="changeRating($event)" ng-mouseleave="leaveRating()" style="visibility: visible;">
 <canvas ng-click="secureNewRating()" class="star" height="10" width="50"></canvas></div></span>
 </span>
 </span>
-    <span data-job-client-spent-tier="::jsuJobClientInfoController.job.client.totalSpent" class="m-sm-left-right"><span
-            class="client-spendings display-inline-block">
-    <strong data-ng-bind="::jsuJobClientSpentTierController.totalSpent|moneyRange">$0</strong>
+    <span data-job-client-spent-tier="::jsuJobClientInfoController.job.client.totalSpent" class="m-sm-left-right"><span class="client-spendings display-inline-block">
+    <strong data-ng-bind="::jsuJobClientSpentTierController.totalSpent|moneyRange">$40k+</strong>
     <span class="text-muted">spent</span>
 </span>
 </span>
-    <span data-job-client-location="::jsuJobClientInfoController.job.client.location.country"><!----><span
-            data-ng-if="::jsuJobClientLocationController.country" class="nowrap">
+    <span data-job-client-location="::jsuJobClientInfoController.job.client.location.country"><!----><span data-ng-if="::jsuJobClientLocationController.country" class="nowrap">
     <span aria-hidden="true" class="glyphicon air-icon-location m-0"></span>
-    <strong data-ng-bind="::jsuJobClientLocationController.country" class="text-muted client-location">India</strong>
+    <strong data-ng-bind="::jsuJobClientLocationController.country" class="text-muted client-location">United States</strong>
 </span><!---->
 </span>
 </span><!---->
 </span>
-                                                    </small><!---->
-                                                    <span data-clouds-list="::jsuJobTileMediumController.job"
-                                                          class="talent-clouds"><!----></span>
-                                                </div>
-                                                <div class="col-md-2">
-                                                    <div data-job-save="::jsuJobTileMediumController.job"
-                                                         class="hover-show">
-                                                        <button class="job-save-button btn-circle btn-sm m-0 ng-pristine ng-untouched ng-valid eo-button-save btn btn-default ng-not-empty pull-right"
-                                                                data-ng-class="{&#39;pull-right&#39;: !jsuJobSaveController.label}"
-                                                                data-eo-save-button=""
-                                                                data-eo-change="jsuJobSaveController.onJobSaveClick()"
-                                                                data-ng-model="jsuJobSaveController.job.isSaved"><span
-                                                                class="glyphicon m-0-left air-icon-favorite-deactivated"
-                                                                ng-class="{&#39;air-icon-favorite-activated&#39;: isActive(), &#39;air-icon-favorite-deactivated&#39;: !isActive()}"></span>
-                                                            <!---->
-                                                        </button>
-                                                    </div>
-                                                    <div data-job-feedback="::jsuJobTileMediumController.job"
-                                                         class="p-sm-right pull-right hover-show"><!---->
-                                                        <div class="job-feedback dropdown dropdown-secondary align-end"
-                                                             data-ng-if="jsuJobFeedbackController.feedbackChoices"
-                                                             data-eo-dropdown=""
-                                                             data-on-toggle="jsuJobFeedbackController.onToggleDropdown(open)">
-                                                            <button class="dropdown-toggle btn btn-circle btn-sm btn-default"
-                                                                    data-ng-class="{&#39;btn-primary&#39;: jsuJobFeedbackController.job.feedback, &#39;btn-default&#39;: !jsuJobFeedbackController.job.feedback}"
-                                                                    data-eo-dropdown-toggle="" aria-haspopup="true"
-                                                                    aria-expanded="false">
-                                                                <span class="job-feedback-button glyphicon air-icon-hand-no m-0 p-0"
-                                                                      aria-hidden="true"></span>
-                                                                <!---->
-                                                            </button>
-                                                            <ul class="eo-dropdown-menu dropdown-menu-right">
-                                                                <!---->
-                                                                <!---->
-                                                                <li data-ng-repeat="(feedbackSlug, feedbackText) in ::jsuJobFeedbackController.feedbackChoices track by feedbackSlug"
-                                                                    data-ng-click="jsuJobFeedbackController.saveFeedback(feedbackSlug)">
-                                                                    <a href="https://www.upwork.com/o/jobs/browse/"
-                                                                       class="feedback-text"
-                                                                       data-ng-bind="feedbackText">Just not
-                                                                        interested</a>
-                                                                </li><!---->
-                                                                <li data-ng-repeat="(feedbackSlug, feedbackText) in ::jsuJobFeedbackController.feedbackChoices track by feedbackSlug"
-                                                                    data-ng-click="jsuJobFeedbackController.saveFeedback(feedbackSlug)">
-                                                                    <a href="https://www.upwork.com/o/jobs/browse/"
-                                                                       class="feedback-text"
-                                                                       data-ng-bind="feedbackText">Vague Description</a>
-                                                                </li><!---->
-                                                                <li data-ng-repeat="(feedbackSlug, feedbackText) in ::jsuJobFeedbackController.feedbackChoices track by feedbackSlug"
-                                                                    data-ng-click="jsuJobFeedbackController.saveFeedback(feedbackSlug)">
-                                                                    <a href="https://www.upwork.com/o/jobs/browse/"
-                                                                       class="feedback-text"
-                                                                       data-ng-bind="feedbackText">Unrealistic
-                                                                        Expectations</a>
-                                                                </li><!---->
-                                                                <li data-ng-repeat="(feedbackSlug, feedbackText) in ::jsuJobFeedbackController.feedbackChoices track by feedbackSlug"
-                                                                    data-ng-click="jsuJobFeedbackController.saveFeedback(feedbackSlug)">
-                                                                    <a href="https://www.upwork.com/o/jobs/browse/"
-                                                                       class="feedback-text"
-                                                                       data-ng-bind="feedbackText">Too Many
-                                                                        Applicants</a>
-                                                                </li><!---->
-                                                                <li data-ng-repeat="(feedbackSlug, feedbackText) in ::jsuJobFeedbackController.feedbackChoices track by feedbackSlug"
-                                                                    data-ng-click="jsuJobFeedbackController.saveFeedback(feedbackSlug)">
-                                                                    <a href="https://www.upwork.com/o/jobs/browse/"
-                                                                       class="feedback-text"
-                                                                       data-ng-bind="feedbackText">Job posted too long
-                                                                        ago</a>
-                                                                </li><!---->
-                                                                <li data-ng-repeat="(feedbackSlug, feedbackText) in ::jsuJobFeedbackController.feedbackChoices track by feedbackSlug"
-                                                                    data-ng-click="jsuJobFeedbackController.saveFeedback(feedbackSlug)">
-                                                                    <a href="https://www.upwork.com/o/jobs/browse/"
-                                                                       class="feedback-text"
-                                                                       data-ng-bind="feedbackText">Poor reviews about
-                                                                        the client</a>
-                                                                </li><!---->
-                                                                <li data-ng-repeat="(feedbackSlug, feedbackText) in ::jsuJobFeedbackController.feedbackChoices track by feedbackSlug"
-                                                                    data-ng-click="jsuJobFeedbackController.saveFeedback(feedbackSlug)">
-                                                                    <a href="https://www.upwork.com/o/jobs/browse/"
-                                                                       class="feedback-text"
-                                                                       data-ng-bind="feedbackText">Doesn't Match
-                                                                        Skills</a>
-                                                                </li><!---->
-                                                                <li data-ng-repeat="(feedbackSlug, feedbackText) in ::jsuJobFeedbackController.feedbackChoices track by feedbackSlug"
-                                                                    data-ng-click="jsuJobFeedbackController.saveFeedback(feedbackSlug)">
-                                                                    <a href="https://www.upwork.com/o/jobs/browse/"
-                                                                       class="feedback-text"
-                                                                       data-ng-bind="feedbackText">I am
-                                                                        overqualified</a>
-                                                                </li><!---->
-                                                                <li data-ng-repeat="(feedbackSlug, feedbackText) in ::jsuJobFeedbackController.feedbackChoices track by feedbackSlug"
-                                                                    data-ng-click="jsuJobFeedbackController.saveFeedback(feedbackSlug)">
-                                                                    <a href="https://www.upwork.com/o/jobs/browse/"
-                                                                       class="feedback-text"
-                                                                       data-ng-bind="feedbackText">Budget too low</a>
-                                                                </li><!---->
-                                                                <li data-ng-repeat="(feedbackSlug, feedbackText) in ::jsuJobFeedbackController.feedbackChoices track by feedbackSlug"
-                                                                    data-ng-click="jsuJobFeedbackController.saveFeedback(feedbackSlug)">
-                                                                    <a href="https://www.upwork.com/o/jobs/browse/"
-                                                                       class="feedback-text"
-                                                                       data-ng-bind="feedbackText">Not in my preferred
-                                                                        location</a>
-                                                                </li><!---->
-                                                                <li class="p-md-left-right p-sm-top-bottom m-sm-left">
-                                                                    <small class="text-muted">
-                                                                        The client will not be notified.
-                                                                        Your feedback helps us improve job search.
-                                                                    </small>
-                                                                </li>
-                                                            </ul>
-                                                        </div><!---->
-                                                    </div>
-                                                </div>
-                                            </div><!---->
-                                        </div><!---->
-                                    </div><!---->
-                                </div>
-                            </section><!----><!----><!---->
+        </small><!---->
+        <span data-clouds-list="::jsuJobTileMediumController.job" class="talent-clouds"><!----></span>
+    </div>
+    <div class="col-md-2">
+        <div data-job-save="::jsuJobTileMediumController.job" class="hover-show"><button class="job-save-button btn-circle btn-sm m-0 ng-pristine ng-untouched ng-valid eo-button-save btn btn-default ng-not-empty pull-right" data-ng-class="{'pull-right': !jsuJobSaveController.label}" data-eo-save-button="" data-eo-change="jsuJobSaveController.onJobSaveClick()" data-ng-model="jsuJobSaveController.job.isSaved"><span class="glyphicon m-0-left air-icon-favorite-deactivated" ng-class="{'air-icon-favorite-activated': isActive(), 'air-icon-favorite-deactivated': !isActive()}"></span>
+    <!---->
+</button></div>
+        <div data-job-feedback="::jsuJobTileMediumController.job" class="p-sm-right pull-right hover-show"><!----><div class="job-feedback dropdown dropdown-secondary align-end" data-ng-if="jsuJobFeedbackController.feedbackChoices" data-eo-dropdown="" data-on-toggle="jsuJobFeedbackController.onToggleDropdown(open)">
+    <button class="dropdown-toggle btn btn-circle btn-sm btn-default" data-ng-class="{'btn-primary': jsuJobFeedbackController.job.feedback, 'btn-default': !jsuJobFeedbackController.job.feedback}" data-eo-dropdown-toggle="" aria-haspopup="true" aria-expanded="false">
+        <span class="job-feedback-button glyphicon air-icon-hand-no m-0 p-0" aria-hidden="true"></span>
+        <!---->
+    </button>
+    <ul class="eo-dropdown-menu dropdown-menu-right">
+        <!---->
+        <!----><li data-ng-repeat="(feedbackSlug, feedbackText) in ::jsuJobFeedbackController.feedbackChoices track by feedbackSlug" data-ng-click="jsuJobFeedbackController.saveFeedback(feedbackSlug)">
+            <a href="" class="feedback-text" data-ng-bind="feedbackText">Just not interested</a>
+        </li><!----><li data-ng-repeat="(feedbackSlug, feedbackText) in ::jsuJobFeedbackController.feedbackChoices track by feedbackSlug" data-ng-click="jsuJobFeedbackController.saveFeedback(feedbackSlug)">
+            <a href="" class="feedback-text" data-ng-bind="feedbackText">Vague Description</a>
+        </li><!----><li data-ng-repeat="(feedbackSlug, feedbackText) in ::jsuJobFeedbackController.feedbackChoices track by feedbackSlug" data-ng-click="jsuJobFeedbackController.saveFeedback(feedbackSlug)">
+            <a href="" class="feedback-text" data-ng-bind="feedbackText">Unrealistic Expectations</a>
+        </li><!----><li data-ng-repeat="(feedbackSlug, feedbackText) in ::jsuJobFeedbackController.feedbackChoices track by feedbackSlug" data-ng-click="jsuJobFeedbackController.saveFeedback(feedbackSlug)">
+            <a href="" class="feedback-text" data-ng-bind="feedbackText">Too Many Applicants</a>
+        </li><!----><li data-ng-repeat="(feedbackSlug, feedbackText) in ::jsuJobFeedbackController.feedbackChoices track by feedbackSlug" data-ng-click="jsuJobFeedbackController.saveFeedback(feedbackSlug)">
+            <a href="" class="feedback-text" data-ng-bind="feedbackText">Job posted too long ago</a>
+        </li><!----><li data-ng-repeat="(feedbackSlug, feedbackText) in ::jsuJobFeedbackController.feedbackChoices track by feedbackSlug" data-ng-click="jsuJobFeedbackController.saveFeedback(feedbackSlug)">
+            <a href="" class="feedback-text" data-ng-bind="feedbackText">Poor reviews about the client</a>
+        </li><!----><li data-ng-repeat="(feedbackSlug, feedbackText) in ::jsuJobFeedbackController.feedbackChoices track by feedbackSlug" data-ng-click="jsuJobFeedbackController.saveFeedback(feedbackSlug)">
+            <a href="" class="feedback-text" data-ng-bind="feedbackText">Doesn't Match Skills</a>
+        </li><!----><li data-ng-repeat="(feedbackSlug, feedbackText) in ::jsuJobFeedbackController.feedbackChoices track by feedbackSlug" data-ng-click="jsuJobFeedbackController.saveFeedback(feedbackSlug)">
+            <a href="" class="feedback-text" data-ng-bind="feedbackText">I am overqualified</a>
+        </li><!----><li data-ng-repeat="(feedbackSlug, feedbackText) in ::jsuJobFeedbackController.feedbackChoices track by feedbackSlug" data-ng-click="jsuJobFeedbackController.saveFeedback(feedbackSlug)">
+            <a href="" class="feedback-text" data-ng-bind="feedbackText">Budget too low</a>
+        </li><!----><li data-ng-repeat="(feedbackSlug, feedbackText) in ::jsuJobFeedbackController.feedbackChoices track by feedbackSlug" data-ng-click="jsuJobFeedbackController.saveFeedback(feedbackSlug)">
+            <a href="" class="feedback-text" data-ng-bind="feedbackText">Not in my preferred location</a>
+        </li><!---->
+        <li class="p-md-left-right p-sm-top-bottom m-sm-left">
+            <small class="text-muted">
+                The client will not be notified.
+                Your feedback helps us improve job search.
+            </small>
+        </li>
+    </ul>
+</div><!---->
+</div>
+    </div>
+</div><!---->
+</div><!---->
+</div><!---->
+</div>
+            </section>
                             <section class="job-tile air-card-hover hover m-0-top" data-ng-if="!loadingSpinner"
                                      data-ng-repeat="job in jobListController.jobs">
                                 <!---->
