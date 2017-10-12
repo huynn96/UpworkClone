@@ -46,6 +46,13 @@
         $('.account-dropdown').click(() => {
             $('.account-dropdown').toggleClass('open');
         });
+
+        $('#freelancerSearchInput').keypress((e) => {
+        	console.log(e.keyCode);
+			if (e.keyCode == 13) {
+				window.location.href = '/FindJobsUpwork.html';
+			}
+        });
     })
     
     </script>
@@ -7856,11 +7863,11 @@ Update: 31 July 2017
                     <div class="collapse navbar-collapse" id="skinny-nav">
                         <ul class="nav navbar-nav" role="menu">
                             <li class="active  dropdown dropdown-toggle-hover" data-eo-dropdown="" data-eo-dropdown-toggle-hover="">
-                                <a class="dropdown-toggle" href="https://www.upwork.com/ab/find-work/" role="button" aria-expanded="false" data-eo-dropdown-toggle="" data-allow-default-click="true" aria-haspopup="true">
+                                <a class="dropdown-toggle" href="/FindJobsUpwork.html" role="button" aria-expanded="false" data-eo-dropdown-toggle="" data-allow-default-click="true" aria-haspopup="true">
                                 Find Work</a>
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
-                                        <a href="https://www.upwork.com/ab/find-work/" target="_self">Find Work</a>
+                                        <a href="/FindJobsUpwork.html" target="_self">Find Work</a>
                                     </li>
                                     <li>
                                         <a href="https://www.upwork.com/jobs/saved" target="_self">Saved Jobs</a>
@@ -7944,13 +7951,11 @@ Update: 31 July 2017
                                 <div data-o-freelancer-search="" data-is-search-expanded="true" class="ng-scope">
                                     <div data-o-freelancer-search-option="" data-label="Jobs" data-url="/o/jobs/browse/" data-placeholder="Find Jobs" data-selected="true" class="ng-isolate-scope"></div>
                                     <div data-o-freelancer-search-option="" data-label="Freelancers" data-url="/ab/profiles/search/" data-placeholder="Find Freelancers" class="ng-isolate-scope"></div>
-                                    <!-- ngIf: isSearchExpanded -->
-                                    <form class="navbar-form ng-pristine ng-valid ng-scope navbar-right" method="GET" data-ng-class="{&#39;navbar-left&#39;: align == &#39;left&#39;, &#39;navbar-right&#39;: align != &#39;left&#39;}" role="search" action="https://www.upwork.com/o/jobs/browse/" data-ng-if="isSearchExpanded">
-                                        <div class="form-group">
+                                        <div class="form-group navbar-form ng-pristine ng-valid ng-scope navbar-right">
                                             <div class="input-group input-group-search">
                                                 <div class="input-group-addon">
                                                     <div data-eo-dropdown="" data-on-toggle="handleDropdownToggle(open, wasOpen)" class="dropdown">
-                                                        <a class="btn btn-default dropdown-toggle" href="javascript:" data-eo-dropdown-toggle="" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                                                        <a class="btn btn-default dropdown-toggle" href="/FindJobsUpwork.html" data-eo-dropdown-toggle="" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
                                                             <label for="eoFreelancerSearchInput"><span aria-hidden="true" class="glyphicon air-icon-search"></span><span aria-hidden="true" class="caret glyphicon air-icon-arrow-expand"></span></label>
                                                         </a>
                                                         <ul class="dropdown-menu" role="menu" data-eo-dropdown-menu="">
@@ -7962,9 +7967,9 @@ Update: 31 July 2017
                                                         </ul>
                                                     </div>
                                                 </div>
-                                                <input class="form-control" id="eoFreelancerSearchInput" type="search" name="q" placeholder="Find Jobs" data-eo-focus="search.focus"> </div>
+                                                <input class="form-control" id="freelancerSearchInput" placeholder="Find Jobs"> </div>
                                         </div>
-                                        <input type="hidden" name="nbs" value="1" autocomplete="off"> </form>
+                                        <input type="hidden" name="nbs" value="1" autocomplete="off">
                                     <!-- end ngIf: isSearchExpanded -->
                                 </div>
                             </li>
