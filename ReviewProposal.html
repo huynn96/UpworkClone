@@ -7183,6 +7183,7 @@ Update: 31 July 2017
                                 </a><!----><a data-ng-if="true" data-ng-init="bucket = &#39;applicants&#39;"
                                         data-ui-sref=".applicants({tab: bucket})" data-ng-click="changeBucket(bucket)"
                                         data-ng-enter="changeBucket(bucket)"
+                                        href="/ReviewProposal.html"
                                         data-ng-class="{&#39;active&#39;: activeBucket == &#39;applicants&#39;}"
                                         tabindex="3" data-log-event="click" data-log-label="select_applicants"
 
@@ -7897,4 +7898,16 @@ fbq("track", "PageView");</script>
 <iframe src="./ReviewProposal_files/nrse.html"
         style="position: absolute; width: 1px; height: 1px; left: 0px; top: -1px; border: 0px;"></iframe>
 </body>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".account-dropdown").click(function () {
+            $(this).toggleClass("open")
+        });
+    });
+
+    function back(argument) {
+        location.href = '/JobPostings.html';
+    }
+
+</script>
 </html>

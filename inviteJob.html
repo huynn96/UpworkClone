@@ -421,7 +421,7 @@
                                         data-ng-enter="changeBucket(bucket)"
                                         data-ng-class="{&#39;active&#39;: activeBucket == &#39;applicants&#39;}"
                                         tabindex="3" data-log-event="click" data-log-label="select_applicants"
-
+                                        href="/ReviewProposal.html"
                                         class="">
                                     <div><span>Review Proposals <!----><strong class="text-muted"
                                             data-ng-if="bucketCounts.applicants_all &gt;= 0">(<span
@@ -454,7 +454,7 @@
                                                 data-ui-sref=".({tab: &#39;suggested&#39;})">Search</a></li>
                                         <li data-ng-class="{active: tab.active == &#39;pending&#39;}"><a
 
-                                                data-ui-sref=".({tab: &#39;pending&#39;})">Invited Freelancers
+                                                href="/InvitedRockstar.html">Invited Freelancers
                                             <!----></a></li><!---->
                                         <li data-ng-if="canHire"
                                                 data-ng-class="{active: tab.active == &#39;past-hires&#39;}"><a
@@ -7480,7 +7480,7 @@ Ha Ha</textarea><!----><!----><!---->
         });
         $("#idInvite").click(function (event) {
             event.preventDefault();
-            location.href = '/ReviewProposal.html';
+            location.href = '/InvitedRockstar.html';
         });
     });
 
