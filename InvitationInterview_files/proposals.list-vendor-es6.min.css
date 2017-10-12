@@ -1,0 +1,17 @@
+.up-disintermediation-highlighter {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  border: solid transparent;
+  display: block;
+  color: transparent;
+  overflow: hidden;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit; }
+  .up-disintermediation-highlighter span, .up-disintermediation-highlighter mark {
+    color: transparent; }
+.up-disintermediation-highlighter {
+  font-size: 14px; }
+
+/*# sourceMappingURL=angular-disintermediation-upwork-configuration.bundle.css.map*/
+/*# sourceMappingURL=proposals.list-vendor-es6.min.css.map*/

@@ -31,15 +31,30 @@
     <meta name="robots" content="noodp,nodir,noydir">
     <meta name="keywords" content="Offshore outsourcing, Freelancers, India, Russia, Ukraine, php Programmers, Coders, Developers, Writers, Web Designers, Website Design, Technical Writers">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <script type="text/javascript" src="https://bam.nr-data.net/1/8e23a381b9?a=15216335&amp;v=1044.a6554e7&amp;to=NVxRMRBYVhBXUhBQDAwWcgYWUFcNGX4AXBAJc1wHMktXE1lCBVUQIExdAQ5cAiJGWEtpEQ1JXBYDVXkTXwsDXBcrV0UMFlhMCllfF3UKEU0%3D&amp;rst=1243&amp;ref=https://www.upwork.com/ab/proposals/&amp;ap=440&amp;be=789&amp;fe=1222&amp;dc=977&amp;af=err,xhr,stn,ins&amp;perf=%7B%22timing%22:%7B%22of%22:1507717582455,%22n%22:0,%22u%22:727,%22ue%22:727,%22f%22:9,%22dn%22:9,%22dne%22:9,%22c%22:9,%22ce%22:9,%22rq%22:14,%22rp%22:720,%22rpe%22:727,%22dl%22:734,%22di%22:962,%22ds%22:962,%22de%22:1148,%22dc%22:1220,%22l%22:1221,%22le%22:1222%7D,%22navigation%22:%7B%7D%7D&amp;at=GRtSR1hCRR4%3D&amp;jsonp=NREUM.setToken"></script>
-    <script type="text/javascript" async="" src="./ProposalRockstar_files/insight.min.js"></script>
-    <script src="./ProposalRockstar_files/816554411748126" async=""></script>
-    <script async="" src="./ProposalRockstar_files/fbevents.js"></script>
-    <script type="text/javascript" async="" src="./ProposalRockstar_files/walkme_0dc202b3af9c445882f2b5b06a958676_https.js"></script>
-    <script type="text/javascript" async="" src="./ProposalRockstar_files/analytics.js"></script>
-    <script src="./ProposalRockstar_files/nr-1044.min.js"></script>
-    <script async="" src="./ProposalRockstar_files/main.min.js"></script>
-    <script async="" src="./ProposalRockstar_files/gtm.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    $(document).ready(() => {
+        $('.dropdown-toggle-hover').hover(
+            function() {
+                $(this).addClass('open');
+            },
+            function() {
+                $(this).removeClass('open');
+            }
+        );
+
+        $('.account-dropdown').click(() => {
+            $('.account-dropdown').toggleClass('open');
+        });
+        $('#freelancerSearchInput').keypress((e) => {
+            console.log(e.keyCode);
+            if (e.keyCode == 13) {
+                window.location.href = '/FindJobsUpwork.html';
+            }
+        });
+    })
+    
+    </script>
     <script type="text/javascript">
     (window.NREUM || (NREUM = {})).loader_config = { xpid: "VQIBUF5RGwIFVlBUBAIC" };
     window.NREUM || (NREUM = {}), __nr_require = function(t, n, e) {
@@ -7847,11 +7862,11 @@ Update: 31 July 2017
                     <div class="collapse navbar-collapse" id="skinny-nav">
                         <ul class="nav navbar-nav" role="menu">
                             <li class="active  dropdown dropdown-toggle-hover" data-eo-dropdown="" data-eo-dropdown-toggle-hover="" style="">
-                                <a class="dropdown-toggle" href="https://www.upwork.com/ab/find-work/" role="button" aria-expanded="false" data-eo-dropdown-toggle="" data-allow-default-click="true" aria-haspopup="true">
+                                <a class="dropdown-toggle" href="/FindJobsUpwork.html" role="button" aria-expanded="false" data-eo-dropdown-toggle="" data-allow-default-click="true" aria-haspopup="true">
                                 Find Work</a>
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
-                                        <a href="https://www.upwork.com/ab/find-work/" target="_self">Find Work</a>
+                                        <a href="/FindJobsUpwork.html" target="_self">Find Work</a>
                                     </li>
                                     <li>
                                         <a href="https://www.upwork.com/jobs/saved" target="_self">Saved Jobs</a>
@@ -7936,12 +7951,11 @@ Update: 31 July 2017
                                     <div data-o-freelancer-search-option="" data-label="Jobs" data-url="/o/jobs/browse/" data-placeholder="Find Jobs" data-selected="true" class="ng-isolate-scope"></div>
                                     <div data-o-freelancer-search-option="" data-label="Freelancers" data-url="/ab/profiles/search/" data-placeholder="Find Freelancers" class="ng-isolate-scope"></div>
                                     <!-- ngIf: isSearchExpanded -->
-                                    <form class="navbar-form ng-pristine ng-valid ng-scope navbar-right" method="GET" data-ng-class="{&#39;navbar-left&#39;: align == &#39;left&#39;, &#39;navbar-right&#39;: align != &#39;left&#39;}" role="search" action="https://www.upwork.com/o/jobs/browse/" data-ng-if="isSearchExpanded">
-                                        <div class="form-group">
+                                    <div class="form-group navbar-form ng-pristine ng-valid ng-scope navbar-right">
                                             <div class="input-group input-group-search">
                                                 <div class="input-group-addon">
                                                     <div data-eo-dropdown="" data-on-toggle="handleDropdownToggle(open, wasOpen)" class="dropdown">
-                                                        <a class="btn btn-default dropdown-toggle" href="javascript:" data-eo-dropdown-toggle="" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                                                        <a class="btn btn-default dropdown-toggle" href="/FindJobsUpwork.html" data-eo-dropdown-toggle="" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
                                                             <label for="eoFreelancerSearchInput"><span aria-hidden="true" class="glyphicon air-icon-search"></span><span aria-hidden="true" class="caret glyphicon air-icon-arrow-expand"></span></label>
                                                         </a>
                                                         <ul class="dropdown-menu" role="menu" data-eo-dropdown-menu="">
@@ -7953,9 +7967,9 @@ Update: 31 July 2017
                                                         </ul>
                                                     </div>
                                                 </div>
-                                                <input class="form-control" id="eoFreelancerSearchInput" type="search" name="q" placeholder="Find Jobs" data-eo-focus="search.focus"> </div>
+                                                <input class="form-control" id="freelancerSearchInput" placeholder="Find Jobs"> </div>
                                         </div>
-                                        <input type="hidden" name="nbs" value="1" autocomplete="off"> </form>
+                                        <input type="hidden" name="nbs" value="1" autocomplete="off">
                                     <!-- end ngIf: isSearchExpanded -->
                                 </div>
                             </li>
@@ -8155,7 +8169,7 @@ My Proposals
                                                     <small class="text-muted m-xs-top clearfix ng-isolate-scope" eo-relative="2017-10-11 17:25:27">56 seconds ago</small>
                                                 </td>
                                                 <td class="vertical-align-middle">
-                                                    <a href="https://www.upwork.com/ab/proposals/interview/400655469" class="ng-binding">upwork test</a>
+                                                    <a href="/InvitationInterview.html" class="ng-binding">upwork test</a>
                                                     <small data-ng-bind="::interview.clientsTeamTitle" class="text-muted m-xs-top clearfix ng-binding"></small>
                                                 </td>
                                                 <!-- ngIf: vm.isShowFreelancerCol() -->
@@ -8213,7 +8227,7 @@ My Proposals
                                                     <small class="text-muted m-xs-top clearfix ng-isolate-scope" eo-relative="2016-11-03T07:11:26.000Z">11 months ago</small>
                                                 </td>
                                                 <td class="vertical-align-middle">
-                                                    <a href="https://www.upwork.com/ab/proposals/794074487860412416">
+                                                    <a href="/SubmitProposal.html">
 <span data-ng-bind="::submittedProposal.title" class="ng-binding">Looking for an experienced frontend developer to join our team</span>
 </a>
                                                     <small data-ng-bind="::submittedProposal.clientsTeamTitle" class="text-muted m-xs-top clearfix ng-binding"></small>
