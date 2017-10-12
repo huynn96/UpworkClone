@@ -45,6 +45,7 @@
 			window.performance && window.performance.clearMeasures && window.performance.clearMeasures(name);
 		}
     </script>
+    <script type="text/javascript" src="./Job Postings - Ha Ha - Upwork_files/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="login/air2.global.responsive.4.3.0.min.css"
           onload="remove_mark(&#39;navCompRenderEnd&#39;);remove_measure(&#39;navCompRendered&#39;);create_mark(&#39;navCompRenderEnd&#39;);create_measure(&#39;navCompRendered&#39;, &#39;navigationStart&#39;, &#39;navCompRenderEnd&#39;);">
     <link rel="stylesheet" href="login/fonts.air2-icons.1.16.0.css"
@@ -4840,7 +4841,7 @@ Update: 31 July 2017
 
                 <div class="form-group hidden-xs m-0-bottom">
 
-                    <button type="submit" class="m-sm-bottom m-lg-top btn btn-block btn-primary p-lg-left-right"
+                    <button type="submit" id="formLoginSubmit" class="m-sm-bottom m-lg-top btn btn-block btn-primary p-lg-left-right"
                             data-ng-disabled="isSubmitDisabled() || isLoading" ng-click="submit($event)" acnvi="1">
                         Log In
                     </button>
@@ -4914,4 +4915,15 @@ Update: 31 July 2017
 <iframe src="login/nrse.html"
         style="position: absolute; width: 1px; height: 1px; left: 0px; top: -1px; border: 0px;"></iframe>
 </body>
+<script type="text/javascript">
+	$("#formLoginSubmit").click(function(event) {
+		event.preventDefault();
+		if($('#login_username').val()==="admin"){
+			location.href = 'JobPostings.html';
+		} else {
+			location.href = 'FindJobsUpwork.html';
+		}
+	})	
+</script>
+
 </html>
