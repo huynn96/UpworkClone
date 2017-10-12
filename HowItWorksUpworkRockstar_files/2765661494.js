@@ -11,11 +11,11 @@
       $('.how-it-works .container .row>div.m-b-80:nth-child(2) .text-block').prepend('<span class="digit-list">2</span>');
 
       $('.how-it-works .container .row>div.m-b-80:nth-child(4) .text-block').prepend('<h4 class="m-b-40">Work</h4>');
-      $('.how-it-works .container .row>div.m-b-80:nth-child(4) .text-short').text("Chat and share files easily through Upwork.");
+      $('.how-it-works .container .row>div.m-b-80:nth-child(4) .text-short').text("Chat and share files easily through.");
       $('.how-it-works .container .row>div.m-b-80:nth-child(4) .text-block').prepend('<span class="digit-list">3</span>');
       
       $('.how-it-works .container .row>div.m-b-80:nth-child(5) .text-block').prepend('<h4 class="m-b-40">Pay</h4>');
-      $('.how-it-works .container .row>div.m-b-80:nth-child(5) .text-short').text("Invoice & pay confidently with Upwork Payment Protection.");
+      $('.how-it-works .container .row>div.m-b-80:nth-child(5) .text-short').text("Invoice & pay confidently with Payment Protection.");
       $('.how-it-works .container .row>div.m-b-80:nth-child(5) .text-block').prepend('<span class="digit-list">4</span>');
       
       //add button
@@ -44,11 +44,11 @@
       $('.section-text-blocks.__process-section .container .row>div.m-b-80:nth-child(2) .text-block').prepend('<span class="digit-list">2</span>');
 
       $('.section-text-blocks.__process-section .container .row>div.m-b-80:nth-child(4) .text-block').prepend('<h4 class="m-b-40">Work</h4>');
-      $('.section-text-blocks.__process-section .container .row>div.m-b-80:nth-child(4) .text-short').text("Chat and share files easily through Upwork.");
+      $('.section-text-blocks.__process-section .container .row>div.m-b-80:nth-child(4) .text-short').text("Chat and share files easily through.");
       $('.section-text-blocks.__process-section .container .row>div.m-b-80:nth-child(4) .text-block').prepend('<span class="digit-list">3</span>');
       
       $('.section-text-blocks.__process-section .container .row>div.m-b-80:nth-child(5) .text-block').prepend('<h4 class="m-b-40">Pay</h4>');
-      $('.section-text-blocks.__process-section .container .row>div.m-b-80:nth-child(5) .text-short').text("Invoice & pay confidently with Upwork Payment Protection.");
+      $('.section-text-blocks.__process-section .container .row>div.m-b-80:nth-child(5) .text-short').text("Invoice & pay confidently with Payment Protection.");
       $('.section-text-blocks.__process-section .container .row>div.m-b-80:nth-child(5) .text-block').prepend('<span class="digit-list">4</span>');
       
       //add button
@@ -77,11 +77,11 @@
       $('.how-it-works .container .row>div.m-b-80:nth-child(2) .text-block').prepend('<span class="digit-list">2</span>');
 
       $('.how-it-works .container .row>div.m-b-80:nth-child(4) .text-block').prepend('<h4 class="m-b-40">Work</h4>');
-      $('.how-it-works .container .row>div.m-b-80:nth-child(4) .text-short').text("Chat and share files easily through Upwork.");
+      $('.how-it-works .container .row>div.m-b-80:nth-child(4) .text-short').text("Chat and share files easily through.");
       $('.how-it-works .container .row>div.m-b-80:nth-child(4) .text-block').prepend('<span class="digit-list">3</span>');
       
       $('.how-it-works .container .row>div.m-b-80:nth-child(5) .text-block').prepend('<h4 class="m-b-40">Pay</h4>');
-      $('.how-it-works .container .row>div.m-b-80:nth-child(5) .text-short').text("Invoice & pay confidently with Upwork Payment Protection.");
+      $('.how-it-works .container .row>div.m-b-80:nth-child(5) .text-short').text("Invoice & pay confidently with Payment Protection.");
       $('.how-it-works .container .row>div.m-b-80:nth-child(5) .text-block').prepend('<span class="digit-list">4</span>');
     }
   }
@@ -102,11 +102,11 @@
       $('.section-text-blocks.__process-section .container .row>div.m-b-80:nth-child(2) .text-block').prepend('<span class="digit-list">2</span>');
 
       $('.section-text-blocks.__process-section .container .row>div.m-b-80:nth-child(4) .text-block').prepend('<h4 class="m-b-40">Work</h4>');
-      $('.section-text-blocks.__process-section .container .row>div.m-b-80:nth-child(4) .text-short').text("Chat and share files easily through Upwork.");
+      $('.section-text-blocks.__process-section .container .row>div.m-b-80:nth-child(4) .text-short').text("Chat and share files easily through.");
       $('.section-text-blocks.__process-section .container .row>div.m-b-80:nth-child(4) .text-block').prepend('<span class="digit-list">3</span>');
       
       $('.section-text-blocks.__process-section .container .row>div.m-b-80:nth-child(5) .text-block').prepend('<h4 class="m-b-40">Pay</h4>');
-      $('.section-text-blocks.__process-section .container .row>div.m-b-80:nth-child(5) .text-short').text("Invoice & pay confidently with Upwork Payment Protection.");
+      $('.section-text-blocks.__process-section .container .row>div.m-b-80:nth-child(5) .text-short').text("Invoice & pay confidently with Payment Protection.");
       $('.section-text-blocks.__process-section .container .row>div.m-b-80:nth-child(5) .text-block').prepend('<span class="digit-list">4</span>');
 
   	}
