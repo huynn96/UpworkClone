@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9590e059-2596-4f47-9e6f-ab7e99968af6" name="Default" comment="add event show message invite">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="FindJobsUpwork.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/FindJobsUpwork.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>bam.</find>
+      <find>nr-</find>
+      <find>l</find>
+      <find>Invite Freelancers</find>
+      <find>https://www.upwork.com/ab/applicants/918027442593431552/suggested</find>
+      <find>https://www.upwork.com/ab/applicants/918027442593431552/suggeste</find>
+      <find>href=&quot;https:\/\/www.upwork.com[^&quot;]*&quot;</find>
+      <find>Huy Nguyen</find>
+      <find>inviteCtrl.onFormSubmit()</find>
+      <find>/JobPostings.html</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/login.html" />
+        <option value="$PROJECT_DIR$/homepage.html" />
+        <option value="$PROJECT_DIR$/JobPostings.html" />
+        <option value="$PROJECT_DIR$/InvitedRockstar.html" />
+        <option value="$PROJECT_DIR$/inviteJob.html" />
+        <option value="$PROJECT_DIR$/ReviewProposal.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="724" />
+    <option name="y" value="218" />
+    <option name="width" value="930" />
+    <option name="height" value="796" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="UpworkClone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UpworkClone" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path" value="/usr/bin/node" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="ignore_missing_gitignore" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9590e059-2596-4f47-9e6f-ab7e99968af6" name="Default" comment="" />
+      <created>1507704185362</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1507704185362</updated>
+      <workItem from="1507704186827" duration="571000" />
+      <workItem from="1507705048783" duration="815000" />
+      <workItem from="1507710590549" duration="146000" />
+      <workItem from="1507711603170" duration="88000" />
+      <workItem from="1507712534273" duration="2975000" />
+      <workItem from="1507716962455" duration="1247000" />
+      <workItem from="1507775730459" duration="3406000" />
+      <workItem from="1507784612209" duration="3570000" />
+    </task>
+    <task id="LOCAL-00001" summary="clear script login">
+      <created>1507704559900</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1507704559900</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add invite job">
+      <created>1507713546623</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1507713546623</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add event show message invite">
+      <created>1507715044994</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1507715044994</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add event show message invite">
+      <created>1507715535287</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1507715535287</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fix page Review Proposal">
+      <created>1507718005157</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1507718005157</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add event invite">
+      <created>1507718310739</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1507718310739</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fix invitedRockstar">
+      <created>1507777003425</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1507777003426</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fix link ReviewProposal">
+      <created>1507777505488</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1507777505488</updated>
+    </task>
+    <task id="LOCAL-00009" summary="quick fix link">
+      <created>1507785189731</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1507785189731</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add event user login">
+      <created>1507786394882</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1507786394882</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="12818000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="724" y="218" width="1920" height="1053" extended-state="6" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33076924" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33406594" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="clear script login" />
+    <MESSAGE value="add invite job" />
+    <MESSAGE value="add event show message invite" />
+    <MESSAGE value="fix page Review Proposal" />
+    <MESSAGE value="add event invite" />
+    <MESSAGE value="fix invitedRockstar" />
+    <MESSAGE value="fix link ReviewProposal" />
+    <MESSAGE value="quick fix link" />
+    <MESSAGE value="add event user login" />
+    <option name="LAST_COMMIT_MESSAGE" value="add event user login" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/InvitedRockstar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136962">
+          <caret line="7609" column="21" lean-forward="false" selection-start-line="7609" selection-start-column="21" selection-end-line="7609" selection-end-column="21" />
+          <folding>
+            <element signature="e#2879#2883#0" expanded="false" />
+            <element signature="e#2997#3001#0" expanded="false" />
+            <element signature="e#3177#3181#0" expanded="false" />
+            <element signature="e#3302#3306#0" expanded="false" />
+            <element signature="e#175710#208981#1" expanded="false" />
+            <element signature="e#209132#243231#1" expanded="false" />
+            <element signature="e#402952#413097#1" expanded="false" />
+            <element signature="e#413325#455768#1" expanded="false" />
+            <element signature="e#456467#456471#0" expanded="false" />
+            <element signature="e#456531#456536#0" expanded="false" />
+            <element signature="e#456568#456573#0" expanded="false" />
+            <element signature="e#456630#456635#0" expanded="false" />
+            <element signature="e#456660#456665#0" expanded="false" />
+            <element signature="e#456715#456720#0" expanded="false" />
+            <element signature="e#456741#456746#0" expanded="false" />
+            <element signature="e#456764#456769#0" expanded="false" />
+            <element signature="e#456788#456793#0" expanded="false" />
+            <element signature="e#456828#456833#0" expanded="false" />
+            <element signature="e#456926#456930#0" expanded="false" />
+            <element signature="e#456930#456934#0" expanded="false" />
+            <element signature="e#456941#456945#0" expanded="false" />
+            <element signature="e#476343#476349#1" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#applicants-tab#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#548378#548383#0" expanded="false" />
+            <element signature="e#548489#548494#0" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <marker date="1507780452669" expanded="true" signature="253231:253291" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="253824:253884" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="260885:260945" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="261435:261495" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="261790:261850" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="262461:262521" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="263394:263454" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="264525:264585" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="265162:265222" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="265801:265861" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="266545:266605" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="267251:267311" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="275210:275270" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="291305:291365" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="293364:293424" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="294189:294249" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="304137:304197" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="306520:306580" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="307260:307320" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="311282:311342" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="312165:312225" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="313056:313116" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="313959:314019" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="314878:314938" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="320335:320395" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inviteJob.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134766">
+          <caret line="7487" column="25" lean-forward="false" selection-start-line="7487" selection-start-column="25" selection-end-line="7487" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ReviewProposal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142074">
+          <caret line="7893" column="88" lean-forward="true" selection-start-line="7893" selection-start-column="88" selection-end-line="7893" selection-end-column="88" />
+          <folding>
+            <marker date="1507780529229" expanded="true" signature="561661:561716" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JobPostings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46278">
+          <caret line="2571" column="35" lean-forward="false" selection-start-line="2571" selection-start-column="12" selection-end-line="2571" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ReviewProposal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127026">
+          <caret line="7057" column="40" lean-forward="false" selection-start-line="7057" selection-start-column="40" selection-end-line="7057" selection-end-column="40" />
+          <folding>
+            <marker date="1507780529229" expanded="true" signature="561661:561716" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inviteJob.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134640">
+          <caret line="7480" column="47" lean-forward="false" selection-start-line="7480" selection-start-column="47" selection-end-line="7480" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JobPostings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homepage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" column="28" lean-forward="false" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homepage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inviteJob.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homepage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MessagesRockstar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="23" column="66" lean-forward="true" selection-start-line="23" selection-start-column="66" selection-end-line="23" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MessagesRockstar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14832">
+          <caret line="751" column="34" lean-forward="true" selection-start-line="751" selection-start-column="34" selection-end-line="751" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homepage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-846">
+          <caret line="34" column="43" lean-forward="true" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JobPostings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46278">
+          <caret line="2571" column="35" lean-forward="false" selection-start-line="2571" selection-start-column="12" selection-end-line="2571" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/InvitedRockstar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136962">
+          <caret line="7609" column="21" lean-forward="false" selection-start-line="7609" selection-start-column="21" selection-end-line="7609" selection-end-column="21" />
+          <folding>
+            <element signature="e#2879#2883#0" expanded="false" />
+            <element signature="e#2997#3001#0" expanded="false" />
+            <element signature="e#3177#3181#0" expanded="false" />
+            <element signature="e#3302#3306#0" expanded="false" />
+            <element signature="e#175710#208981#1" expanded="false" />
+            <element signature="e#209132#243231#1" expanded="false" />
+            <element signature="e#402952#413097#1" expanded="false" />
+            <element signature="e#413325#455768#1" expanded="false" />
+            <element signature="e#456467#456471#0" expanded="false" />
+            <element signature="e#456531#456536#0" expanded="false" />
+            <element signature="e#456568#456573#0" expanded="false" />
+            <element signature="e#456630#456635#0" expanded="false" />
+            <element signature="e#456660#456665#0" expanded="false" />
+            <element signature="e#456715#456720#0" expanded="false" />
+            <element signature="e#456741#456746#0" expanded="false" />
+            <element signature="e#456764#456769#0" expanded="false" />
+            <element signature="e#456788#456793#0" expanded="false" />
+            <element signature="e#456828#456833#0" expanded="false" />
+            <element signature="e#456926#456930#0" expanded="false" />
+            <element signature="e#456930#456934#0" expanded="false" />
+            <element signature="e#456941#456945#0" expanded="false" />
+            <element signature="e#476343#476349#1" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#applicants-tab#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#548378#548383#0" expanded="false" />
+            <element signature="e#548489#548494#0" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <marker date="1507780452669" expanded="true" signature="253231:253291" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="253824:253884" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="260885:260945" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="261435:261495" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="261790:261850" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="262461:262521" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="263394:263454" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="264525:264585" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="265162:265222" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="265801:265861" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="266545:266605" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="267251:267311" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="275210:275270" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="291305:291365" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="293364:293424" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="294189:294249" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="304137:304197" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="306520:306580" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="307260:307320" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="311282:311342" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="312165:312225" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="313056:313116" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="313959:314019" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="314878:314938" ph="{...}" />
+            <marker date="1507780452669" expanded="true" signature="320335:320395" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inviteJob.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134766">
+          <caret line="7487" column="25" lean-forward="false" selection-start-line="7487" selection-start-column="25" selection-end-line="7487" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ReviewProposal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="7903" column="39" lean-forward="false" selection-start-line="7903" selection-start-column="39" selection-end-line="7903" selection-end-column="39" />
+          <folding>
+            <marker date="1507780529229" expanded="true" signature="561661:561716" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FindJobsUpwork.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
